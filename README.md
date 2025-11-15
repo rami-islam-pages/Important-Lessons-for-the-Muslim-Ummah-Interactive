@@ -1,4 +1,5 @@
 بسم الله الرحمن الرحيم
+
 SITE IS STILL UNDER CONSTRUCTION: https://rami-islam-pages.github.io/Important-Lessons-for-the-Muslim-Ummah-Interactive/
 
 This is a big task, but I hope to turn the work of Sheikh Haytham Sarhan's حفظه الله explanation of The Important Lessons for the Muslim Ummah of Sheikh Bin Baz رحمه الله
