@@ -8,4 +8,4 @@ This is a big task, but I hope to, إن شاء الله, turn the work of Sheikh
 
 I ask Allah to put barakah in it and make it a means of benefit for the ummah.
 
-I had the idea to make a site from this book of Sheikh Bin Baz رحمه الله many months ago, but I began coding the site 11/14/2025.
+I first had the idea to make a site from this book of Sheikh Bin Baz رحمه الله many months ago, but I began coding the site 11/14/2025.
