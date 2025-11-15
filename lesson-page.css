@@ -1,0 +1,846 @@
+/* ========================================
+   RESET & ROOT VARIABLES
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --deep-green: #0d2318;
+    --darker-green: #081510;
+    --forest-green: #1a3d2e;
+    --medium-green: #2d5742;
+    --gold: #d4af37;
+    --gold-light: #e8c968;
+    --gold-dark: #b8941f;
+    --cream: #f9f6f0;
+    --text-dark: #2c2c2c;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Amiri', serif;
+    background: linear-gradient(180deg, #f5f3ed 0%, #faf8f3 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--text-dark);
+    padding: 0;
+    margin: 0;
+}
+
+/* ========================================
+   LESSON PAGE
+   ======================================== */
+.lesson-page {
+    width: 100%;
+    max-width: 900px;
+    min-height: 100vh;
+    padding: 25px 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.top-nav {
+    margin-bottom: 25px;
+    animation: fadeIn 0.6s ease-out;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.notes-toggle-btn {
+    background: var(--gold) !important;
+    color: var(--darker-green) !important;
+    border-color: var(--gold-dark) !important;
+}
+
+.bottom-nav {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 11px 30px;
+    background: var(--forest-green);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    background: var(--deep-green);
+}
+
+.nav-btn.primary {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--darker-green);
+    border-color: var(--gold-dark);
+}
+
+.nav-btn.primary:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+}
+
+.nav-btn.secondary {
+    background: transparent;
+    color: var(--forest-green);
+    border-color: var(--forest-green);
+}
+
+.nav-btn.secondary:hover {
+    background: var(--forest-green);
+    color: var(--gold);
+}
+
+/* ========================================
+   LESSON CONTENT
+   ======================================== */
+.lesson-content {
+    flex: 1;
+    background: linear-gradient(145deg, #f9f6f0 0%, #e8dcc8 100%);
+    border: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 35px 40px;
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.15),
+        0 0 40px rgba(212, 175, 55, 0.25);
+    animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.lesson-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--gold);
+}
+
+.bismillah-lesson {
+    font-family: 'Scheherazade New', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: var(--deep-green);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: var(--deep-green);
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.5rem;
+}
+
+.numbered-list {
+    list-style-position: outside;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.numbered-list li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.four-box-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.box-item {
+    background: linear-gradient(135deg, #f9f6f0 0%, #e8dcc8 100%);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 35, 24, 0.15);
+}
+
+.box-number {
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.box-content {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: var(--deep-green);
+    line-height: 1.7;
+}
+
+.lesson-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.arabic-inline {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: 1.15em;
+    color: var(--forest-green);
+    font-weight: 600;
+}
+
+/* ========================================
+   LESSON LIST
+   ======================================== */
+.lesson-list {
+    margin: 20px 0 20px 30px;
+    padding: 0;
+}
+
+.lesson-list li {
+    font-family: 'Amiri', serif;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.lesson-list li::marker {
+    color: var(--gold-dark);
+    font-weight: 700;
+}
+
+/* ========================================
+   TOOLTIP
+   ======================================== */
+.tooltip-term {
+    color: var(--gold-dark);
+    font-weight: 600;
+    cursor: help;
+    position: relative;
+    border-bottom: 1px dotted var(--gold-dark);
+    transition: all 0.2s ease;
+}
+
+.tooltip-term:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+.tooltip-term::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--deep-green);
+    color: var(--gold-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    white-space: normal;
+    width: 250px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    pointer-events: none;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.tooltip-term::before {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--deep-green);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.tooltip-term:hover::after,
+.tooltip-term:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1024px) {
+    .four-box-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .lesson-page {
+        padding: 20px 20px 35px;
+    }
+    
+    .lesson-content {
+        padding: 28px 25px;
+    }
+    
+    .lesson-title {
+        font-size: 1.6rem;
+    }
+    
+    .lesson-text {
+        font-size: 1.05rem;
+    }
+    
+    .lesson-list {
+        margin-left: 22px;
+    }
+    
+    .lesson-list li {
+        font-size: 1.05rem;
+    }
+    
+    .tooltip-term::after {
+        width: 220px;
+        font-size: 0.9rem;
+    }
+    
+    .four-box-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .notes-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .notes-panel.open {
+        right: 0;
+    }
+    
+    .top-nav {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .lesson-page {
+        padding: 18px 15px 30px;
+    }
+    
+    .lesson-content {
+        padding: 25px 20px;
+    }
+    
+    .lesson-title {
+        font-size: 1.4rem;
+    }
+    
+    .lesson-text {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .lesson-list {
+        margin-left: 18px;
+    }
+    
+    .lesson-list li {
+        font-size: 1rem;
+    }
+    
+    .bottom-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-btn {
+        width: 100%;
+    }
+    
+    .tooltip-term::after {
+        width: 200px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    .top-nav,
+    .bottom-nav,
+    .notes-panel {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .lesson-content {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+/* ========================================
+   NOTES PANEL
+   ======================================== */
+.notes-panel {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    height: 100vh;
+    width: 400px;
+    background: linear-gradient(180deg, #f9f6f0 0%, #fffef9 100%);
+    border-left: 3px solid var(--gold);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.notes-panel.open {
+    right: 0;
+}
+
+.notes-header {
+    background: linear-gradient(135deg, var(--deep-green), var(--forest-green));
+    color: var(--gold);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--gold);
+}
+
+.notes-header h3 {
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.close-notes-btn {
+    background: transparent;
+    border: none;
+    color: var(--gold);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.close-notes-btn:hover {
+    transform: scale(1.2);
+}
+
+.notes-tabs {
+    display: flex;
+    background: var(--beige);
+    border-bottom: 2px solid var(--gold);
+}
+
+.notes-tab {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--gold);
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notes-tab:last-child {
+    border-right: none;
+}
+
+.notes-tab:hover {
+    background: rgba(212, 175, 55, 0.2);
+}
+
+.notes-tab.active {
+    background: var(--gold);
+    color: var(--darker-green);
+}
+
+.notes-tab-content {
+    display: none;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.notes-tab-content.active {
+    display: block;
+}
+
+.notes-section {
+    padding: 20px;
+}
+
+.add-note-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--darker-green);
+    border: 2px solid var(--gold-dark);
+    border-radius: 6px;
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.add-note-btn:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.note-item {
+    background: white;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.note-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.note-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.note-timestamp {
+    font-size: 0.85rem;
+    color: var(--gold-dark);
+    font-style: italic;
+}
+
+.note-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.note-action-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.note-action-btn:hover {
+    transform: scale(1.2);
+}
+
+.edit-btn {
+    color: var(--gold-dark);
+}
+
+.delete-btn {
+    color: #c44;
+}
+
+.note-content {
+    font-family: 'Amiri', serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    word-wrap: break-word;
+}
+
+.note-selection-text {
+    background: rgba(212, 175, 55, 0.2);
+    border-left: 3px solid var(--gold);
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--forest-green);
+}
+
+/* Highlight Colors */
+.highlight-colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: white;
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+}
+
+.color-label {
+    font-family: 'Amiri', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.color-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-btn:hover {
+    transform: scale(1.15);
+}
+
+.color-btn.active {
+    border-color: var(--deep-green);
+    box-shadow: 0 0 0 2px var(--gold);
+}
+
+.color-btn.yellow {
+    background: #fef08a;
+}
+
+.color-btn.green {
+    background: #bbf7d0;
+}
+
+.color-btn.blue {
+    background: #bfdbfe;
+}
+
+.color-btn.pink {
+    background: #fbcfe8;
+}
+
+.color-btn.orange {
+    background: #fed7aa;
+}
+
+.highlight-instruction {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 4px;
+}
+
+/* Highlighted text in lesson content */
+.highlighted {
+    cursor: pointer;
+    position: relative;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: opacity 0.2s ease;
+}
+
+.highlighted:hover {
+    opacity: 0.8;
+}
+
+.highlighted.yellow {
+    background: #fef08a;
+}
+
+.highlighted.green {
+    background: #bbf7d0;
+}
+
+.highlighted.blue {
+    background: #bfdbfe;
+}
+
+.highlighted.pink {
+    background: #fbcfe8;
+}
+
+.highlighted.orange {
+    background: #fed7aa;
+}
+
+/* Note Modal */
+.note-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.note-modal.hidden {
+    display: none;
+}
+
+.note-modal-content {
+    background: linear-gradient(145deg, #f9f6f0, #fffef9);
+    border: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.note-modal-content h4 {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    color: var(--forest-green);
+    margin-bottom: 15px;
+}
+
+.note-modal-content textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.note-modal-content textarea:focus {
+    outline: none;
+    border-color: var(--gold-dark);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.note-modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.save-note-btn,
+.cancel-note-btn {
+    padding: 10px 20px;
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-note-btn {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--darker-green);
+    border: 2px solid var(--gold-dark);
+}
+
+.save-note-btn:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-note-btn {
+    background: transparent;
+    color: var(--forest-green);
+    border: 2px solid var(--forest-green);
+}
+
+.cancel-note-btn:hover {
+    background: var(--forest-green);
+    color: var(--cream);
+}
+    
+    .lesson-content {
+        box-shadow: none;
+        border: 2px solid #333;
+    }
+}

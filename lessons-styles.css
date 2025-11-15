@@ -1,0 +1,1096 @@
+/* ========================================
+   RESET & ROOT VARIABLES
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Deep green from Islamic book cover */
+    --deep-green: #0d2318;
+    --darker-green: #081510;
+    --forest-green: #1a3d2e;
+    --medium-green: #2d5742;
+    
+    /* Gold ornate colors */
+    --gold: #d4af37;
+    --gold-light: #e8c968;
+    --gold-dark: #b8941f;
+    --bronze: #c9a961;
+    
+    /* Neutral tones */
+    --cream: #f9f6f0;
+    --off-white: #fffef9;
+    --beige: #e8dcc8;
+    --text-dark: #2c2c2c;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Amiri', serif;
+    background: linear-gradient(180deg, #f5f3ed 0%, #faf8f3 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    color: var(--text-dark);
+    padding: 0;
+    margin: 0;
+}
+
+/* ========================================
+   PAGE CONTENT
+   ======================================== */
+.page-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    padding: 30px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========================================
+   PAGE HEADER
+   ======================================== */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.page-title {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.page-subtitle {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: var(--gold-dark);
+    font-style: italic;
+}
+
+/* ========================================
+   INTRO SECTION (SEPARATE FROM LESSONS)
+   ======================================== */
+.intro-section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 35px;
+    animation: fadeInUp 0.8s ease-out 0.15s backwards;
+}
+
+.intro-card {
+    background: linear-gradient(145deg, rgba(232, 220, 200, 0.98), rgba(212, 175, 55, 0.15));
+    border: 3px solid var(--gold-dark);
+    border-radius: 10px;
+    padding: 25px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.12),
+        0 0 25px rgba(212, 175, 55, 0.25);
+    position: relative;
+    text-align: center;
+}
+
+.intro-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.18),
+        0 0 40px rgba(212, 175, 55, 0.45);
+    border-color: var(--gold-light);
+}
+
+.intro-card:hover::before {
+    opacity: 1;
+}
+
+.intro-card-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--deep-green);
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-card-desc {
+    font-family: 'Amiri', serif;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    opacity: 0.85;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   LESSONS MENU (CARDS)
+   ======================================== */
+.lessons-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.lesson-card {
+    background: linear-gradient(145deg, rgba(249, 246, 240, 0.98), rgba(232, 220, 200, 0.95));
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(212, 175, 55, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.lesson-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        0 0 40px rgba(212, 175, 55, 0.4);
+    border-color: var(--gold-light);
+}
+
+.lesson-card:hover::before {
+    opacity: 1;
+}
+
+.lesson-number {
+    font-family: 'Amiri', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.3;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.lesson-card-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 8px;
+}
+
+.lesson-card-desc {
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.lesson-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 35px;
+    background: var(--forest-green);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    background: var(--deep-green);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   MODAL
+   ======================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #f9f6f0 0%, #e8dcc8 100%);
+    border: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 35px 40px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 
+        0 10px 50px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(212, 175, 55, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+    transform: rotate(90deg);
+}
+
+.modal-lesson-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--gold);
+}
+
+.lesson-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.arabic-inline {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: 1.1em;
+    color: var(--forest-green);
+    font-weight: 600;
+}
+
+/* ========================================
+   LESSON LIST
+   ======================================== */
+.lesson-list {
+    margin: 18px 0 18px 25px;
+    padding: 0;
+}
+
+.lesson-list li {
+    font-family: 'Amiri', serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.lesson-list li::marker {
+    color: var(--gold-dark);
+    font-weight: 700;
+}
+
+/* ========================================
+   TOOLTIP
+   ======================================== */
+.tooltip-term {
+    color: var(--gold-dark);
+    font-weight: 600;
+    cursor: help;
+    position: relative;
+    border-bottom: 1px dotted var(--gold-dark);
+    transition: all 0.2s ease;
+}
+
+.tooltip-term:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+.tooltip-term::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--deep-green);
+    color: var(--gold-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: normal;
+    width: 250px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    pointer-events: none;
+    line-height: 1.4;
+}
+
+.tooltip-term::before {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--deep-green);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.tooltip-term:hover::after,
+.tooltip-term:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 25px 20px 40px;
+    }
+    
+    .lessons-menu {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .modal-content {
+        padding: 30px 25px;
+        width: 95%;
+    }
+    
+    .tooltip-term::after {
+        width: 200px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-content {
+        padding: 20px 15px 35px;
+    }
+    
+    .lesson-card {
+        padding: 20px;
+    }
+    
+    .modal-content {
+        padding: 25px 20px;
+    }
+    
+    .lesson-list {
+        margin-left: 18px;
+    }
+    
+    .lesson-text {
+        text-align: left;
+    }
+    
+    .tooltip-term::after {
+        width: 180px;
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & PRINT
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    .modal {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Amiri', serif;
+    background: 
+        radial-gradient(ellipse at top, rgba(45, 87, 66, 0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom, rgba(45, 87, 66, 0.3) 0%, transparent 60%),
+        linear-gradient(180deg, var(--darker-green) 0%, var(--deep-green) 30%, var(--forest-green) 50%, var(--deep-green) 70%, var(--darker-green) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    color: var(--text-dark);
+    padding: 0;
+    margin: 0;
+}
+
+/* ========================================
+   ORNATE BORDER FRAME
+   ======================================== */
+.border-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.border-line {
+    position: absolute;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--gold) 10%, 
+        var(--gold-light) 50%, 
+        var(--gold) 90%, 
+        transparent 100%);
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.6),
+        inset 0 0 10px rgba(240, 216, 143, 0.3);
+}
+
+.border-line.top,
+.border-line.bottom {
+    height: 8px;
+    left: 15px;
+    right: 15px;
+}
+
+.border-line.top {
+    top: 15px;
+}
+
+.border-line.bottom {
+    bottom: 15px;
+}
+
+.border-line.left,
+.border-line.right {
+    width: 8px;
+    top: 15px;
+    bottom: 15px;
+}
+
+.border-line.left {
+    left: 15px;
+}
+
+.border-line.right {
+    right: 15px;
+}
+
+/* Corner Ornaments */
+.corner-ornament {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at center, var(--gold-light), var(--gold-dark));
+    opacity: 0.9;
+    border-radius: 4px;
+}
+
+.corner-ornament::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--deep-green);
+    border-radius: 2px;
+}
+
+.corner-ornament::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    clip-path: polygon(
+        0% 0%, 100% 0%, 100% 30%, 30% 30%, 30% 100%, 0% 100%
+    );
+}
+
+.corner-ornament.top-left {
+    top: 8px;
+    left: 8px;
+}
+
+.corner-ornament.top-right {
+    top: 8px;
+    right: 8px;
+    transform: scaleX(-1);
+}
+
+.corner-ornament.bottom-left {
+    bottom: 8px;
+    left: 8px;
+    transform: scaleY(-1);
+}
+
+.corner-ornament.bottom-right {
+    bottom: 8px;
+    right: 8px;
+    transform: scale(-1);
+}
+
+/* ========================================
+   LIGHT PARTICLES
+   ======================================== */
+.light-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.light-dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--gold), 0 0 30px rgba(212, 175, 55, 0.4);
+    animation: sparkle 8s infinite;
+}
+
+.light-dot:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; animation-duration: 7s; }
+.light-dot:nth-child(2) { top: 35%; left: 75%; animation-delay: 1.5s; animation-duration: 9s; }
+.light-dot:nth-child(3) { top: 60%; left: 15%; animation-delay: 3s; animation-duration: 8s; }
+.light-dot:nth-child(4) { top: 80%; left: 65%; animation-delay: 2s; animation-duration: 10s; }
+.light-dot:nth-child(5) { top: 25%; left: 50%; animation-delay: 4s; animation-duration: 7.5s; }
+.light-dot:nth-child(6) { top: 70%; left: 85%; animation-delay: 5s; animation-duration: 9.5s; }
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* ========================================
+   PAGE CONTENT
+   ======================================== */
+.page-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========================================
+   PAGE HEADER
+   ======================================== */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.page-title {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 40px rgba(212, 175, 55, 0.7),
+        0 4px 12px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+/* ========================================
+   LESSONS CONTAINER
+   ======================================== */
+.lessons-container {
+    background: linear-gradient(160deg, 
+        rgba(232, 220, 200, 0.95) 0%, 
+        rgba(249, 246, 240, 0.97) 30%,
+        rgba(232, 220, 200, 0.95) 100%);
+    border: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 50px 60px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 
+        0 0 80px rgba(212, 175, 55, 0.5),
+        0 0 40px rgba(212, 175, 55, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.8),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+        0 25px 70px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.lessons-container::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 2px solid var(--gold);
+    opacity: 0.4;
+    border-radius: 8px;
+    pointer-events: none;
+    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+/* ========================================
+   LESSON SECTIONS
+   ======================================== */
+.lesson {
+    margin-bottom: 40px;
+}
+
+.lesson:last-of-type {
+    margin-bottom: 50px;
+}
+
+.lesson-title {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    color: var(--gold-dark);
+    margin-bottom: 15px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-text {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 2;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ========================================
+   LESSON LIST
+   ======================================== */
+.lesson-list {
+    margin: 20px 0 20px 30px;
+    padding: 0;
+}
+
+.lesson-list li {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 2;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.lesson-list li::marker {
+    color: var(--gold-dark);
+    font-weight: 700;
+}
+
+/* ========================================
+   FOOTNOTE
+   ======================================== */
+.footnote {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid var(--gold);
+    opacity: 0.9;
+}
+
+.footnote p {
+    font-family: 'Amiri', serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    line-height: 1.8;
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+.footnote sup {
+    font-weight: 700;
+    color: var(--gold-dark);
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.lesson-nav {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 14px 45px;
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+    color: var(--darker-green);
+    border: 3px solid var(--gold-dark);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(212, 175, 55, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(212, 175, 55, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 40px 25px 50px;
+    }
+    
+    .lessons-container {
+        padding: 35px 30px;
+    }
+    
+    .lesson-list {
+        margin-left: 20px;
+    }
+    
+    .border-line.top,
+    .border-line.bottom {
+        left: 10px;
+        right: 10px;
+        height: 6px;
+    }
+    
+    .border-line.top {
+        top: 10px;
+    }
+    
+    .border-line.bottom {
+        bottom: 10px;
+    }
+    
+    .border-line.left,
+    .border-line.right {
+        width: 6px;
+        top: 10px;
+        bottom: 10px;
+    }
+    
+    .border-line.left {
+        left: 10px;
+    }
+    
+    .border-line.right {
+        right: 10px;
+    }
+    
+    .corner-ornament {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .corner-ornament.top-left {
+        top: 5px;
+        left: 5px;
+    }
+    
+    .corner-ornament.top-right {
+        top: 5px;
+        right: 5px;
+    }
+    
+    .corner-ornament.bottom-left {
+        bottom: 5px;
+        left: 5px;
+    }
+    
+    .corner-ornament.bottom-right {
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-content {
+        padding: 35px 20px 40px;
+    }
+    
+    .lessons-container {
+        padding: 30px 20px;
+    }
+    
+    .lesson-list {
+        margin-left: 15px;
+    }
+    
+    .lesson-text {
+        text-align: left;
+    }
+    
+    .border-line.top,
+    .border-line.bottom {
+        left: 8px;
+        right: 8px;
+        height: 5px;
+    }
+    
+    .border-line.top {
+        top: 8px;
+    }
+    
+    .border-line.bottom {
+        bottom: 8px;
+    }
+    
+    .border-line.left,
+    .border-line.right {
+        width: 5px;
+        top: 8px;
+        bottom: 8px;
+    }
+    
+    .border-line.left {
+        left: 8px;
+    }
+    
+    .border-line.right {
+        right: 8px;
+    }
+    
+    .corner-ornament {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .corner-ornament.top-left,
+    .corner-ornament.top-right,
+    .corner-ornament.bottom-left,
+    .corner-ornament.bottom-right {
+        top: 4px;
+        left: 4px;
+    }
+    
+    .corner-ornament.top-right {
+        left: auto;
+        right: 4px;
+    }
+    
+    .corner-ornament.bottom-left,
+    .corner-ornament.bottom-right {
+        top: auto;
+        bottom: 4px;
+    }
+    
+    .corner-ornament.bottom-right {
+        left: auto;
+        right: 4px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & PRINT
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    .light-particles,
+    .border-frame,
+    .lesson-nav {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .lessons-container {
+        box-shadow: none;
+        border: 3px solid #333;
+    }
+}

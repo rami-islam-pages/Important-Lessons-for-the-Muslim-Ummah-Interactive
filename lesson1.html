@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Explanation of the Intro - Important Lessons</title>
+    <link rel="stylesheet" href="lesson-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="lesson-page">
+        <nav class="top-nav">
+            <button class="nav-btn" onclick="window.location.href='lessons.html'">← Back to Lessons</button>
+            <button class="nav-btn notes-toggle-btn" onclick="toggleNotesPanel()">📝 Notes</button>
+        </nav>
+        
+        <article class="lesson-content">
+            <div class="bismillah-lesson">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+            
+            <h1 class="lesson-title">Explanation of the Intro</h1>
+            
+            <div class="lesson-text">
+                <h2 class="section-title">Explanation of the Author's Introduction</h2>
+                
+                <p>Ibn Baaz رحمه الله said:</p>
+                <p>All praise and thanks are only for Allah, the Lord of everything that exists. The good end is for the obedient slaves of Allah. May Allah praise and send peace upon his slave and messenger, our prophet Muhammad, his family, and all of his companions.</p>
+                <p>These words are about some of the obligations upon every Muslim regarding the religion and I have named it: "The Important Lessons for Every Muslim".</p>
+
+                <h2 class="section-title">Why do we study these Important Lessons?</h2>
+                
+                <p>Because they are important as the author has mentioned, so the scholars have advised us to study them. If it is said: "They are important, but for the beginners, while I am a student of Knowledge! My level is above the common Muslims".</p>
+                <p>Answer: S/he should be tested and if s/he does not pass, then they are even lower than the common Muslims! A student of knowledge should be humble and not think s/he is better than others. In Saheeh Bukharee that Mujaahid said: "A shy and an arrogant person will not attain knowledge."</p>
+
+                <h2 class="section-title">What do 'The Important Lessons' consist of?</h2>
+                
+                <ol class="numbered-list">
+                    <li>The way the early scholars read the Qur'an, memorized it, reflected upon its meanings, and acted upon it.</li>
+                    <li>Explanation of Islam, Imaan, Ihsaan, worshiping Allah alone, and the categories of Shirk or worshipping other than Allah.</li>
+                    <li>Explanation of the Prayer.</li>
+                    <li>Explanation of Wudu / Ablution.</li>
+                    <li>Beautifying oneself with the Islamic manners.</li>
+                    <li>Warning against the worship of other than Allah and the categories of sins.</li>
+                    <li>Preparing the dead body, praying the funeral prayer, and burying it.</li>
+                </ol>
+
+                <h2 class="section-title">Why do the scholars begin with the Name of Allah?</h2>
+                
+                <div class="four-box-grid">
+                    <div class="box-item">
+                        <div class="box-number">1.</div>
+                        <div class="box-content">Following the example of the Book of Allah as well as the Prophets –peace be upon them all-</div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-number">2.</div>
+                        <div class="box-content">Following the Hadith: "Every important matter which does not begin with the name of Allah, it is deficient" Even though this narration is weak.</div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-number">3.</div>
+                        <div class="box-content">Following the example of the early scholars of Islam; they would begin their books in the Name of Allah</div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-number">4.</div>
+                        <div class="box-content">Seeking blessings or increase in goodness from the blessed Name of Allah.</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <nav class="bottom-nav">
+            <button class="nav-btn secondary" onclick="window.location.href='lessons.html'">← Back to Lessons</button>
+            <button class="nav-btn primary" onclick="window.location.href='lesson2.html'">Next Lesson →</button>
+        </nav>
+    </main>
+    
+    <!-- Notes Panel -->
+    <div id="notesPanel" class="notes-panel">
+        <div class="notes-header">
+            <h3>📝 My Notes</h3>
+            <button class="close-notes-btn" onclick="toggleNotesPanel()">×</button>
+        </div>
+        
+        <div class="notes-tabs">
+            <button class="notes-tab active" onclick="switchNotesTab('general')">General Notes</button>
+            <button class="notes-tab" onclick="switchNotesTab('highlights')">Highlights</button>
+        </div>
+        
+        <div id="generalNotesTab" class="notes-tab-content active">
+            <div class="notes-section">
+                <button class="add-note-btn" onclick="addGeneralNote()">+ Add General Note</button>
+                <div id="generalNotesList" class="notes-list"></div>
+            </div>
+        </div>
+        
+        <div id="highlightsTab" class="notes-tab-content">
+            <div class="notes-section">
+                <div class="highlight-colors">
+                    <span class="color-label">Highlight Color:</span>
+                    <button class="color-btn yellow active" data-color="yellow" onclick="selectHighlightColor('yellow')"></button>
+                    <button class="color-btn green" data-color="green" onclick="selectHighlightColor('green')"></button>
+                    <button class="color-btn blue" data-color="blue" onclick="selectHighlightColor('blue')"></button>
+                    <button class="color-btn pink" data-color="pink" onclick="selectHighlightColor('pink')"></button>
+                    <button class="color-btn orange" data-color="orange" onclick="selectHighlightColor('orange')"></button>
+                </div>
+                <p class="highlight-instruction">Select text in the lesson to highlight it</p>
+                <div id="highlightsList" class="notes-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Note Modal for text selection -->
+    <div id="noteModal" class="note-modal hidden">
+        <div class="note-modal-content">
+            <h4>Add Note to Selection</h4>
+            <textarea id="selectionNoteText" placeholder="Enter your note here..."></textarea>
+            <div class="note-modal-actions">
+                <button class="save-note-btn" onclick="saveSelectionNote()">Save Note</button>
+                <button class="cancel-note-btn" onclick="closeNoteModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="notes.js"></script>
+</body>
+</html>
