@@ -203,6 +203,136 @@ body {
     line-height: 1.7;
 }
 
+.five-box-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.five-box-grid .box-item {
+    background: linear-gradient(135deg, #f9f6f0 0%, #e8dcc8 100%);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.five-box-grid .box-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 35, 24, 0.15);
+}
+
+.five-box-grid .box-content {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: var(--deep-green);
+    line-height: 1.6;
+}
+
+/* Three Categories Grid */
+.quran-types-container {
+    margin: 2rem 0;
+}
+
+.three-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-box {
+    background: linear-gradient(145deg, #f9f6f0 0%, #fffef9 100%);
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+}
+
+.category-box.negligence .category-title {
+    color: #e67e22;
+}
+
+.category-box.extremism .category-title {
+    color: #c44;
+}
+
+.category-box.moderation .category-title {
+    color: #27ae60;
+}
+
+.category-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.negligence-items-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    position: relative;
+    padding-top: 3rem;
+    margin-top: -1rem;
+}
+
+.negligence-items-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(10% - 1.5px);
+    width: 3px;
+    height: 3rem;
+    background: #e67e22;
+}
+
+.negligence-item {
+    background: linear-gradient(145deg, #f9f6f0 0%, #fffef9 100%);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.negligence-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.category-item {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 3px solid var(--gold);
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+    color: var(--deep-green);
+    border-radius: 4px;
+}
+
 .lesson-text {
     font-family: 'Amiri', serif;
     font-size: 1.1rem;
@@ -327,6 +457,16 @@ body {
     .four-box-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .five-box-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .five-box-grid .box-item:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -361,6 +501,26 @@ body {
     
     .four-box-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .five-box-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .five-box-grid .box-item:last-child {
+        max-width: 100%;
+    }
+    
+    .three-categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .negligence-items-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .negligence-items-grid::before {
+        display: none;
     }
     
     .notes-panel {

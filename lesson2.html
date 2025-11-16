@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Lesson 2 - The Important Lessons</title>
+    <title>Lesson 1 - The Important Lessons</title>
     <link rel="stylesheet" href="lesson-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,20 +13,134 @@
     <main class="lesson-page">
         <nav class="top-nav">
             <button class="nav-btn" onclick="window.location.href='lessons.html'">← Back to Lessons</button>
+            <button class="nav-btn notes-toggle-btn" onclick="toggleNotesPanel()">📝 Notes</button>
         </nav>
         
         <article class="lesson-content">
-            <h1 class="lesson-title">The Second Lesson:</h1>
+            <h1 class="lesson-title">Explanation of Lesson One</h1>
             
-            <p class="lesson-text">
-                <!-- Content will be added -->
-            </p>
+            <div class="lesson-text">
+                <h2 class="section-title">Lesson One</h2>
+                
+                <h2 class="section-title">The Opening Chapter (Al Faatiha) and some short chapters</h2>
+                
+                <p>The Opening Chapter, Al Faatiha, and some short chapters from Surah Az-Zalzalah to Surah An-Naas; reading it correctly to a Qur'an teacher, memorizing it, and knowing that which is obligatory to understand.</p>
+
+                <h2 class="section-title">Clarification:</h2>
+                
+                <p>The memorization should be according to the way the companions did it; every day ten verses along with reading a concise explanation such as Tafseer As-Sa'di and acting upon them while seeking the help of Allah.</p>
+
+                <h2 class="section-title">Which Qur'an explanation should a student of knowledge begin with?</h2>
+                
+                <p>The student is advised to begin with the explanation of the Qur'an by As-Sa'di "Tayseer Al-Kareem Ar-Rahmaan Fee Tafseeri Kalaam Al-Manaan" may Allah have mercy on him and forgive him. Why?</p>
+                
+                <div class="five-box-grid">
+                    <div class="box-item">
+                        <div class="box-content">The scholars have advised with it and given it great attention</div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-content">It is concise and thus appropriate for a new student to read.</div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-content">It's expressions are easy and clear; without any ambiguity.</div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-content">It helps one to act upon the Qur'an by the help of Allah</div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-content">The author – may Allah have mercy on him– emphasizes the Oneness of Allah</div>
+                    </div>
+                </div>
+
+                <h2 class="section-title">The types of people with regard to the Qur'an:</h2>
+                
+                <p>With regard to the Qur'an, there are two extremes and one moderation</p>
+                
+                <div class="quran-types-container">
+                    <div class="three-categories-grid">
+                        <div class="category-box negligence">
+                            <h3 class="category-title">Negligence</h3>
+                            <p class="category-desc">Some abandon the Qur'an and that is done by abandoning:</p>
+                        </div>
+                        
+                        <div class="category-box extremism">
+                            <h3 class="category-title">Extremism</h3>
+                            <p class="category-desc">They read and memorize without pondering nor acting upon it.</p>
+                        </div>
+                        
+                        <div class="category-box moderation">
+                            <h3 class="category-title">Moderation</h3>
+                            <p class="category-desc">They read, memorize, ponder, and act upon it. This is the way of the early scholars and those who follow them.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="negligence-items-grid">
+                        <div class="negligence-item">Reading</div>
+                        <div class="negligence-item">Memorization</div>
+                        <div class="negligence-item">Pondering</div>
+                        <div class="negligence-item">Acting upon it</div>
+                        <div class="negligence-item">Treating sickness with it</div>
+                    </div>
+                </div>
+                
+                <p>Allah says: "And the Messenger has said, 'O my Lord, surely my people have abandoned this Qur'an" (Qur'an 25:30). The Prophet –may Allah praise and send him peace- has said: "From the offspring of this person will come people who will read the Qur'an, but it does not pass their throat (i.e. they do not understand it). They kill the Muslims and leave alone the idol worshipers. They will leave Islam just as an arrow passes through the target. If I reach them, I will kill them as the people of 'Aad were killed" (Bukhari 3610 and Muslim 1064).</p>
+            </div>
         </article>
         
         <nav class="bottom-nav">
-            <button class="nav-btn secondary" onclick="window.location.href='lesson1.html'">← Previous Lesson</button>
+            <button class="nav-btn secondary" onclick="window.location.href='lesson1.html'">← Previous</button>
             <button class="nav-btn secondary" onclick="window.location.href='lessons.html'">Back to Lessons</button>
+            <button class="nav-btn primary" onclick="window.location.href='lesson3.html'">Next Lesson →</button>
         </nav>
     </main>
+    
+    <!-- Notes Panel -->
+    <div id="notesPanel" class="notes-panel">
+        <div class="notes-header">
+            <h3>📝 My Notes</h3>
+            <button class="close-notes-btn" onclick="toggleNotesPanel()">×</button>
+        </div>
+        
+        <div class="notes-tabs">
+            <button class="notes-tab active" onclick="switchNotesTab('general')">General Notes</button>
+            <button class="notes-tab" onclick="switchNotesTab('highlights')">Highlights</button>
+        </div>
+        
+        <div id="generalNotesTab" class="notes-tab-content active">
+            <div class="notes-section">
+                <button class="add-note-btn" onclick="addGeneralNote()">+ Add General Note</button>
+                <div id="generalNotesList" class="notes-list"></div>
+            </div>
+        </div>
+        
+        <div id="highlightsTab" class="notes-tab-content">
+            <div class="notes-section">
+                <div class="highlight-colors">
+                    <span class="color-label">Highlight Color:</span>
+                    <button class="color-btn yellow active" data-color="yellow" onclick="selectHighlightColor('yellow')"></button>
+                    <button class="color-btn green" data-color="green" onclick="selectHighlightColor('green')"></button>
+                    <button class="color-btn blue" data-color="blue" onclick="selectHighlightColor('blue')"></button>
+                    <button class="color-btn pink" data-color="pink" onclick="selectHighlightColor('pink')"></button>
+                    <button class="color-btn orange" data-color="orange" onclick="selectHighlightColor('orange')"></button>
+                </div>
+                <p class="highlight-instruction">Select text in the lesson to highlight it</p>
+                <div id="highlightsList" class="notes-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Note Modal for text selection -->
+    <div id="noteModal" class="note-modal hidden">
+        <div class="note-modal-content">
+            <h4>Add Note to Selection</h4>
+            <textarea id="selectionNoteText" placeholder="Enter your note here..."></textarea>
+            <div class="note-modal-actions">
+                <button class="save-note-btn" onclick="saveSelectionNote()">Save Note</button>
+                <button class="cancel-note-btn" onclick="closeNoteModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="notes.js"></script>
 </body>
 </html>
