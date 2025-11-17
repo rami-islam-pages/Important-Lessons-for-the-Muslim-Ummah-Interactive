@@ -391,13 +391,26 @@ body::after {
     transform: translateY(-50%);
     margin-top: -60px;
     background: linear-gradient(90deg, 
-        rgba(212, 175, 55, 0.08) 0%,
-        rgba(212, 175, 55, 0.15) 50%,
-        rgba(212, 175, 55, 0.08) 100%);
-    border-top: 1px solid rgba(212, 175, 55, 0.3);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        rgba(218, 165, 32, 0.08) 0%,
+        rgba(218, 165, 32, 0.15) 50%,
+        rgba(218, 165, 32, 0.08) 100%);
+    border-top: 1px solid rgba(218, 165, 32, 0.25);
+    border-bottom: 1px solid rgba(218, 165, 32, 0.25);
     z-index: 0;
     pointer-events: none;
+    opacity: 0;
+    animation: bannerFadeIn 1.2s ease-out 1.2s forwards;
+}
+
+@keyframes bannerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scaleY(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scaleY(1);
+    }
 }
 
 .title-banner::before {
@@ -405,12 +418,12 @@ body::after {
     position: absolute;
     inset: 0;
     background-image: 
-        radial-gradient(circle, rgba(212, 175, 55, 0.4) 1px, transparent 1px),
-        radial-gradient(circle, rgba(212, 175, 55, 0.3) 1px, transparent 1px);
+        radial-gradient(circle, rgba(218, 165, 32, 0.35) 1px, transparent 1px),
+        radial-gradient(circle, rgba(218, 165, 32, 0.25) 1px, transparent 1px);
     background-size: 50px 50px, 80px 80px;
     background-position: 0 0, 40px 40px;
     animation: particleRise 15s linear infinite;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .title-banner::after {
@@ -418,8 +431,8 @@ body::after {
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse at 30% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
+        radial-gradient(ellipse at 30% 50%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(218, 165, 32, 0.06) 0%, transparent 50%);
     animation: smokeFloat 8s ease-in-out infinite;
 }
 
@@ -441,11 +454,11 @@ body::after {
     padding: var(--space-sm) var(--space-md);
     z-index: 2;
     background: linear-gradient(90deg, 
-        rgba(212, 175, 55, 0.05) 0%,
-        rgba(212, 175, 55, 0.1) 50%,
-        rgba(212, 175, 55, 0.05) 100%);
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        rgba(218, 165, 32, 0.06) 0%,
+        rgba(218, 165, 32, 0.12) 50%,
+        rgba(218, 165, 32, 0.06) 100%);
+    border-top: 1px solid rgba(218, 165, 32, 0.25);
+    border-bottom: 1px solid rgba(218, 165, 32, 0.25);
 }
 
 .titles-wrapper::before {
@@ -453,12 +466,12 @@ body::after {
     position: absolute;
     inset: 0;
     background-image: 
-        radial-gradient(circle, rgba(212, 175, 55, 0.3) 1px, transparent 1px),
-        radial-gradient(circle, rgba(212, 175, 55, 0.2) 1px, transparent 1px);
+        radial-gradient(circle, rgba(218, 165, 32, 0.4) 1px, transparent 1px),
+        radial-gradient(circle, rgba(218, 165, 32, 0.3) 1px, transparent 1px);
     background-size: 40px 40px, 70px 70px;
     background-position: 0 0, 35px 35px;
     animation: particleRise 15s linear infinite;
-    opacity: 0.4;
+    opacity: 0.35;
     z-index: 0;
 }
 
@@ -467,8 +480,8 @@ body::after {
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse at 25% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 75% 50%, rgba(212, 175, 55, 0.04) 0%, transparent 50%);
+        radial-gradient(ellipse at 25% 50%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 75% 50%, rgba(218, 165, 32, 0.06) 0%, transparent 50%);
     animation: smokeFloat 8s ease-in-out infinite;
     z-index: 0;
 }
