@@ -374,7 +374,8 @@ body {
 /* ========================================
    TOOLTIP
    ======================================== */
-.tooltip-term {
+.tooltip-term,
+.tooltip-word {
     color: var(--gold-dark);
     font-weight: 600;
     cursor: help;
@@ -383,12 +384,14 @@ body {
     transition: all 0.2s ease;
 }
 
-.tooltip-term:hover {
+.tooltip-term:hover,
+.tooltip-word:hover {
     color: var(--gold);
     border-bottom-color: var(--gold);
 }
 
-.tooltip-term::after {
+.tooltip-term::after,
+.tooltip-word::after {
     content: attr(data-tooltip);
     position: absolute;
     bottom: 125%;
@@ -412,7 +415,8 @@ body {
     font-weight: 400;
 }
 
-.tooltip-term::before {
+.tooltip-term::before,
+.tooltip-word::before {
     content: '';
     position: absolute;
     bottom: 115%;
@@ -426,7 +430,9 @@ body {
 }
 
 .tooltip-term:hover::after,
-.tooltip-term:hover::before {
+.tooltip-term:hover::before,
+.tooltip-word:hover::after,
+.tooltip-word:hover::before {
     opacity: 1;
     visibility: visible;
 }
@@ -494,7 +500,8 @@ body {
         font-size: 1.05rem;
     }
     
-    .tooltip-term::after {
+    .tooltip-term::after,
+    .tooltip-word::after {
         width: 220px;
         font-size: 0.9rem;
     }
@@ -581,7 +588,8 @@ body {
         width: 100%;
     }
     
-    .tooltip-term::after {
+    .tooltip-term::after,
+    .tooltip-word::after {
         width: 200px;
         font-size: 0.85rem;
     }
