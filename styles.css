@@ -121,7 +121,7 @@ body::after {
 .page-content {
     position: relative;
     width: 100%;
-    max-width: 380px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -286,7 +286,7 @@ body::after {
 .bismillah-header {
     background: linear-gradient(135deg, #0d2318 0%, #1a3d2e 100%);
     border-bottom: 2px solid var(--gold);
-    padding: clamp(0.9rem, 2.8vw, 1.25rem);
+    padding: clamp(0.6rem, 2vw, 0.85rem);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -346,7 +346,7 @@ body::after {
 
 .bismillah {
     font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(1.15rem, 3.6vw, 1.5rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.15rem);
     font-weight: 400;
     color: var(--gold);
     direction: rtl;
@@ -382,28 +382,29 @@ body::after {
    CARD BODY
    ======================================== */
 .card-body {
-    padding: clamp(0.9rem, 3.5vw, 1.5rem) clamp(0.9rem, 3.5vw, 1.9rem);
+    padding: clamp(0.6rem, 2.5vw, 1rem) clamp(0.8rem, 3vw, 1.3rem);
     position: relative;
     z-index: 1;
+    overflow: visible;
 }
 
 /* ========================================
-   TYPOGRAPHY - ARABIC TITLE
+   TITLES WRAPPER WITH BANNER
    ======================================== */
-.title-section {
-    text-align: center;
-    margin-block-end: var(--space-lg);
-    animation: fadeInUp 1s ease-out 0.4s backwards;
+.titles-wrapper {
     position: relative;
-    margin-inline: calc(var(--space-lg) * -1);
-    padding: var(--space-md) var(--space-lg);
+    margin-block-end: var(--space-lg);
+    padding: var(--space-sm) var(--space-md);
 }
 
-/* Banner background with effects */
-.title-section::before {
+/* Single banner background behind both titles */
+.titles-wrapper::before {
     content: '';
     position: absolute;
-    inset: 0;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    top: 0;
+    bottom: 0;
     background: linear-gradient(90deg, 
         rgba(212, 175, 55, 0.08) 0%,
         rgba(212, 175, 55, 0.15) 50%,
@@ -411,23 +412,27 @@ body::after {
     border-top: 1px solid rgba(212, 175, 55, 0.3);
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     animation: bannerGlow 4s ease-in-out infinite;
-    z-index: 0;
+    z-index: -1;
 }
 
-/* Animated particles in banner */
-.title-section::after {
+/* Animated particles and smoke in banner */
+.titles-wrapper::after {
     content: '';
     position: absolute;
-    inset: 0;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    top: 0;
+    bottom: 0;
     background-image: 
         radial-gradient(circle, rgba(212, 175, 55, 0.4) 1px, transparent 1px),
         radial-gradient(circle, rgba(212, 175, 55, 0.3) 1px, transparent 1px),
-        radial-gradient(circle, rgba(212, 175, 55, 0.5) 1px, transparent 1px);
-    background-size: 50px 50px, 80px 80px, 100px 100px;
-    background-position: 0 0, 40px 40px, 80px 80px;
-    animation: particleRise 15s linear infinite;
+        radial-gradient(ellipse at 30% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
+    background-size: 50px 50px, 80px 80px, 200px 100px, 200px 100px;
+    background-position: 0 0, 40px 40px, 0 0, 0 0;
+    animation: particleRise 15s linear infinite, smokeFloat 8s ease-in-out infinite;
     opacity: 0.6;
-    z-index: 1;
+    z-index: -1;
 }
 
 @keyframes bannerGlow {
@@ -449,16 +454,38 @@ body::after {
 
 @keyframes particleRise {
     0% {
-        background-position: 0 0, 40px 40px, 80px 80px;
+        background-position: 0 0, 40px 40px, 0 0, 0 0;
     }
     100% {
-        background-position: 0 -100px, 40px -60px, 80px -120px;
+        background-position: 0 -100px, 40px -60px, 0 0, 0 0;
     }
+}
+
+@keyframes smokeFloat {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-5px);
+    }
+}
+
+/* ========================================
+   TYPOGRAPHY - ARABIC TITLE
+   ======================================== */
+.title-section {
+    text-align: center;
+    margin-block-end: var(--space-md);
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+    position: relative;
+    z-index: 2;
 }
 
 .arabic-title {
     font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(1.5rem, 4.3vw, 2rem);
+    font-size: clamp(1.15rem, 3.3vw, 1.5rem);
     font-weight: 700;
     color: var(--text-black);
     direction: rtl;
@@ -469,8 +496,6 @@ body::after {
         0 1px 2px rgba(0, 0, 0, 0.08),
         0 0 20px rgba(212, 175, 55, 0.2),
         0 0 40px rgba(212, 175, 55, 0.1);
-    position: relative;
-    z-index: 2;
 }
 
 @keyframes fadeInUp {
@@ -489,83 +514,24 @@ body::after {
    ======================================== */
 .english-section {
     text-align: center;
-    margin-block-end: var(--space-lg);
     animation: fadeInUp 1s ease-out 0.6s backwards;
     position: relative;
-    margin-inline: calc(var(--space-lg) * -1);
-    padding: var(--space-md) var(--space-lg);
-}
-
-/* Smoke-like floating background */
-.english-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: 
-        radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.06) 0%, transparent 40%);
-    animation: smokeFloat 8s ease-in-out infinite;
-    z-index: 0;
-}
-
-/* Light ray sweep effect */
-.english-section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 40%,
-        rgba(212, 175, 55, 0.1) 50%,
-        transparent 60%,
-        transparent 100%
-    );
-    animation: lightSweep 6s ease-in-out infinite;
-    z-index: 1;
-}
-
-@keyframes smokeFloat {
-    0%, 100% {
-        opacity: 0.5;
-        transform: translateY(0);
-    }
-    50% {
-        opacity: 0.8;
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes lightSweep {
-    0% {
-        transform: translateX(-100%) skewX(-15deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(200%) skewX(-15deg);
-        opacity: 0;
-    }
+    z-index: 2;
 }
 
 .english-subtitle {
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+    font-size: clamp(0.5rem, 1.15vw, 0.62rem);
     font-weight: 400;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-block-end: var(--space-xs);
-    position: relative;
-    z-index: 2;
 }
 
 .english-title-main {
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: clamp(1.2rem, 3.3vw, 1.55rem);
+    font-size: clamp(0.9rem, 2.6vw, 1.2rem);
     font-weight: 700;
     color: var(--gold-dark);
     letter-spacing: 1px;
@@ -574,8 +540,6 @@ body::after {
         0 1px 3px rgba(0, 0, 0, 0.12),
         0 0 15px rgba(212, 175, 55, 0.15),
         0 0 30px rgba(212, 175, 55, 0.08);
-    position: relative;
-    z-index: 2;
 }
 
 /* ========================================
@@ -589,7 +553,7 @@ body::after {
 
 .author-label {
     font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(0.7rem, 1.6vw, 0.9rem);
+    font-size: clamp(0.53rem, 1.25vw, 0.7rem);
     font-weight: 400;
     color: var(--text-muted);
     direction: rtl;
@@ -599,7 +563,7 @@ body::after {
 
 .author-name {
     font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(1rem, 2.8vw, 1.3rem);
+    font-size: clamp(0.8rem, 2.2vw, 1rem);
     font-weight: 700;
     color: var(--text-black);
     direction: rtl;
@@ -612,8 +576,8 @@ body::after {
 
 .author-english {
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: clamp(0.7rem, 1.6vw, 0.9rem);
-    font-weight: 500;
+    font-size: clamp(0.53rem, 1.25vw, 0.7rem);
+    font-weight: 400;
     color: var(--text-dark);
 }
 
@@ -628,7 +592,7 @@ body::after {
 
 .explainer-label {
     font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(0.7rem, 1.6vw, 0.9rem);
+    font-size: clamp(0.53rem, 1.25vw, 0.7rem);
     font-weight: 400;
     color: var(--text-muted);
     direction: rtl;
@@ -638,7 +602,7 @@ body::after {
 
 .explainer-name {
     font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(1rem, 2.8vw, 1.3rem);
+    font-size: clamp(0.8rem, 2.2vw, 1rem);
     font-weight: 700;
     color: var(--text-black);
     direction: rtl;
@@ -651,15 +615,15 @@ body::after {
 
 .explainer-english {
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: clamp(0.7rem, 1.6vw, 0.9rem);
-    font-weight: 500;
+    font-size: clamp(0.53rem, 1.25vw, 0.7rem);
+    font-weight: 400;
     color: var(--text-dark);
     margin-block-end: var(--space-xs);
 }
 
 .explainer-desc {
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: clamp(0.65rem, 1.4vw, 0.75rem);
+    font-size: clamp(0.48rem, 1.1vw, 0.58rem);
     font-weight: 400;
     color: var(--text-muted);
     font-style: italic;
@@ -679,9 +643,9 @@ body::after {
     background-position: 0% 50%;
     border: none;
     border-radius: 50px;
-    padding: clamp(0.55rem, 1.7vw, 0.7rem) clamp(1.7rem, 4.3vw, 2.3rem);
+    padding: clamp(0.4rem, 1.3vw, 0.55rem) clamp(1rem, 3vw, 1.4rem);
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: clamp(0.8rem, 2.1vw, 1rem);
+    font-size: clamp(0.62rem, 1.6vw, 0.8rem);
     font-weight: 700;
     color: var(--text-black);
     cursor: pointer;
