@@ -1,28 +1,16 @@
-# Terminal command file
+# Personal files
 terminal command copy.txt
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumb.db
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-*.swp
-*.swo
-*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Temporary files
-*.tmp
-*.temp
+# OS files
+.DS_Store
+Thumbs.db
