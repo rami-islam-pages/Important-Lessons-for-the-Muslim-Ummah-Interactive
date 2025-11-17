@@ -379,85 +379,106 @@ body::after {
 }
 
 /* ========================================
-   CARD BODY
+   FULL-WIDTH TITLE BANNER
    ======================================== */
-.card-body {
-    padding: clamp(0.6rem, 2.5vw, 1rem) clamp(0.8rem, 3vw, 1.3rem);
-    position: relative;
-    z-index: 1;
-    overflow: visible;
-}
-
-/* ========================================
-   TITLES WRAPPER WITH BANNER
-   ======================================== */
-.titles-wrapper {
-    position: relative;
-    margin-block-end: var(--space-lg);
-    padding: var(--space-sm) var(--space-md);
-}
-
-/* Single banner background behind both titles */
-.titles-wrapper::before {
-    content: '';
+.title-banner {
     position: absolute;
-    left: calc(-50vw + 50%);
-    width: 100vw;
-    top: 0;
-    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -60px;
     background: linear-gradient(90deg, 
         rgba(212, 175, 55, 0.08) 0%,
         rgba(212, 175, 55, 0.15) 50%,
         rgba(212, 175, 55, 0.08) 100%);
     border-top: 1px solid rgba(212, 175, 55, 0.3);
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-    animation: bannerGlow 4s ease-in-out infinite;
-    z-index: -1;
+    z-index: 0;
+    pointer-events: none;
 }
 
-/* Animated particles and smoke in banner */
+.title-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle, rgba(212, 175, 55, 0.4) 1px, transparent 1px),
+        radial-gradient(circle, rgba(212, 175, 55, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px, 80px 80px;
+    background-position: 0 0, 40px 40px;
+    animation: particleRise 15s linear infinite;
+    opacity: 0.6;
+}
+
+.title-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 30% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
+    animation: smokeFloat 8s ease-in-out infinite;
+}
+
+/* ========================================
+   CARD BODY
+   ======================================== */
+.card-body {
+    padding: clamp(0.6rem, 2.5vw, 1rem) clamp(0.8rem, 3vw, 1.3rem);
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   TITLES WRAPPER
+   ======================================== */
+.titles-wrapper {
+    position: relative;
+    margin-block-end: var(--space-lg);
+    padding: var(--space-sm) var(--space-md);
+    z-index: 2;
+    background: linear-gradient(90deg, 
+        rgba(212, 175, 55, 0.05) 0%,
+        rgba(212, 175, 55, 0.1) 50%,
+        rgba(212, 175, 55, 0.05) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.titles-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle, rgba(212, 175, 55, 0.3) 1px, transparent 1px),
+        radial-gradient(circle, rgba(212, 175, 55, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px, 70px 70px;
+    background-position: 0 0, 35px 35px;
+    animation: particleRise 15s linear infinite;
+    opacity: 0.4;
+    z-index: 0;
+}
+
 .titles-wrapper::after {
     content: '';
     position: absolute;
-    left: calc(-50vw + 50%);
-    width: 100vw;
-    top: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle, rgba(212, 175, 55, 0.4) 1px, transparent 1px),
-        radial-gradient(circle, rgba(212, 175, 55, 0.3) 1px, transparent 1px),
-        radial-gradient(ellipse at 30% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
-    background-size: 50px 50px, 80px 80px, 200px 100px, 200px 100px;
-    background-position: 0 0, 40px 40px, 0 0, 0 0;
-    animation: particleRise 15s linear infinite, smokeFloat 8s ease-in-out infinite;
-    opacity: 0.6;
-    z-index: -1;
-}
-
-@keyframes bannerGlow {
-    0%, 100% {
-        background: linear-gradient(90deg, 
-            rgba(212, 175, 55, 0.08) 0%,
-            rgba(212, 175, 55, 0.15) 50%,
-            rgba(212, 175, 55, 0.08) 100%);
-        box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.1);
-    }
-    50% {
-        background: linear-gradient(90deg, 
-            rgba(212, 175, 55, 0.12) 0%,
-            rgba(212, 175, 55, 0.22) 50%,
-            rgba(212, 175, 55, 0.12) 100%);
-        box-shadow: inset 0 0 50px rgba(212, 175, 55, 0.2);
-    }
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 25% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 75% 50%, rgba(212, 175, 55, 0.04) 0%, transparent 50%);
+    animation: smokeFloat 8s ease-in-out infinite;
+    z-index: 0;
 }
 
 @keyframes particleRise {
     0% {
-        background-position: 0 0, 40px 40px, 0 0, 0 0;
+        background-position: 0 0, 40px 40px;
     }
     100% {
-        background-position: 0 -100px, 40px -60px, 0 0, 0 0;
+        background-position: 0 -100px, 40px -60px;
     }
 }
 
@@ -480,7 +501,7 @@ body::after {
     margin-block-end: var(--space-md);
     animation: fadeInUp 1s ease-out 0.4s backwards;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .arabic-title {
@@ -516,14 +537,14 @@ body::after {
     text-align: center;
     animation: fadeInUp 1s ease-out 0.6s backwards;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .english-subtitle {
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: clamp(0.5rem, 1.15vw, 0.62rem);
-    font-weight: 400;
-    color: var(--text-muted);
+    font-size: clamp(0.6rem, 1.4vw, 0.75rem);
+    font-weight: 500;
+    color: var(--text-black);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-block-end: var(--space-xs);
