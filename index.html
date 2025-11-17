@@ -7,70 +7,58 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Ornate Border Frame -->
-    <div class="border-frame">
-        <div class="corner-ornament top-left"></div>
-        <div class="corner-ornament top-right"></div>
-        <div class="corner-ornament bottom-left"></div>
-        <div class="corner-ornament bottom-right"></div>
-        <div class="border-line top"></div>
-        <div class="border-line right"></div>
-        <div class="border-line bottom"></div>
-        <div class="border-line left"></div>
-    </div>
-    
-    <!-- Light Particles -->
-    <div class="light-particles">
-        <span class="light-dot"></span>
-        <span class="light-dot"></span>
-        <span class="light-dot"></span>
-        <span class="light-dot"></span>
-        <span class="light-dot"></span>
-        <span class="light-dot"></span>
-    </div>
+    <!-- Decorative Corner Accents -->
+    <div class="corner-accent top-left"></div>
+    <div class="corner-accent top-right"></div>
+    <div class="corner-accent bottom-left"></div>
+    <div class="corner-accent bottom-right"></div>
     
     <main class="page-content">
-        <!-- Bismillah -->
-        <header class="bismillah-section">
-            <h1 class="bismillah">بسم الله الرحمن الرحيم</h1>
-        </header>
-        
-        <!-- Inner Ornate Frame -->
-        <div class="inner-frame">
-            <!-- Arabic Title -->
-            <section class="title-section">
-                <div class="ornate-divider top"></div>
-                <h2 class="arabic-title">الدروس المهمة لعامة الأمة</h2>
-                <div class="ornate-divider bottom"></div>
-            </section>
+        <!-- Content Card -->
+        <div class="content-card">
+            <!-- Bismillah Header -->
+            <header class="bismillah-header">
+                <h1 class="bismillah">بسم الله الرحمن الرحيم</h1>
+            </header>
             
-            <!-- English Title -->
-            <section class="english-section">
-                <h3 class="english-title">The Important Lessons For The</h3>
-                <h3 class="english-title-emphasis">Muslim Ummah</h3>
-            </section>
-            
-            <!-- Author Section -->
-            <section class="author-section">
-                <p class="author-label">لسماحة الشيخ</p>
-                <h4 class="author-arabic">عبد العزيز بن عبد الله بن باز</h4>
-                <div class="author-divider"></div>
-                <p class="author-english">Sheikh Abdul Aziz Bin Abdullah Bin Baz</p>
-                <div class="explainer-section">
-                    <p class="explainer-label">Explanation by</p>
-                    <p class="explainer-name">Sheikh Haytham ibn Muhammad Jameel Sarhaan</p>
+            <!-- Card Body -->
+            <div class="card-body">
+                <!-- Arabic Title -->
+                <section class="title-section">
+                    <h2 class="arabic-title">الدروس المهمة لعامة الأمة</h2>
+                </section>
+                
+                <!-- English Title -->
+                <section class="english-section">
+                    <p class="english-subtitle">The Important Lessons For The</p>
+                    <h3 class="english-title-main">Muslim Ummah</h3>
+                </section>
+                
+                <!-- Author Section -->
+                <section class="author-section">
+                    <p class="author-label">لسماحة الشيخ</p>
+                    <h4 class="author-name">عبد العزيز بن عبد الله بن باز</h4>
+                    <p class="author-english">By: Sheikh Abdul Aziz bin Abdullah Bin Baz</p>
+                </section>
+                
+                <!-- Explainer Section -->
+                <section class="explainer-section">
+                    <p class="explainer-label">شرحها فضيلة الشيخ</p>
+                    <h4 class="explainer-name">هيثم بن محمد جميل سرحان</h4>
+                    <p class="explainer-english">Explained by: Sheikh Haytham ibn Muhammad Jameel Sarhaan</p>
                     <p class="explainer-desc">Former teacher in Masjid Nabawi</p>
+                </section>
+                
+                <!-- Enter Button -->
+                <div class="button-section">
+                    <button class="enter-btn" onclick="enterBook()">
+                        <span class="btn-text">Enter</span>
+                        <span class="btn-icon">→</span>
+                    </button>
                 </div>
-            </section>
-            
-            <!-- Enter Button -->
-            <div class="button-section">
-                <button class="enter-btn" onclick="enterBook()">
-                    <span class="btn-text">Enter</span>
-                </button>
             </div>
         </div>
     </main>

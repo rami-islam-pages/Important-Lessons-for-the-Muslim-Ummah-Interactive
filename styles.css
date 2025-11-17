@@ -1,5 +1,32 @@
 /* ========================================
-   RESET & ROOT VARIABLES
+   CSS VARIABLES
+   ======================================== */
+:root {
+    /* Book cover color palette */
+    --bg-dark-green: #021910;
+    --bg-dark-green-light: #0a2d1f;
+    
+    --card-cream: #f9f1df;
+    --card-cream-dark: #f3e4c5;
+    
+    --gold: #d4af37;
+    --gold-light: #e8c968;
+    --gold-dark: #b8941f;
+    
+    --text-dark: #1e2621;
+    --text-black: #111111;
+    --text-muted: #7a7a7a;
+    
+    /* Spacing rhythm */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+}
+
+/* ========================================
+   RESET & BASE STYLES
    ======================================== */
 * {
     margin: 0;
@@ -7,924 +34,378 @@
     box-sizing: border-box;
 }
 
-:root {
-    /* Deep green from Islamic book cover */
-    --deep-green: #0d2318;
-    --darker-green: #081510;
-    --forest-green: #1a3d2e;
-    --medium-green: #2d5742;
-    
-    /* Gold ornate colors */
-    --gold: #d4af37;
-    --gold-light: #e8c968;
-    --gold-dark: #b8941f;
-    --bronze: #c9a961;
-    
-    /* Neutral tones */
-    --cream: #f9f6f0;
-    --off-white: #fffef9;
-    --beige: #e8dcc8;
-    --text-dark: #2c2c2c;
-}
-
 html {
     scroll-behavior: smooth;
     height: 100%;
 }
 
 body {
-    font-family: 'Amiri', serif;
-    background: 
-        radial-gradient(ellipse at top, rgba(45, 87, 66, 0.3) 0%, transparent 60%),
-        radial-gradient(ellipse at bottom, rgba(45, 87, 66, 0.3) 0%, transparent 60%),
-        linear-gradient(180deg, var(--darker-green) 0%, var(--deep-green) 30%, var(--forest-green) 50%, var(--deep-green) 70%, var(--darker-green) 100%);
+    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+    background: radial-gradient(ellipse at center, var(--bg-dark-green-light) 0%, var(--bg-dark-green) 70%);
     min-height: 100vh;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow-x: hidden;
     color: var(--text-dark);
-    padding: 0;
-    margin: 0;
+    padding: clamp(1rem, 3vw, 2rem);
 }
 
 /* ========================================
-   ORNATE BORDER FRAME
-   ======================================== */
-.border-frame {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 100;
-}
-
-.border-line {
-    position: absolute;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        var(--gold) 10%, 
-        var(--gold-light) 50%, 
-        var(--gold) 90%, 
-        transparent 100%);
-    box-shadow: 
-        0 0 20px rgba(212, 175, 55, 0.6),
-        inset 0 0 10px rgba(240, 216, 143, 0.3);
-}
-
-.border-line.top,
-.border-line.bottom {
-    height: 8px;
-    left: 15px;
-    right: 15px;
-}
-
-.border-line.top {
-    top: 15px;
-}
-
-.border-line.bottom {
-    bottom: 15px;
-}
-
-.border-line.left,
-.border-line.right {
-    width: 8px;
-    top: 15px;
-    bottom: 15px;
-}
-
-.border-line.left {
-    left: 15px;
-}
-
-.border-line.right {
-    right: 15px;
-}
-
-/* Corner Ornaments */
-.corner-ornament {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle at center, var(--gold-light), var(--gold-dark));
-    opacity: 0.9;
-    border-radius: 4px;
-}
-
-.corner-ornament::before {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    background: var(--deep-green);
-    border-radius: 2px;
-}
-
-.corner-ornament::after {
-    content: '';
-    position: absolute;
-    inset: 8px;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
-    clip-path: polygon(
-        0% 0%, 100% 0%, 100% 30%, 30% 30%, 30% 100%, 0% 100%
-    );
-}
-
-.corner-ornament.top-left {
-    top: 8px;
-    left: 8px;
-}
-
-.corner-ornament.top-left::after {
-    clip-path: polygon(
-        0% 0%, 100% 0%, 100% 30%, 30% 30%, 30% 100%, 0% 100%
-    );
-}
-
-.corner-ornament.top-right {
-    top: 8px;
-    right: 8px;
-    transform: scaleX(-1);
-}
-
-.corner-ornament.bottom-left {
-    bottom: 8px;
-    left: 8px;
-    transform: scaleY(-1);
-}
-
-.corner-ornament.bottom-right {
-    bottom: 8px;
-    right: 8px;
-    transform: scale(-1);
-}
-
-/* ========================================
-   LIGHT PARTICLES
-   ======================================== */
-.light-particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.light-dot {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: var(--gold);
-    border-radius: 50%;
-    box-shadow: 0 0 15px var(--gold), 0 0 30px rgba(212, 175, 55, 0.4);
-    animation: sparkle 8s infinite;
-}
-
-.light-dot:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; animation-duration: 7s; }
-.light-dot:nth-child(2) { top: 35%; left: 75%; animation-delay: 1.5s; animation-duration: 9s; }
-.light-dot:nth-child(3) { top: 60%; left: 15%; animation-delay: 3s; animation-duration: 8s; }
-.light-dot:nth-child(4) { top: 80%; left: 65%; animation-delay: 2s; animation-duration: 10s; }
-.light-dot:nth-child(5) { top: 25%; left: 50%; animation-delay: 4s; animation-duration: 7.5s; }
-.light-dot:nth-child(6) { top: 70%; left: 85%; animation-delay: 5s; animation-duration: 9.5s; }
-
-@keyframes sparkle {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.5); }
-}
-
-/* ========================================
-   PAGE CONTENT
+   LAYOUT - PAGE STRUCTURE
    ======================================== */
 .page-content {
     position: relative;
-    z-index: 2;
     width: 100%;
-    min-height: 100vh;
+    max-width: 600px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 100px 30px 50px;
-    gap: 20px;
 }
 
 /* ========================================
-   BISMILLAH SECTION
+   CORNER ACCENTS
    ======================================== */
-.bismillah-section {
-    text-align: center;
-    animation: fadeInDown 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    margin-bottom: 15px;
+.corner-accent {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
 }
 
-.bismillah {
-    font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 2px;
-    text-shadow: 
-        0 0 40px rgba(212, 175, 55, 0.7),
-        0 4px 12px rgba(0, 0, 0, 0.5),
-        0 2px 4px rgba(0, 0, 0, 0.3);
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* ========================================
-   INNER FRAME
-   ======================================== */
-.inner-frame {
-    background: linear-gradient(160deg, 
-        rgba(232, 220, 200, 0.95) 0%, 
-        rgba(249, 246, 240, 0.97) 30%,
-        rgba(232, 220, 200, 0.95) 100%);
-    border: 4px solid var(--gold);
-    border-radius: 12px;
-    padding: 30px 45px 35px;
-    max-width: 650px;
-    width: 100%;
-    position: relative;
-    box-shadow: 
-        0 0 80px rgba(212, 175, 55, 0.5),
-        0 0 40px rgba(212, 175, 55, 0.3),
-        inset 0 2px 4px rgba(255, 255, 255, 0.8),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.1),
-        0 25px 70px rgba(0, 0, 0, 0.6);
-    animation: fadeInUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards;
-}
-
-.inner-frame::before {
+.corner-accent::before,
+.corner-accent::after {
     content: '';
     position: absolute;
-    inset: 12px;
-    border: 2px solid var(--gold);
-    opacity: 0.4;
-    border-radius: 8px;
-    pointer-events: none;
-    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.1);
+    background: var(--gold);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
 }
 
-/* ========================================
-   TITLE SECTION
-   ======================================== */
-.title-section {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.ornate-divider {
-    height: 2px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        var(--gold) 20%, 
-        var(--gold-light) 50%, 
-        var(--gold) 80%, 
-        transparent 100%);
-    margin: 12px auto;
-    max-width: 400px;
-    position: relative;
-}
-
-.ornate-divider::before,
-.ornate-divider::after {
-    content: '◆';
-    position: absolute;
-    color: var(--gold);
-    font-size: 0.7em;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.ornate-divider::before {
-    left: 10%;
-}
-
-.ornate-divider::after {
-    right: 10%;
-}
-
-.arabic-title {
-    font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    font-weight: 700;
-    color: var(--text-dark);
-    line-height: 1.7;
-    letter-spacing: 1px;
-    margin: 0;
-    text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.15),
-        0 0 20px rgba(212, 175, 55, 0.2);
-}
-
-/* ========================================
-   ENGLISH SECTION
-   ======================================== */
-.english-section {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.english-title {
-    font-family: 'Amiri', serif;
-    font-size: clamp(1rem, 2.2vw, 1.35rem);
-    font-weight: 600;
-    color: var(--text-dark);
-    letter-spacing: 0.5px;
-    margin: 0;
-    line-height: 1.5;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.english-title-emphasis {
-    font-family: 'Amiri', serif;
-    font-size: clamp(1.2rem, 2.8vw, 1.6rem);
-    font-weight: 700;
-    color: var(--gold-dark);
-    letter-spacing: 1px;
-    margin: 0;
-    margin-top: 3px;
-    line-height: 1.4;
-    text-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.2),
-        0 0 15px rgba(212, 175, 55, 0.3);
-}
-
-/* ========================================
-   AUTHOR SECTION
-   ======================================== */
-.author-section {
-    text-align: center;
-    margin: 15px 0 18px;
-}
-
-.author-label {
-    font-family: 'Amiri', serif;
-    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-    color: var(--text-dark);
-    margin-bottom: 5px;
-    font-weight: 400;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    opacity: 0.85;
-}
-
-.author-arabic {
-    font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: clamp(1.2rem, 2.8vw, 1.6rem);
-    font-weight: 700;
-    color: var(--text-dark);
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-    text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.15),
-        0 0 15px rgba(212, 175, 55, 0.2);
-}
-
-.author-divider {
+.corner-accent::before {
     width: 60px;
     height: 2px;
-    background: var(--gold);
-    margin: 12px auto;
-    border-radius: 1px;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
-.author-english {
-    font-family: 'Amiri', serif;
-    font-size: clamp(1rem, 2.2vw, 1.3rem);
-    font-weight: 600;
-    color: var(--text-dark);
-    font-style: italic;
-    letter-spacing: 0.3px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    opacity: 0.85;
+.corner-accent::after {
+    width: 2px;
+    height: 60px;
 }
 
-.explainer-section {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(212, 175, 55, 0.3);
+.corner-accent.top-left {
+    top: 20px;
+    left: 20px;
 }
 
-.explainer-label {
-    font-family: 'Amiri', serif;
-    font-size: clamp(0.85rem, 1.6vw, 1rem);
-    color: var(--gold-dark);
-    margin-bottom: 5px;
-    font-weight: 500;
-    font-style: italic;
-    opacity: 0.9;
+.corner-accent.top-left::before {
+    top: 0;
+    left: 0;
 }
 
-.explainer-name {
-    font-family: 'Amiri', serif;
-    font-size: clamp(0.95rem, 2vw, 1.15rem);
-    color: var(--text-dark);
-    font-weight: 600;
-    margin-bottom: 3px;
-    line-height: 1.5;
+.corner-accent.top-left::after {
+    top: 0;
+    left: 0;
 }
 
-.explainer-desc {
-    font-family: 'Amiri', serif;
-    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-    color: var(--text-dark);
-    font-style: italic;
-    opacity: 0.75;
+.corner-accent.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.corner-accent.top-right::before {
+    top: 0;
+    right: 0;
+}
+
+.corner-accent.top-right::after {
+    top: 0;
+    right: 0;
+}
+
+.corner-accent.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.corner-accent.bottom-left::before {
+    bottom: 0;
+    left: 0;
+}
+
+.corner-accent.bottom-left::after {
+    bottom: 0;
+    left: 0;
+}
+
+.corner-accent.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.corner-accent.bottom-right::before {
+    bottom: 0;
+    right: 0;
+}
+
+.corner-accent.bottom-right::after {
+    bottom: 0;
+    right: 0;
 }
 
 /* ========================================
-   BUTTON SECTION
+   CARD - MAIN CONTENT CONTAINER
    ======================================== */
-.button-section {
-    margin-top: 18px;
-    text-align: center;
-}
-
-.enter-btn {
-    font-family: 'Amiri', serif;
-    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 13px 45px;
-    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-dark) 100%);
-    color: var(--darker-green);
-    border: 3px solid var(--gold-dark);
+.content-card {
+    background: linear-gradient(160deg, var(--card-cream) 0%, var(--card-cream-dark) 50%, var(--card-cream) 100%);
+    border: 2px solid var(--gold);
     border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 100%;
     box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.5),
-        0 0 40px rgba(212, 175, 55, 0.5),
-        inset 0 2px 0 rgba(255, 255, 255, 0.3),
-        inset 0 -2px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(212, 175, 55, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
     overflow: hidden;
+    position: relative;
+    animation: fadeIn 0.6s ease-out;
 }
 
-.enter-btn::before {
+.content-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
-
-.enter-btn:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.5),
-        0 0 50px rgba(212, 175, 55, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    border-color: var(--gold-light);
-}
-
-.enter-btn:hover::before {
-    left: 100%;
-}
-
-.enter-btn:active {
-    transform: translateY(-1px) scale(1);
-    box-shadow: 
-        0 4px 15px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(212, 175, 55, 0.4);
-}
-
-.btn-text {
-    position: relative;
-    z-index: 1;
-}
-
-/* ========================================
-   ANIMATIONS
-   ======================================== */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-@media (max-width: 768px) {
-    .page-content {
-        padding: 120px 30px 40px;
-        gap: 15px;
-    }
-    
-    .border-line.top,
-    .border-line.bottom {
-        left: 10px;
-        right: 10px;
-        height: 6px;
-    }
-    
-    .border-line.top {
-        top: 10px;
-    }
-    
-    .border-line.bottom {
-        bottom: 10px;
-    }
-    
-    .border-line.left,
-    .border-line.right {
-        width: 6px;
-        top: 10px;
-        bottom: 10px;
-    }
-    
-    .border-line.left {
-        left: 10px;
-    }
-    
-    .border-line.right {
-        right: 10px;
-    }
-    
-    .corner-ornament {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .corner-ornament.top-left {
-        top: 5px;
-        left: 5px;
-    }
-    
-    .corner-ornament.top-right {
-        top: 5px;
-        right: 5px;
-    }
-    
-    .corner-ornament.bottom-left {
-        bottom: 5px;
-        left: 5px;
-    }
-    
-    .corner-ornament.bottom-right {
-        bottom: 5px;
-        right: 5px;
-    }
-    
-    .bismillah-section {
-        margin-bottom: 12px;
-    }
-    
-    .inner-frame {
-        padding: 30px 30px 35px;
-    }
-    
-    .title-section {
-        margin-bottom: 15px;
-    }
-    
-    .english-section {
-        margin-bottom: 15px;
-    }
-    
-    .author-section {
-        margin: 18px 0 22px;
-    }
-    
-    .button-section {
-        margin-top: 22px;
-    }
-    
-    .enter-btn {
-        padding: 12px 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-content {
-        padding: 100px 20px 30px;
-        gap: 12px;
-    }
-    
-    .border-line.top,
-    .border-line.bottom {
-        left: 8px;
-        right: 8px;
-        height: 5px;
-    }
-    
-    .border-line.top {
-        top: 8px;
-    }
-    
-    .border-line.bottom {
-        bottom: 8px;
-    }
-    
-    .border-line.left,
-    .border-line.right {
-        width: 5px;
-        top: 8px;
-        bottom: 8px;
-    }
-    
-    .border-line.left {
-        left: 8px;
-    }
-    
-    .border-line.right {
-        right: 8px;
-    }
-    
-    .corner-ornament {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .corner-ornament.top-left,
-    .corner-ornament.top-right,
-    .corner-ornament.bottom-left,
-    .corner-ornament.bottom-right {
-        top: 4px;
-        left: 4px;
-    }
-    
-    .corner-ornament.top-right {
-        left: auto;
-        right: 4px;
-    }
-    
-    .corner-ornament.bottom-left,
-    .corner-ornament.bottom-right {
-        top: auto;
-        bottom: 4px;
-    }
-    
-    .corner-ornament.bottom-right {
-        left: auto;
-        right: 4px;
-    }
-    
-    .bismillah-section {
-        margin-bottom: 10px;
-    }
-    
-    .inner-frame {
-        padding: 25px 20px 30px;
-    }
-    
-    .title-section {
-        margin-bottom: 12px;
-    }
-    
-    .ornate-divider {
-        margin: 10px auto;
-    }
-    
-    .english-section {
-        margin-bottom: 12px;
-    }
-    
-    .author-section {
-        margin: 15px 0 20px;
-    }
-    
-    .author-divider {
-        margin: 10px auto;
-    }
-    
-    .button-section {
-        margin-top: 20px;
-    }
-    
-    .enter-btn {
-        padding: 11px 35px;
-    }
-}
-
-/* ========================================
-   ACCESSIBILITY & PRINT
-   ======================================== */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-@media print {
-    .light-particles,
-    .border-frame {
-        display: none;
-    }
-    
-    body {
-        background: white;
-    }
-    
-    .inner-frame {
-        box-shadow: none;
-        border: 3px solid #333;
-    }
-}
-
-/* ========================================
-   HIGH DPI SCREENS
-   ======================================== */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .bismillah,
-    .arabic-title,
-    .author-arabic {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Libre Baskerville', serif;
-    background: var(--deep-teal);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 20px;
-    position: relative;
-    overflow-x: hidden;
-    color: var(--charcoal);
-}
-
-/* ========================================
-   ANIMATED BACKGROUND LAYERS
-   ======================================== */
-.bg-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.bg-layer {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    opacity: 0.15;
-}
-
-.layer1 {
-    background: radial-gradient(circle at 30% 40%, var(--bronze) 0%, transparent 50%);
-    animation: drift 25s ease-in-out infinite alternate;
-}
-
-.layer2 {
-    background: radial-gradient(circle at 70% 60%, var(--sage-green) 0%, transparent 40%);
-    animation: drift 30s ease-in-out infinite alternate-reverse;
-}
-
-.layer3 {
-    background: radial-gradient(circle at 50% 50%, var(--gold-accent) 0%, transparent 60%);
-    animation: drift 35s ease-in-out infinite alternate;
-}
-
-@keyframes drift {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(-20px, -20px) rotate(5deg); }
-}
-
-/* ========================================
-   LIGHT PARTICLES
-   ======================================== */
-.light-particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.03) 100%);
     pointer-events: none;
-    z-index: 1;
-}
-
-.light-dot {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--gold-accent);
-    border-radius: 50%;
-    box-shadow: 0 0 15px var(--gold-accent), 0 0 30px rgba(212, 165, 116, 0.4);
-    animation: sparkle 8s infinite;
-}
-
-.light-dot:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; animation-duration: 7s; }
-.light-dot:nth-child(2) { top: 35%; left: 75%; animation-delay: 1.5s; animation-duration: 9s; }
-.light-dot:nth-child(3) { top: 60%; left: 15%; animation-delay: 3s; animation-duration: 8s; }
-.light-dot:nth-child(4) { top: 80%; left: 65%; animation-delay: 2s; animation-duration: 10s; }
-.light-dot:nth-child(5) { top: 25%; left: 50%; animation-delay: 4s; animation-duration: 7.5s; }
-.light-dot:nth-child(6) { top: 70%; left: 85%; animation-delay: 5s; animation-duration: 9.5s; }
-
-@keyframes sparkle {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.5); }
-}
-
-/* ========================================
-   MAIN CONTAINER
-   ======================================== */
-.main-container {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
-    width: 100%;
 }
 
 /* ========================================
    BISMILLAH HEADER
    ======================================== */
 .bismillah-header {
+    background: linear-gradient(135deg, #0d2318 0%, #1a3d2e 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: clamp(1.5rem, 4vw, 2rem);
     text-align: center;
-    margin-bottom: 45px;
-    animation: slideDown 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.bismillah-wrapper {
-    display: inline-flex;
-    align-items: center;
-    gap: 25px;
     position: relative;
 }
 
 .bismillah {
-    font-family: 'Amiri Quran', 'Amiri', serif;
-    font-size: 3.2em;
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    font-weight: 400;
+    color: var(--gold);
+    direction: rtl;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+/* ========================================
+   CARD BODY
+   ======================================== */
+.card-body {
+    padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+/* ========================================
+   TYPOGRAPHY - ARABIC TITLE
+   ======================================== */
+.title-section {
+    text-align: center;
+    margin-block-end: var(--space-lg);
+}
+
+.arabic-title {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: clamp(2.25rem, 6vw, 3rem);
     font-weight: 700;
-    color: var(--gold-accent);
-    letter-spacing: 3px;
-    text-shadow: 
-        0 0 40px rgba(212, 165, 116, 0.6),
-        0 4px 12px rgba(0, 0, 0, 0.4);
-    margin: 0;
+    color: var(--text-black);
+    direction: rtl;
+    text-align: center;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-.bismillah-ornament-left,
-.bismillah-ornament-right {
-    font-size: 1.5em;
-    color: var(--bronze);
-    text-shadow: 0 0 20px rgba(184, 149, 106, 0.5);
-    animation: pulse-glow 3s ease-in-out infinite;
+/* ========================================
+   TYPOGRAPHY - ENGLISH TITLE
+   ======================================== */
+.english-section {
+    text-align: center;
+    margin-block-end: var(--space-lg);
 }
 
-.bismillah-ornament-left {
-    animation-delay: 0s;
+.english-subtitle {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+    font-weight: 400;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-block-end: var(--space-xs);
 }
 
-.bismillah-ornament-right {
-    animation-delay: 1.5s;
+.english-title-main {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+    font-weight: 700;
+    color: var(--gold-dark);
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-@keyframes pulse-glow {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
+/* ========================================
+   TYPOGRAPHY - AUTHOR SECTION
+   ======================================== */
+.author-section {
+    text-align: center;
+    margin-block-end: var(--space-md);
 }
 
-@keyframes slideDown {
+.author-label {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: clamp(1rem, 2.3vw, 1.2rem);
+    font-weight: 400;
+    color: var(--text-muted);
+    direction: rtl;
+    text-align: center;
+    margin-block-end: var(--space-xs);
+}
+
+.author-name {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: clamp(1.5rem, 3.8vw, 1.9rem);
+    font-weight: 700;
+    color: var(--text-black);
+    direction: rtl;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    margin-block-end: var(--space-xs);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.author-english {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* ========================================
+   TYPOGRAPHY - EXPLAINER SECTION
+   ======================================== */
+.explainer-section {
+    text-align: center;
+    margin-block-end: var(--space-lg);
+}
+
+.explainer-label {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: clamp(1rem, 2.3vw, 1.2rem);
+    font-weight: 400;
+    color: var(--text-muted);
+    direction: rtl;
+    text-align: center;
+    margin-block-end: var(--space-xs);
+}
+
+.explainer-name {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-size: clamp(1.5rem, 3.8vw, 1.9rem);
+    font-weight: 700;
+    color: var(--text-black);
+    direction: rtl;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    margin-block-end: var(--space-xs);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.explainer-english {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-block-end: var(--space-xs);
+}
+
+.explainer-desc {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+    font-weight: 400;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* ========================================
+   BUTTON
+   ======================================== */
+.button-section {
+    text-align: center;
+    margin-block-start: var(--space-xl);
+}
+
+.enter-btn {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    border: none;
+    border-radius: 50px;
+    padding: clamp(0.875rem, 2.5vw, 1rem) clamp(2.5rem, 6vw, 3.5rem);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: clamp(1.15rem, 2.8vw, 1.35rem);
+    font-weight: 700;
+    color: var(--text-black);
+    cursor: pointer;
+    box-shadow: 
+        0 4px 16px rgba(212, 175, 55, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.enter-btn:hover {
+    background-position: 100% 50%;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 8px 24px rgba(212, 175, 55, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.enter-btn:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 
+        0 2px 12px rgba(212, 175, 55, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-text {
+    font-weight: 700;
+}
+
+.btn-icon {
+    font-size: 1.3em;
+    transition: transform 0.3s ease;
+    font-weight: 400;
+}
+
+.enter-btn:hover .btn-icon {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -933,487 +414,90 @@ body {
 }
 
 /* ========================================
-   BOOK CARD
+   RESPONSIVE - MOBILE
    ======================================== */
-.book-card {
-    animation: fadeInScale 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s backwards;
-}
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.9) translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-.card-inner {
-    background: linear-gradient(160deg, var(--ivory) 0%, var(--parchment) 100%);
-    border-radius: 20px;
-    padding: 0;
-    box-shadow: 
-        0 25px 80px rgba(10, 61, 61, 0.5),
-        0 10px 30px rgba(10, 61, 61, 0.3),
-        inset 0 2px 0 rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(212, 165, 116, 0.25);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.card-inner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 10% 20%, rgba(212, 165, 116, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(212, 165, 116, 0.08) 0%, transparent 40%);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.card-inner:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 
-        0 35px 100px rgba(10, 61, 61, 0.6),
-        0 15px 40px rgba(10, 61, 61, 0.4),
-        inset 0 2px 0 rgba(255, 255, 255, 0.8),
-        0 0 0 1px rgba(212, 165, 116, 0.4);
-}
-
-/* ========================================
-   DECORATIVE BORDERS
-   ======================================== */
-.decorative-top,
-.decorative-bottom {
-    padding: 25px 60px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
-
-.decorative-top {
-    padding-bottom: 0;
-}
-
-.decorative-bottom {
-    padding-top: 0;
-}
-
-.border-svg {
-    width: 100%;
-    max-width: 500px;
-    height: 20px;
-    color: var(--bronze);
-    opacity: 0.6;
-}
-
-/* ========================================
-   CARD CONTENT
-   ======================================== */
-.card-content {
-    padding: 50px 70px 60px;
-    position: relative;
-    z-index: 1;
-}
-
-/* ========================================
-   TITLE BLOCKS
-   ======================================== */
-.title-block {
-    margin-bottom: 35px;
-}
-
-.arabic-block {
-    text-align: center;
-}
-
-.block-frame {
-    position: relative;
-    padding: 20px 0;
-}
-
-.main-title.arabic {
-    font-family: 'Amiri Quran', 'Amiri', serif;
-    font-size: 2.8em;
-    font-weight: 700;
-    color: var(--deep-teal);
-    line-height: 1.8;
-    letter-spacing: 2px;
-    margin: 0;
-    text-shadow: 
-        1px 1px 3px rgba(0, 0, 0, 0.08),
-        0 0 25px rgba(184, 149, 106, 0.15);
-}
-
-/* English Title Block */
-.english-block {
-    text-align: center;
-    padding: 30px 0;
-}
-
-.separator-line {
-    width: 80px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--bronze), transparent);
-    margin: 0 auto 25px;
-}
-
-.english-block .separator-line:last-child {
-    margin: 25px auto 0;
-}
-
-.main-title.english {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.9em;
-    font-weight: 600;
-    color: var(--forest-green);
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    margin: 0;
-}
-
-.main-title.english .emphasis {
-    display: inline-block;
-    font-weight: 900;
-    color: var(--bronze);
-    font-size: 1.08em;
-    letter-spacing: 1px;
-    margin-top: 5px;
-}
-
-/* ========================================
-   ORNAMENTAL BREAK
-   ======================================== */
-.ornamental-break {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin: 45px 0;
-    padding: 0 20px;
-}
-
-.break-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--bronze), transparent);
-}
-
-.break-symbol {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.symbol-icon {
-    width: 40px;
-    height: 40px;
-    color: var(--bronze);
-    animation: rotate-slow 30s linear infinite;
-}
-
-@keyframes rotate-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* ========================================
-   AUTHOR BLOCK
-   ======================================== */
-.author-block {
-    text-align: center;
-    margin: 45px 0;
-}
-
-.author-intro.arabic {
-    font-family: 'Amiri', serif;
-    font-size: 1.3em;
-    color: var(--sage-green);
-    margin-bottom: 12px;
-    font-weight: 400;
-}
-
-.author-name.arabic {
-    font-family: 'Amiri', serif;
-    font-size: 1.9em;
-    font-weight: 700;
-    color: var(--deep-teal);
-    line-height: 1.9;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-}
-
-.mini-divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin: 25px 0;
-}
-
-.dot {
-    width: 6px;
-    height: 6px;
-    background: var(--bronze);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(184, 149, 106, 0.5);
-}
-
-.author-name.english {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.35em;
-    font-weight: 600;
-    color: var(--sage-green);
-    font-style: italic;
-    letter-spacing: 0.3px;
-}
-
-/* ========================================
-   ACTION SECTION (BUTTON)
-   ======================================== */
-.action-section {
-    margin-top: 55px;
-    text-align: center;
-}
-
-.primary-btn {
-    position: relative;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1em;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 18px 55px;
-    border: 2px solid var(--bronze);
-    border-radius: 50px;
-    background: transparent;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    color: var(--deep-teal);
-}
-
-.btn-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--deep-teal), var(--forest-green));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    z-index: 0;
-}
-
-.btn-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.btn-text {
-    transition: color 0.4s ease;
-}
-
-.btn-arrow {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.primary-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 
-        0 12px 30px rgba(10, 61, 61, 0.4),
-        0 0 0 4px rgba(184, 149, 106, 0.2),
-        0 0 40px rgba(212, 165, 116, 0.3);
-    border-color: var(--gold-accent);
-}
-
-.primary-btn:hover .btn-bg {
-    transform: scaleX(1);
-}
-
-.primary-btn:hover .btn-text,
-.primary-btn:hover .btn-arrow {
-    color: var(--gold-accent);
-}
-
-.primary-btn:hover .btn-arrow {
-    transform: translateX(5px);
-}
-
-.primary-btn:active {
-    transform: translateY(-1px);
-    box-shadow: 
-        0 6px 20px rgba(10, 61, 61, 0.3),
-        0 0 0 2px rgba(184, 149, 106, 0.2);
-}
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-@media (max-width: 968px) {
-    .card-content {
-        padding: 45px 50px 55px;
-    }
-    
-    .bismillah {
-        font-size: 2.8em;
-    }
-    
-    .main-title.arabic {
-        font-size: 2.4em;
-    }
-    
-    .main-title.english {
-        font-size: 1.7em;
-    }
-    
-    .author-name.arabic {
-        font-size: 1.7em;
-    }
-}
-
 @media (max-width: 768px) {
     body {
-        padding: 20px 15px;
+        padding: clamp(0.75rem, 2vw, 1.5rem);
     }
     
-    .bismillah-header {
-        margin-bottom: 35px;
+    .corner-accent {
+        width: 50px;
+        height: 50px;
     }
     
-    .bismillah-wrapper {
-        gap: 18px;
+    .corner-accent::before {
+        width: 50px;
     }
     
-    .bismillah {
-        font-size: 2.4em;
+    .corner-accent::after {
+        height: 50px;
     }
     
-    .card-content {
-        padding: 40px 35px 50px;
+    .corner-accent.top-left,
+    .corner-accent.top-right {
+        top: 15px;
     }
     
-    .decorative-top,
-    .decorative-bottom {
-        padding: 20px 40px;
+    .corner-accent.bottom-left,
+    .corner-accent.bottom-right {
+        bottom: 15px;
     }
     
-    .main-title.arabic {
-        font-size: 2em;
+    .corner-accent.top-left,
+    .corner-accent.bottom-left {
+        left: 15px;
     }
     
-    .main-title.english {
-        font-size: 1.5em;
-    }
-    
-    .author-intro.arabic {
-        font-size: 1.2em;
-    }
-    
-    .author-name.arabic {
-        font-size: 1.5em;
-    }
-    
-    .author-name.english {
-        font-size: 1.2em;
-    }
-    
-    .primary-btn {
-        padding: 16px 45px;
-        font-size: 1em;
-    }
-    
-    .ornamental-break {
-        gap: 20px;
-        margin: 35px 0;
+    .corner-accent.top-right,
+    .corner-accent.bottom-right {
+        right: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .bismillah {
-        font-size: 2em;
-    }
-    
-    .bismillah-wrapper {
-        gap: 12px;
-    }
-    
-    .bismillah-ornament-left,
-    .bismillah-ornament-right {
-        font-size: 1.2em;
-    }
-    
-    .card-content {
-        padding: 35px 25px 45px;
-    }
-    
-    .decorative-top,
-    .decorative-bottom {
-        padding: 15px 20px;
-    }
-    
-    .main-title.arabic {
-        font-size: 1.7em;
-    }
-    
-    .main-title.english {
-        font-size: 1.3em;
-    }
-    
-    .author-intro.arabic {
-        font-size: 1.1em;
-    }
-    
-    .author-name.arabic {
-        font-size: 1.3em;
-    }
-    
-    .author-name.english {
-        font-size: 1.05em;
-    }
-    
-    .primary-btn {
-        padding: 14px 35px;
-        font-size: 0.95em;
-        letter-spacing: 1.5px;
-    }
-    
-    .ornamental-break {
-        gap: 15px;
-        margin: 30px 0;
-        padding: 0 10px;
-    }
-    
-    .break-symbol {
+    .corner-accent {
         width: 40px;
         height: 40px;
     }
     
-    .symbol-icon {
-        width: 32px;
-        height: 32px;
+    .corner-accent::before {
+        width: 40px;
+        height: 1.5px;
+    }
+    
+    .corner-accent::after {
+        width: 1.5px;
+        height: 40px;
+    }
+    
+    .corner-accent.top-left,
+    .corner-accent.top-right {
+        top: 10px;
+    }
+    
+    .corner-accent.bottom-left,
+    .corner-accent.bottom-right {
+        bottom: 10px;
+    }
+    
+    .corner-accent.top-left,
+    .corner-accent.bottom-left {
+        left: 10px;
+    }
+    
+    .corner-accent.top-right,
+    .corner-accent.bottom-right {
+        right: 10px;
+    }
+    
+    .card-body {
+        padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 4vw, 2.5rem);
     }
 }
 
 /* ========================================
-   ACCESSIBILITY & PRINT
+   ACCESSIBILITY
    ======================================== */
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -1425,774 +509,8 @@ body {
     }
 }
 
-@media print {
-    .bg-animation,
-    .light-particles {
-        display: none;
-    }
-    
-    body {
-        background: white;
-    }
-    
-    .card-inner {
-        box-shadow: none;
-        border: 2px solid var(--bronze);
-    }
-}
-
-body {
-    font-family: 'Cormorant Garamond', serif;
-    background: var(--primary-green);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-    overflow-x: hidden;
-    color: var(--text-dark);
-}
-
-/* ========================
-   Background Elements
-   ======================== */
-.background-pattern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(201, 169, 97, 0.03) 2px, rgba(201, 169, 97, 0.03) 4px),
-        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(201, 169, 97, 0.03) 2px, rgba(201, 169, 97, 0.03) 4px);
-    opacity: 0.5;
-    z-index: 0;
-}
-
-.gradient-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(ellipse at center, transparent 0%, rgba(13, 59, 46, 0.4) 100%);
-    z-index: 0;
-}
-
-/* ========================
-   Floating Particles
-   ======================== */
-.particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.particle {
-    position: absolute;
-    display: block;
-    width: 3px;
-    height: 3px;
-    background: var(--accent-gold);
-    border-radius: 50%;
-    opacity: 0;
-    animation: float 15s infinite ease-in-out;
-    box-shadow: 0 0 10px var(--accent-gold);
-}
-
-.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
-.particle:nth-child(2) { left: 25%; animation-delay: 2s; animation-duration: 15s; }
-.particle:nth-child(3) { left: 40%; animation-delay: 4s; animation-duration: 18s; }
-.particle:nth-child(4) { left: 55%; animation-delay: 1s; animation-duration: 14s; }
-.particle:nth-child(5) { left: 70%; animation-delay: 3s; animation-duration: 16s; }
-.particle:nth-child(6) { left: 85%; animation-delay: 5s; animation-duration: 13s; }
-.particle:nth-child(7) { left: 15%; animation-delay: 2.5s; animation-duration: 17s; }
-.particle:nth-child(8) { left: 90%; animation-delay: 4.5s; animation-duration: 19s; }
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(100vh) scale(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 0.5;
-        transform: translateY(50vh) scale(1);
-    }
-    90% {
-        opacity: 0.3;
-    }
-}
-
-/* ========================
-   Container
-   ======================== */
-.container {
-    max-width: 1000px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-/* ========================
-   Bismillah Section
-   ======================== */
-.bismillah-container {
-    text-align: center;
-    margin-bottom: 50px;
-    position: relative;
-    animation: fadeInDown 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.bismillah {
-    font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: 3.5em;
-    font-weight: 700;
-    color: var(--accent-gold);
-    text-shadow: 
-        0 0 30px rgba(201, 169, 97, 0.5),
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.2);
-    letter-spacing: 3px;
-    position: relative;
-    display: inline-block;
-    padding: 0 40px;
-}
-
-.bismillah-ornament {
-    position: absolute;
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.bismillah-ornament.top {
-    top: -20px;
-}
-
-.bismillah-ornament.bottom {
-    bottom: -20px;
-}
-
-.bismillah-ornament::before,
-.bismillah-ornament::after {
-    content: '◆';
-    position: absolute;
-    color: var(--accent-gold);
-    font-size: 0.6em;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.bismillah-ornament::before {
-    left: -15px;
-}
-
-.bismillah-ornament::after {
-    right: -15px;
-}
-
-/* ========================
-   Book Wrapper & Glow
-   ======================== */
-.book-wrapper {
-    position: relative;
-    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
-}
-
-.book-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110%;
-    height: 110%;
-    background: radial-gradient(ellipse at center, 
-        rgba(201, 169, 97, 0.2) 0%, 
-        rgba(201, 169, 97, 0.1) 40%, 
-        transparent 70%);
-    filter: blur(40px);
-    animation: pulse 4s ease-in-out infinite;
-    z-index: -1;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
-}
-
-/* ========================
-   Book Cover
-   ======================== */
-.book-cover {
-    background: linear-gradient(145deg, var(--cream) 0%, var(--off-white) 100%);
-    border-radius: 16px;
-    padding: 60px 80px;
-    position: relative;
-    box-shadow: 
-        0 30px 90px rgba(0, 0, 0, 0.4),
-        0 10px 30px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(201, 169, 97, 0.3);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
-}
-
-.book-cover:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 40px 100px rgba(0, 0, 0, 0.5),
-        0 15px 40px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* Corner Decorations */
-.corner-decoration {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border: 2px solid var(--accent-gold);
-    opacity: 0.4;
-}
-
-.corner-decoration::before {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: var(--accent-gold);
-    opacity: 0.6;
-}
-
-.corner-decoration.top-left {
-    top: 30px;
-    left: 30px;
-    border-right: none;
-    border-bottom: none;
-    border-top-left-radius: 8px;
-}
-
-.corner-decoration.top-left::before {
-    top: -2px;
-    left: -2px;
-    border-radius: 50% 0 0 0;
-}
-
-.corner-decoration.top-right {
-    top: 30px;
-    right: 30px;
-    border-left: none;
-    border-bottom: none;
-    border-top-right-radius: 8px;
-}
-
-.corner-decoration.top-right::before {
-    top: -2px;
-    right: -2px;
-    border-radius: 0 50% 0 0;
-}
-
-.corner-decoration.bottom-left {
-    bottom: 30px;
-    left: 30px;
-    border-right: none;
-    border-top: none;
-    border-bottom-left-radius: 8px;
-}
-
-.corner-decoration.bottom-left::before {
-    bottom: -2px;
-    left: -2px;
-    border-radius: 0 0 0 50%;
-}
-
-.corner-decoration.bottom-right {
-    bottom: 30px;
-    right: 30px;
-    border-left: none;
-    border-top: none;
-    border-bottom-right-radius: 8px;
-}
-
-.corner-decoration.bottom-right::before {
-    bottom: -2px;
-    right: -2px;
-    border-radius: 0 0 50% 0;
-}
-
-/* ========================
-   Book Content
-   ======================== */
-.book-content {
-    position: relative;
-    z-index: 1;
-}
-
-/* ========================
-   Title Sections
-   ======================== */
-.title-section {
-    margin-bottom: 40px;
-}
-
-.title-section.arabic {
-    position: relative;
-    padding: 30px 0;
-}
-
-.title-ornament {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        var(--accent-gold) 20%, 
-        var(--accent-gold) 80%, 
-        transparent 100%);
-    margin: 20px 0;
-    position: relative;
-}
-
-.title-ornament::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background: var(--accent-gold);
-    border-radius: 50%;
-    box-shadow: 
-        -30px 0 0 var(--accent-gold),
-        30px 0 0 var(--accent-gold);
-}
-
-.arabic-title {
-    font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: 3.2em;
-    font-weight: 700;
-    color: var(--primary-green);
-    text-align: center;
-    line-height: 1.7;
-    letter-spacing: 2px;
-    text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.05),
-        0 0 30px rgba(201, 169, 97, 0.2);
-    margin: 0;
-}
-
-.title-section.english {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.english-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2em;
-    font-weight: 600;
-    color: var(--secondary-green);
-    line-height: 1.6;
-    letter-spacing: 1px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.title-line {
-    display: block;
-}
-
-.title-line.highlight {
-    color: var(--dark-gold);
-    font-weight: 700;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-}
-
-/* ========================
-   Divider Section
-   ======================== */
-.divider-section {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin: 50px 0;
-    padding: 0 40px;
-}
-
-.divider-line {
-    flex: 1;
-    height: 2px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        var(--accent-gold) 50%, 
-        transparent 100%);
-    position: relative;
-}
-
-.divider-center {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--cream);
-    border-radius: 50%;
-    border: 2px solid var(--accent-gold);
-    box-shadow: 
-        0 0 20px rgba(201, 169, 97, 0.3),
-        inset 0 0 10px rgba(201, 169, 97, 0.1);
-}
-
-.divider-icon {
-    width: 20px;
-    height: 20px;
-    color: var(--accent-gold);
-    animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* ========================
-   Author Section
-   ======================== */
-.author-section {
-    text-align: center;
-    margin: 50px 0;
-}
-
-.author-label {
-    font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: 1.4em;
-    color: var(--secondary-green);
-    margin-bottom: 10px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.author-name-arabic {
-    font-family: 'Scheherazade New', 'Amiri', serif;
-    font-size: 2em;
-    font-weight: 700;
-    color: var(--primary-green);
-    line-height: 1.8;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.author-divider {
-    width: 60px;
-    height: 3px;
-    background: var(--accent-gold);
-    margin: 20px auto;
-    border-radius: 2px;
-    position: relative;
-}
-
-.author-divider::before,
-.author-divider::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: var(--accent-gold);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.author-divider::before {
-    left: -15px;
-}
-
-.author-divider::after {
-    right: -15px;
-}
-
-.author-name-english {
-    font-family: 'Cinzel', serif;
-    font-size: 1.4em;
-    color: var(--dark-gold);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    font-style: italic;
-}
-
-/* ========================
-   Button
-   ======================== */
-.button-container {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.enter-button {
-    font-family: 'Cinzel', serif;
-    font-size: 1.2em;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 18px 70px;
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-    color: var(--accent-gold);
-    border: 2px solid var(--accent-gold);
-    border-radius: 50px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 
-        0 8px 25px rgba(13, 59, 46, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-        0 0 0 0 rgba(201, 169, 97, 0.4);
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.enter-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(201, 169, 97, 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
-}
-
-.enter-button:hover::before {
-    width: 300px;
-    height: 300px;
-}
-
-.enter-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 
-        0 12px 35px rgba(13, 59, 46, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-        0 0 0 4px rgba(201, 169, 97, 0.2),
-        0 0 40px rgba(201, 169, 97, 0.3);
-    color: var(--light-gold);
-    border-color: var(--light-gold);
-}
-
-.enter-button:active {
-    transform: translateY(-1px);
-    box-shadow: 
-        0 6px 20px rgba(13, 59, 46, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.button-text,
-.button-icon {
-    position: relative;
-    z-index: 1;
-}
-
-.button-icon {
-    font-size: 1.3em;
-    transition: transform 0.3s ease;
-}
-
-.enter-button:hover .button-icon {
-    transform: translateX(5px);
-}
-
-/* ========================
-   Animations
-   ======================== */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========================
-   Responsive Design
-   ======================== */
-@media (max-width: 968px) {
-    .book-cover {
-        padding: 50px 60px;
-    }
-    
-    .bismillah {
-        font-size: 3em;
-    }
-    
-    .arabic-title {
-        font-size: 2.6em;
-    }
-    
-    .english-title {
-        font-size: 1.7em;
-    }
-    
-    .author-name-arabic {
-        font-size: 1.7em;
-    }
-}
-
-@media (max-width: 768px) {
-    .book-cover {
-        padding: 40px 40px;
-    }
-    
-    .bismillah {
-        font-size: 2.5em;
-        padding: 0 30px;
-    }
-    
-    .arabic-title {
-        font-size: 2.2em;
-    }
-    
-    .english-title {
-        font-size: 1.5em;
-    }
-    
-    .author-name-arabic {
-        font-size: 1.5em;
-    }
-    
-    .author-name-english {
-        font-size: 1.2em;
-    }
-    
-    .divider-section {
-        padding: 0 20px;
-    }
-    
-    .corner-decoration {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .enter-button {
-        padding: 15px 50px;
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .book-cover {
-        padding: 30px 25px;
-    }
-    
-    .bismillah {
-        font-size: 2em;
-        padding: 0 20px;
-    }
-    
-    .arabic-title {
-        font-size: 1.8em;
-    }
-    
-    .english-title {
-        font-size: 1.2em;
-    }
-    
-    .author-label {
-        font-size: 1.2em;
-    }
-    
-    .author-name-arabic {
-        font-size: 1.3em;
-    }
-    
-    .author-name-english {
-        font-size: 1em;
-    }
-    
-    .corner-decoration {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .corner-decoration.top-left,
-    .corner-decoration.top-right {
-        top: 20px;
-    }
-    
-    .corner-decoration.bottom-left,
-    .corner-decoration.bottom-right {
-        bottom: 20px;
-    }
-    
-    .corner-decoration.top-left,
-    .corner-decoration.bottom-left {
-        left: 20px;
-    }
-    
-    .corner-decoration.top-right,
-    .corner-decoration.bottom-right {
-        right: 20px;
-    }
-    
-    .enter-button {
-        padding: 14px 40px;
-        font-size: 0.95em;
-        letter-spacing: 2px;
-    }
-    
-    .divider-section {
-        gap: 15px;
-        padding: 0 10px;
-    }
-}
-
-/* ========================
-   Print Styles
-   ======================== */
-@media print {
-    .particles,
-    .background-pattern,
-    .gradient-overlay,
-    .book-glow {
-        display: none;
-    }
-    
-    body {
-        background: white;
-    }
-    
-    .book-cover {
-        box-shadow: none;
-        border: 2px solid var(--accent-gold);
-    }
+/* Focus styles for keyboard navigation */
+.enter-btn:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
 }
