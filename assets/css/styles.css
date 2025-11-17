@@ -52,21 +52,23 @@ body {
     overflow: hidden;
 }
 
-/* Animated background layers */
+/* Animated background layers with orange glow */
 body::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+        radial-gradient(circle at 20% 80%, rgba(255, 140, 0, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 120, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 160, 0, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 60% 60%, rgba(212, 175, 55, 0.1) 0%, transparent 45%);
     animation: backgroundPulse 8s ease-in-out infinite;
     pointer-events: none;
     z-index: 1;
 }
 
+/* Golden sparkle particles */
 body::after {
     content: '';
     position: absolute;
@@ -75,14 +77,14 @@ body::after {
     top: -50%;
     left: -50%;
     background-image: 
-        radial-gradient(2px 2px at 20% 30%, rgba(212, 175, 55, 0.2), transparent),
-        radial-gradient(2px 2px at 60% 70%, rgba(212, 175, 55, 0.15), transparent),
-        radial-gradient(1px 1px at 50% 50%, rgba(212, 175, 55, 0.15), transparent),
-        radial-gradient(1px 1px at 80% 10%, rgba(212, 175, 55, 0.18), transparent),
-        radial-gradient(2px 2px at 90% 60%, rgba(212, 175, 55, 0.12), transparent),
-        radial-gradient(1px 1px at 33% 80%, rgba(212, 175, 55, 0.15), transparent),
-        radial-gradient(1px 1px at 15% 60%, rgba(212, 175, 55, 0.1), transparent),
-        radial-gradient(2px 2px at 70% 40%, rgba(212, 175, 55, 0.12), transparent);
+        radial-gradient(2px 2px at 20% 30%, rgba(255, 150, 30, 0.25), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(255, 140, 20, 0.2), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255, 160, 40, 0.2), transparent),
+        radial-gradient(1px 1px at 80% 10%, rgba(255, 130, 20, 0.22), transparent),
+        radial-gradient(2px 2px at 90% 60%, rgba(255, 145, 25, 0.18), transparent),
+        radial-gradient(1px 1px at 33% 80%, rgba(255, 155, 35, 0.2), transparent),
+        radial-gradient(1px 1px at 15% 60%, rgba(255, 150, 30, 0.15), transparent),
+        radial-gradient(2px 2px at 70% 40%, rgba(255, 140, 25, 0.18), transparent);
     background-size: 300% 300%;
     animation: sparkleFloat 25s ease-in-out infinite;
     pointer-events: none;
@@ -126,6 +128,174 @@ body::after {
     align-items: center;
     justify-content: center;
     z-index: 2;
+}
+
+/* ========================================
+   SMOKE EDGE EFFECTS
+   ======================================== */
+.smoke-edge {
+    position: fixed;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.smoke-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, 
+        rgba(255, 140, 20, 0.15) 0%,
+        rgba(255, 130, 15, 0.08) 30%,
+        transparent 100%);
+    animation: smokeTopFloat 10s ease-in-out infinite;
+}
+
+.smoke-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(0deg, 
+        rgba(255, 140, 20, 0.15) 0%,
+        rgba(255, 130, 15, 0.08) 30%,
+        transparent 100%);
+    animation: smokeBottomFloat 10s ease-in-out infinite;
+}
+
+.smoke-left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    background: linear-gradient(90deg, 
+        rgba(255, 140, 20, 0.12) 0%,
+        rgba(255, 130, 15, 0.06) 40%,
+        transparent 100%);
+    animation: smokeLeftFloat 12s ease-in-out infinite;
+}
+
+.smoke-right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    background: linear-gradient(270deg, 
+        rgba(255, 140, 20, 0.12) 0%,
+        rgba(255, 130, 15, 0.06) 40%,
+        transparent 100%);
+    animation: smokeRightFloat 12s ease-in-out infinite;
+}
+
+@keyframes smokeTopFloat {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translateY(0) scaleY(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(10px) scaleY(1.1);
+    }
+}
+
+@keyframes smokeBottomFloat {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translateY(0) scaleY(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-10px) scaleY(1.1);
+    }
+}
+
+@keyframes smokeLeftFloat {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translateX(0) scaleX(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateX(10px) scaleX(1.15);
+    }
+}
+
+@keyframes smokeRightFloat {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translateX(0) scaleX(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateX(-10px) scaleX(1.15);
+    }
+}
+
+/* ========================================
+   ATMOSPHERIC LIGHTS
+   ======================================== */
+.atmospheric-light {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 3;
+    animation: lightPulse 6s ease-in-out infinite;
+}
+
+.light-1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.6) 0%, transparent 70%);
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.light-2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(255, 160, 30, 0.5) 0%, transparent 70%);
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.light-3 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 130, 10, 0.4) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4s;
+}
+
+@keyframes lightPulse {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.2);
+    }
+}
+
+.light-3 {
+    animation: lightPulseCenter 6s ease-in-out infinite;
+}
+
+@keyframes lightPulseCenter {
+    0%, 100% {
+        opacity: 0.1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
 }
 
 /* ========================================
@@ -391,11 +561,14 @@ body::after {
     transform: translateY(-50%);
     margin-top: -60px;
     background: linear-gradient(90deg, 
-        rgba(218, 165, 32, 0.08) 0%,
-        rgba(218, 165, 32, 0.15) 50%,
-        rgba(218, 165, 32, 0.08) 100%);
-    border-top: 1px solid rgba(218, 165, 32, 0.25);
-    border-bottom: 1px solid rgba(218, 165, 32, 0.25);
+        rgba(255, 140, 0, 0.12) 0%,
+        rgba(255, 130, 20, 0.22) 50%,
+        rgba(255, 140, 0, 0.12) 100%);
+    border-top: 1px solid rgba(255, 140, 20, 0.35);
+    border-bottom: 1px solid rgba(255, 140, 20, 0.35);
+    box-shadow: 
+        inset 0 0 40px rgba(255, 140, 0, 0.15),
+        0 0 60px rgba(255, 130, 20, 0.08);
     z-index: 0;
     pointer-events: none;
     opacity: 0;
@@ -413,26 +586,30 @@ body::after {
     }
 }
 
+/* Orange light particles in banner */
 .title-banner::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image: 
-        radial-gradient(circle, rgba(218, 165, 32, 0.35) 1px, transparent 1px),
-        radial-gradient(circle, rgba(218, 165, 32, 0.25) 1px, transparent 1px);
-    background-size: 50px 50px, 80px 80px;
-    background-position: 0 0, 40px 40px;
+        radial-gradient(circle, rgba(255, 150, 30, 0.45) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 140, 20, 0.35) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 160, 40, 0.3) 0.5px, transparent 0.5px);
+    background-size: 50px 50px, 80px 80px, 60px 60px;
+    background-position: 0 0, 40px 40px, 20px 20px;
     animation: particleRise 15s linear infinite;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
+/* Smoke effect in banner */
 .title-banner::after {
     content: '';
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse at 30% 50%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 50%, rgba(218, 165, 32, 0.06) 0%, transparent 50%);
+        radial-gradient(ellipse at 30% 50%, rgba(255, 140, 20, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(255, 130, 15, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 30%, rgba(255, 150, 25, 0.08) 0%, transparent 40%);
     animation: smokeFloat 8s ease-in-out infinite;
 }
 
@@ -454,11 +631,12 @@ body::after {
     padding: var(--space-sm) var(--space-md);
     z-index: 2;
     background: linear-gradient(90deg, 
-        rgba(218, 165, 32, 0.06) 0%,
-        rgba(218, 165, 32, 0.12) 50%,
-        rgba(218, 165, 32, 0.06) 100%);
-    border-top: 1px solid rgba(218, 165, 32, 0.25);
-    border-bottom: 1px solid rgba(218, 165, 32, 0.25);
+        rgba(255, 140, 0, 0.08) 0%,
+        rgba(255, 130, 20, 0.15) 50%,
+        rgba(255, 140, 0, 0.08) 100%);
+    border-top: 1px solid rgba(255, 140, 20, 0.3);
+    border-bottom: 1px solid rgba(255, 140, 20, 0.3);
+    box-shadow: inset 0 0 30px rgba(255, 140, 0, 0.08);
 }
 
 .titles-wrapper::before {
@@ -466,12 +644,13 @@ body::after {
     position: absolute;
     inset: 0;
     background-image: 
-        radial-gradient(circle, rgba(218, 165, 32, 0.4) 1px, transparent 1px),
-        radial-gradient(circle, rgba(218, 165, 32, 0.3) 1px, transparent 1px);
-    background-size: 40px 40px, 70px 70px;
-    background-position: 0 0, 35px 35px;
+        radial-gradient(circle, rgba(255, 150, 30, 0.5) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 140, 20, 0.4) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 160, 40, 0.35) 0.5px, transparent 0.5px);
+    background-size: 40px 40px, 70px 70px, 50px 50px;
+    background-position: 0 0, 35px 35px, 18px 18px;
     animation: particleRise 15s linear infinite;
-    opacity: 0.35;
+    opacity: 0.4;
     z-index: 0;
 }
 
@@ -480,8 +659,9 @@ body::after {
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse at 25% 50%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 75% 50%, rgba(218, 165, 32, 0.06) 0%, transparent 50%);
+        radial-gradient(ellipse at 25% 50%, rgba(255, 140, 20, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 75% 50%, rgba(255, 130, 15, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 20%, rgba(255, 150, 25, 0.06) 0%, transparent 40%);
     animation: smokeFloat 8s ease-in-out infinite;
     z-index: 0;
 }
