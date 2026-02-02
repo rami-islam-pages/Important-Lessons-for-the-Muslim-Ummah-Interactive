@@ -3,48 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Important Lessons for the Muslim Ummah - An interactive study of Sheikh Ibn Baz's essential Islamic teachings, explained by Sheikh Haytham Sarhan.">
+    <meta name="keywords" content="Islam, Islamic studies, Sheikh Ibn Baz, Quran, Muslim, lessons, Islamic education">
+    <meta name="author" content="Sheikh Abdul Aziz bin Abdullah Bin Baz">
+    <meta name="theme-color" content="#0d2a1c">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Important Lessons for the Muslim Ummah">
+    <meta property="og:description" content="An interactive study of Sheikh Ibn Baz's essential Islamic teachings.">
+    
     <title>Important Lessons for the Muslim Ummah - Sheikh Bin Baz</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
 </head>
 <body>
-    <!-- Edge Smoke Effects -->
-    <div class="smoke-edge smoke-top"></div>
-    <div class="smoke-edge smoke-bottom"></div>
-    <div class="smoke-edge smoke-left"></div>
-    <div class="smoke-edge smoke-right"></div>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Atmospheric Lights -->
-    <div class="atmospheric-light light-1"></div>
-    <div class="atmospheric-light light-2"></div>
-    <div class="atmospheric-light light-3"></div>
+    <!-- Decorative Edge Smoke Effects -->
+    <div class="smoke-edge smoke-top" aria-hidden="true"></div>
+    <div class="smoke-edge smoke-bottom" aria-hidden="true"></div>
+    <div class="smoke-edge smoke-left" aria-hidden="true"></div>
+    <div class="smoke-edge smoke-right" aria-hidden="true"></div>
     
-    <!-- Full-width Banner Background -->
-    <div class="title-banner"></div>
+    <!-- Atmospheric Light Effects -->
+    <div class="atmospheric-light light-1" aria-hidden="true"></div>
+    <div class="atmospheric-light light-2" aria-hidden="true"></div>
+    <div class="atmospheric-light light-3" aria-hidden="true"></div>
+    
+    <!-- Title Banner Background -->
+    <div class="title-banner" aria-hidden="true"></div>
     
     <!-- Decorative Corner Accents -->
-    <div class="corner-accent top-left"></div>
-    <div class="corner-accent top-right"></div>
-    <div class="corner-accent bottom-left"></div>
-    <div class="corner-accent bottom-right"></div>
+    <div class="corner-accent top-left" aria-hidden="true"></div>
+    <div class="corner-accent top-right" aria-hidden="true"></div>
+    <div class="corner-accent bottom-left" aria-hidden="true"></div>
+    <div class="corner-accent bottom-right" aria-hidden="true"></div>
     
-    <main class="page-content">
-        <!-- Content Card -->
-        <div class="content-card">
+    <!-- Main Content -->
+    <main id="main-content" class="page-content">
+        <article class="content-card">
             <!-- Bismillah Header -->
             <header class="bismillah-header">
-                <h1 class="bismillah">بسم الله الرحمن الرحيم</h1>
+                <h1 class="bismillah" lang="ar">بسم الله الرحمن الرحيم</h1>
             </header>
             
             <!-- Card Body -->
             <div class="card-body">
-                <!-- Titles Wrapper with Single Banner -->
+                <!-- Title Section -->
                 <div class="titles-wrapper">
                     <!-- Arabic Title -->
                     <section class="title-section">
-                        <h2 class="arabic-title">الدروس المهمة لعامة الأمة</h2>
+                        <h2 class="arabic-title" lang="ar">الدروس المهمة لعامة الأمة</h2>
                     </section>
                     
                     <!-- English Title -->
@@ -56,30 +78,31 @@
                 
                 <!-- Author Section -->
                 <section class="author-section">
-                    <p class="author-label">لسماحة الشيخ</p>
-                    <h4 class="author-name">عبد العزيز بن عبد الله بن باز</h4>
+                    <p class="author-label" lang="ar">لسماحة الشيخ</p>
+                    <h4 class="author-name" lang="ar">عبد العزيز بن عبد الله بن باز</h4>
                     <p class="author-english">By: Sheikh Abdul Aziz bin Abdullah Bin Baz</p>
                 </section>
                 
                 <!-- Explainer Section -->
                 <section class="explainer-section">
-                    <p class="explainer-label">شرحها فضيلة الشيخ</p>
-                    <h4 class="explainer-name">هيثم بن محمد جميل سرحان</h4>
+                    <p class="explainer-label" lang="ar">شرحها فضيلة الشيخ</p>
+                    <h4 class="explainer-name" lang="ar">هيثم بن محمد جميل سرحان</h4>
                     <p class="explainer-english">Explained by: Sheikh Haytham ibn Muhammad Jameel Sarhaan</p>
                     <p class="explainer-desc">Former teacher in Masjid Nabawi</p>
                 </section>
                 
                 <!-- Enter Button -->
                 <div class="button-section">
-                    <button class="enter-btn" onclick="enterBook()">
+                    <button class="enter-btn" onclick="enterBook()" aria-label="Enter the book and begin reading">
                         <span class="btn-text">Enter</span>
-                        <span class="btn-icon">→</span>
+                        <span class="btn-icon" aria-hidden="true">→</span>
                     </button>
                 </div>
             </div>
-        </div>
+        </article>
     </main>
     
+    <!-- Scripts -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
