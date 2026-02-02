@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Lesson 8 - The Important Lessons</title>
+    <link rel="stylesheet" href="../assets/css/lesson-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=Amiri+Quran&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="lesson-page">
+        <nav class="top-nav">
+            <button class="nav-btn" onclick="window.location.href='index.html'">← Back to Lessons</button>
+            <button class="nav-btn notes-toggle-btn" onclick="toggleNotesPanel()">📝 Notes</button>
+        </nav>
+        
+        <article class="lesson-content">
+            <h1 class="lesson-title">Explanation of Lesson Eight</h1>
+            
+            <div class="lesson-text">
+                <h2 class="section-title">Eighth Lesson</h2>
+                
+                <h2 class="section-title">Obligations of Prayer</h2>
+                
+                <p>The obligations of prayer are eight:</p>
+                
+                <p><strong>1. All the Takbeers other than Takbiratul-Ihraam</strong><br>Takbiratul-Ihraam is a pillar. If one leaves it out intentionally, forgetfully, or out of ignorance then the prayer is not valid. However, the rest of the Takbeers are obligations; if one leaves them out intentionally then the prayer is invalid. If it was out of forgetfulness then one should do the prostration of forgetfulness. If it was out of ignorance, it is excused.</p>
+                
+                <p><strong>2. Saying "Sami'a-Allahu liman Hamidah" (سمع الله لمن حمده)</strong><br>For the Imam and the one praying alone.</p>
+                
+                <p><strong>3. Saying "Rabbana wa lakal-Hamd" (ربنا ولك الحمد)</strong><br>It is said by everyone; the Imam, the one praying alone, and the one praying behind the Imam.</p>
+                
+                <p><strong>4. Saying "Subhana Rabbi al-Adheem" (سبحان ربي العظيم)</strong><br>Once is obligatory. Three times is the lowest level of perfection. More than that is recommended until ten times.</p>
+                
+                <p><strong>5. Saying "Subhana Rabbi al-A'la" (سبحان ربي الأعلى)</strong><br>In prostration. Once is obligatory. Three times is the lowest level of perfection. More than that is recommended until ten times.</p>
+                
+                <p><strong>6. Saying "Rabb Ighfir-lee" (رب اغفر لي)</strong><br>Between the two prostrations. Once is obligatory.</p>
+                
+                <p><strong>7. The first Tashahhud</strong></p>
+                
+                <p><strong>8. Sitting for the first Tashahhud</strong><br>The Sunnah is to sit in Iftiraash; sitting on the left foot with the toes of the right foot facing the Qiblah.</p>
+                
+                <h2 class="section-title">The Difference Between the Pillars and the Obligations</h2>
+                
+                <p>The <strong>pillar</strong> cannot be dropped intentionally, out of forgetfulness, or out of ignorance. One must do it.</p>
+                
+                <p>The <strong>obligation</strong> drops if left out due to forgetfulness or ignorance but does not drop if one leaves it intentionally.</p>
+                
+                <p>If one forgets an obligation then one does the prostration of forgetfulness before making the Tasleem.</p>
+                
+                <p>If one forgets a pillar then one should redo it then do the prostration of forgetfulness after making the Tasleem.</p>
+
+            </div>
+        </article>
+        
+        <nav class="bottom-nav">
+            <button class="nav-btn secondary" onclick="window.location.href='lesson-7.html'">← Previous</button>
+            <button class="nav-btn secondary" onclick="window.location.href='index.html'">Back to Lessons</button>
+            <button class="nav-btn primary" onclick="window.location.href='lesson-9.html'">Next Lesson →</button>
+        </nav>
+    </main>
+    
+    <!-- Notes Panel -->
+    <div id="notesPanel" class="notes-panel">
+        <div class="notes-header">
+            <h3>📝 My Notes</h3>
+            <button class="close-notes-btn" onclick="toggleNotesPanel()">×</button>
+        </div>
+        
+        <div class="notes-tabs">
+            <button class="notes-tab active" onclick="switchNotesTab('general')">General Notes</button>
+            <button class="notes-tab" onclick="switchNotesTab('highlights')">Highlights</button>
+        </div>
+        
+        <div id="generalNotesTab" class="notes-tab-content active">
+            <div class="notes-section">
+                <button class="add-note-btn" onclick="addGeneralNote()">+ Add General Note</button>
+                <div id="generalNotesList" class="notes-list"></div>
+            </div>
+        </div>
+        
+        <div id="highlightsTab" class="notes-tab-content">
+            <div class="notes-section">
+                <div class="highlight-colors">
+                    <span class="color-label">Highlight Color:</span>
+                    <button class="color-btn yellow active" data-color="yellow" onclick="selectHighlightColor('yellow')"></button>
+                    <button class="color-btn green" data-color="green" onclick="selectHighlightColor('green')"></button>
+                    <button class="color-btn blue" data-color="blue" onclick="selectHighlightColor('blue')"></button>
+                    <button class="color-btn pink" data-color="pink" onclick="selectHighlightColor('pink')"></button>
+                    <button class="color-btn orange" data-color="orange" onclick="selectHighlightColor('orange')"></button>
+                </div>
+                <p class="highlight-instruction">Select text in the lesson to highlight it</p>
+                <div id="highlightsList" class="notes-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="noteModal" class="note-modal hidden">
+        <div class="note-modal-content">
+            <h4>Add Note to Selection</h4>
+            <textarea id="selectionNoteText" placeholder="Enter your note here..."></textarea>
+            <div class="note-modal-actions">
+                <button class="save-note-btn" onclick="saveSelectionNote()">Save Note</button>
+                <button class="cancel-note-btn" onclick="closeNoteModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/notes.js"></script>
+</body>
+</html>
