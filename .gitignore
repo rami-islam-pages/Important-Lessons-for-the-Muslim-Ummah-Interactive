@@ -14,3 +14,19 @@ terminal command copy.txt
 # OS files
 .DS_Store
 Thumbs.db
+node_modules
+
+# Environment variables
+.env.local
+.env*.local
+
+# Next.js
+.next/
+out/
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Large files
+*.pdf
+extracted_text.txt

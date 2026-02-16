@@ -1,0 +1,64 @@
+import { SectionTitle } from '@/components/content/SectionTitle'
+
+export default function Lesson10Content() {
+  return (
+    <>
+<SectionTitle>Tenth Lesson</SectionTitle>
+
+                
+                
+      <SectionTitle>Recommended Acts of Prayer</SectionTitle>
+
+                
+                <p>What is other than the conditions, pillars, and obligations is recommended. The one who leaves out the recommended acts is not sinful nor does one have to do the prostration of forgetfulness. Some of the recommended acts are:</p>
+                
+                <p><strong>1. The Opening Supplication</strong></p>
+                <div className="tashahhud-box">
+                    <p className="arabic-text" dir="rtl">سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ</p>
+                    <p className="transliteration"><strong>Transliteration:</strong> Subhaanak-Allaahumma wa bihamdik, wa tabaarakasmuk, wa ta'aalaa jadduk, wa laa ilaaha ghayruk.</p>
+                    <p className="translation"><strong>Translation:</strong> Glory be to You, O Allah, and praise be to You. Blessed is Your Name. Exalted is Your Majesty. There is no deity worthy of worship besides You.</p>
+                </div>
+                
+                <p><strong>2. Seeking refuge before recitation</strong><br />Saying: "A'oodhu billaahi minash-Shaytaanir-Rajeem" (I seek refuge in Allah from the accursed Satan).</p>
+                
+                <p><strong>3. Saying Bismillah</strong><br />Saying "Bismillaahir-Rahmaanir-Raheem" before Al-Fatiha.</p>
+                
+                <p><strong>4. Saying Ameen</strong><br />After completing Al-Fatiha.</p>
+                
+                <p><strong>5. Reciting a Surah after Al-Fatiha</strong><br />In the first two rak'ahs of the obligatory prayers and in all rak'ahs of the recommended prayers.</p>
+                
+                <p><strong>6. Reciting aloud</strong><br />For the Imam in Fajr, Jumu'ah, the first two rak'ahs of Maghrib and Isha, Taraweeh, Witr, and Eid prayers.</p>
+                
+                <p><strong>7. Saying after "Rabbana wa lakal-Hamd":</strong><br />"Mil'as-samaawaati wa mil'al-ard, wa mil'a maa shi'ta min shay'in ba'd" (Filling the heavens and filling the earth and filling whatever You wish after that).</p>
+                
+                <p><strong>8. More than one Tasbeeh in Ruku' and Sujud</strong><br />The first is obligatory; additional ones are recommended.</p>
+                
+                <p><strong>9. More than once saying "Rabb Ighfir-lee"</strong><br />Between the two prostrations.</p>
+                
+                <p><strong>10. Making the head level with the back in Ruku'</strong></p>
+                
+                <p><strong>11. Keeping the arms away from the sides</strong><br />The stomach away from the thighs in prostration and keeping the thighs away from the legs.</p>
+                
+                <p><strong>12. Raising the forearms off the ground in prostration</strong></p>
+                
+                <p><strong>13. Sitting in Iftiraash between the two prostrations and in the first Tashahhud</strong><br />And sitting in Tawarruk in the last Tashahhud in three and four rak'ah prayers.</p>
+                
+                <p><strong>14. Placing the hands on the thighs</strong><br />With fingers spread between the two prostrations. In the Tashahhud, the right hand is in a fist with the index finger pointing and moving during supplication. The left hand is spread on the left thigh.</p>
+                
+                <p><strong>15. Looking at the place of prostration</strong><br />Except during the Tashahhud when pointing with the index finger; one looks at it.</p>
+                
+                <p><strong>16. Turning to the right and left when making the Tasleem</strong></p>
+                
+                
+      <SectionTitle>Raising the Hands</SectionTitle>
+
+                <p>The hands are raised in four places:</p>
+                <ol>
+                    <li>With the opening Takbeer</li>
+                    <li>When going down for Ruku'</li>
+                    <li>When rising from Ruku'</li>
+                    <li>When standing after the first Tashahhud</li>
+                </ol>
+    </>
+  )
+}
