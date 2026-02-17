@@ -14,7 +14,7 @@ export const quiz: Quiz = {
           text: 'How many conditions does ablution have?',
           type: 'multiple-choice',
           options: ['9', '10', '8'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'purification-q2',
@@ -25,7 +25,7 @@ export const quiz: Quiz = {
             'The four limbs',
             'That which has preceded along with the order and continuity.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'purification-q3',
@@ -33,7 +33,7 @@ export const quiz: Quiz = {
           text: 'How many nullifiers does ablution have?',
           type: 'multiple-choice',
           options: ['6', '5', '8'],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'purification-q4',
@@ -49,7 +49,7 @@ export const quiz: Quiz = {
             'Washing a dead person',
             'Touching a woman',
           ],
-          correctIndices: [],
+          correctIndices: [0, 3, 4, 5],
         },
         {
           id: 'purification-q5',

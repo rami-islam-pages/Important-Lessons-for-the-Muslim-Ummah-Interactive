@@ -29,7 +29,7 @@ export default function Lesson13Content() {
 
       <SectionTitle>How to Perform Ablution (Step-by-Step)</SectionTitle>
 
-      <ol className="wudu-steps">
+      <ol className="list-decimal list-inside space-y-3 my-4 text-cream-200">
         <li><strong>Say &quot;Bismillah&quot;</strong> - If one intends to make ablution, s/he should say &quot;Bismillah&quot;</li>
         <li><strong>Wash the hands</strong> - Wash the hands to the wrist three times with water</li>
         <li><strong>Rinse mouth and nose</strong> - Fill the right hand with water and rinse the mouth with it and put water in the nose. Use the thumb and index finger of the left hand to remove the water from the nose. Do this three times.</li>

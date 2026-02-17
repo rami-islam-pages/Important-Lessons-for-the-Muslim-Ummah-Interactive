@@ -18,7 +18,7 @@ export const quiz: Quiz = {
             'Muhammad ibn Uthaymeen',
             'Haytham Sarhaan',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q2',
@@ -31,7 +31,7 @@ export const quiz: Quiz = {
             'These lessons contain important topics which the Muslim needs',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q3',
@@ -46,7 +46,7 @@ export const quiz: Quiz = {
             'Preparing the dead person',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 5,
         },
         {
           id: 'q4',
@@ -58,7 +58,7 @@ export const quiz: Quiz = {
             'Surah Al Faatihah.',
             'Surah Al Ikhlaas.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q5',
@@ -66,7 +66,7 @@ export const quiz: Quiz = {
           text: 'People are divided in two extremes and the moderate way regarding reflecting on the Qur\'an and acting upon it',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q6',
@@ -78,7 +78,7 @@ export const quiz: Quiz = {
             'As-Sa\'dee.',
             'Al Qurtubee.',
           ],
-          correctIndex: -1,
+          correctIndex: 5,
         },
         {
           id: 'q7',
@@ -86,7 +86,7 @@ export const quiz: Quiz = {
           text: 'Students should begin studying short explanations before long explanations',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q8',
@@ -94,7 +94,7 @@ export const quiz: Quiz = {
           text: 'Students should begin reading the explanation of Surahs which they enjoy reading over and over such as Surah Al Qasas, Maryam, and Al Kahf',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q9',
@@ -102,7 +102,7 @@ export const quiz: Quiz = {
           text: 'Students may listen to audio books explaining the Qur\'an, if reading is difficult for them',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q10',
@@ -110,7 +110,7 @@ export const quiz: Quiz = {
           text: 'The Prophet –may Allah praise and send him peace- discouraged from reading the Qur\'an without reflecting on its meaning',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -123,7 +123,7 @@ export const quiz: Quiz = {
           text: 'This Surah is given this name because it is surrounded with a fence which prevents anything to exit from it or to enter it',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q12',
@@ -144,7 +144,7 @@ export const quiz: Quiz = {
             'The Prayer.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q14',
@@ -171,7 +171,7 @@ export const quiz: Quiz = {
             'he throws desires and doubts at the children of Adam.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q17',
@@ -179,7 +179,7 @@ export const quiz: Quiz = {
           text: 'The preposition and the noun following it in \'Bismi-laahi\' are linked to a verb which comes after it and has not been mentioned',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q18',
@@ -194,7 +194,7 @@ export const quiz: Quiz = {
             'The two first letters Alif and Laam are not erased when calling Him.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 4,
         },
         {
           id: 'q19',
@@ -212,7 +212,7 @@ export const quiz: Quiz = {
             'General and Specific.',
             'Unrestricted and Restricted.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q21',
@@ -223,7 +223,7 @@ export const quiz: Quiz = {
             'Allah.',
             'Rabb.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q22',
@@ -235,7 +235,7 @@ export const quiz: Quiz = {
             'The day people will be rewarded according to their actions.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 5,
         },
         {
           id: 'q23',
@@ -243,7 +243,7 @@ export const quiz: Quiz = {
           text: '"Guide us to the Straight Path" is the most comprehensive and beneficial supplication',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q24',
@@ -255,7 +255,7 @@ export const quiz: Quiz = {
             'The deeds.',
             'Sometimes to the reward and sometimes to the deeds.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q25',
@@ -266,7 +266,7 @@ export const quiz: Quiz = {
             'Restriction of worship for Him alone.',
             'Nothing.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q26',
@@ -278,7 +278,7 @@ export const quiz: Quiz = {
             'His right over the right of His slave.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q27',
@@ -297,7 +297,7 @@ export const quiz: Quiz = {
             'is humbling one\'s self to Allah by doing that which He has ordered and abandoning that which He has forbidden out of love and glorification for Him.',
             'refers sometimes to the first and sometimes to the second definition.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q29',
@@ -309,7 +309,7 @@ export const quiz: Quiz = {
             'to bless us to accept the guidance.',
             'Both.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q30',
@@ -320,7 +320,7 @@ export const quiz: Quiz = {
             'every believer.',
             'those who Allah has blessed from the prophets, truthful, martyrs, and the righteous.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q31',
@@ -328,7 +328,7 @@ export const quiz: Quiz = {
           text: '"You alone we worship and You alone we ask for help" combines between the legislation and the pre-decree',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q32',
@@ -340,7 +340,7 @@ export const quiz: Quiz = {
             'The verse of the Kursee.',
             'Surah Al-Ikhlaas.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q33',
@@ -352,7 +352,7 @@ export const quiz: Quiz = {
             'a criticism for all those who introduce new acts of worship',
             'All of the above',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q34',
@@ -365,7 +365,7 @@ export const quiz: Quiz = {
             'the rewards will be for the deeds only.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -378,7 +378,7 @@ export const quiz: Quiz = {
           text: 'The verse of the Kursee is called with this name since Kursee is mentioned in it',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q36',
@@ -390,7 +390,7 @@ export const quiz: Quiz = {
             'The verse which mentions the ten commands.',
             'The verse of the Kursee.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q37',
@@ -398,7 +398,7 @@ export const quiz: Quiz = {
           text: 'The Qur\'an has great meanings',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q38',
@@ -410,7 +410,7 @@ export const quiz: Quiz = {
             'Six.',
             'Seven.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q39',
@@ -421,7 +421,7 @@ export const quiz: Quiz = {
             'power.',
             'self.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q40',
@@ -432,7 +432,7 @@ export const quiz: Quiz = {
             'power',
             'self.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q41',
@@ -440,7 +440,7 @@ export const quiz: Quiz = {
           text: 'If the two names of Allah, The Ever Living and The All Sustaining, are mentioned together, they show perfection of self and perfection of power',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q42',
@@ -452,7 +452,7 @@ export const quiz: Quiz = {
             'four places.',
             'two places.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q43',
@@ -460,7 +460,7 @@ export const quiz: Quiz = {
           text: 'It is a must to negate the attributes Allah has negated for Himself or the Prophet –may Allah praise and send him peace- has negated for Him while affirming the opposite of that attribute which is perfect. Negating only does not show outmost perfection. For example, we negate for Allah slumber and sleep in order to affirm His perfect Life and Sustaining',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q44',
@@ -472,7 +472,7 @@ export const quiz: Quiz = {
             'follows the messengers.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q45',
@@ -483,7 +483,7 @@ export const quiz: Quiz = {
             'little.',
             'a lot.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q46',
@@ -491,7 +491,7 @@ export const quiz: Quiz = {
           text: '"He knows what is in front of them" means the present and the future while "and what is behind them" means the past',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q47',
@@ -504,7 +504,7 @@ export const quiz: Quiz = {
             'the One who has overpowered all of the creations.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q48',
@@ -515,7 +515,7 @@ export const quiz: Quiz = {
             'The end of Surah Al Baqarah.',
             'The verse of the Footstool',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q49',
@@ -528,7 +528,7 @@ export const quiz: Quiz = {
             'in the morning and the evening.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -544,7 +544,7 @@ export const quiz: Quiz = {
             'Maki Surah.',
             'Madani Surah.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q51',
@@ -556,7 +556,7 @@ export const quiz: Quiz = {
             'encouraging.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q52',
@@ -567,7 +567,7 @@ export const quiz: Quiz = {
             'Mountains and hills.',
             'The dead and treasures.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q53',
@@ -575,7 +575,7 @@ export const quiz: Quiz = {
           text: 'Earth is from among the witnesses which will bear witness for the people\'s actions',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q54',
@@ -586,7 +586,7 @@ export const quiz: Quiz = {
             'everyone by itself.',
             'different groups.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q55',
@@ -594,7 +594,7 @@ export const quiz: Quiz = {
           text: 'The saying of Allah "Whoever does an atom\'s weight of good will see it…" is similar to His saying "On the Day that each self finds the good it did, and the evil it did, present there in front of it…"',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
       ],
     },
@@ -610,7 +610,7 @@ export const quiz: Quiz = {
             'Maki Surah.',
             'Madani Surah.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q57',
@@ -622,7 +622,7 @@ export const quiz: Quiz = {
             'everything which moves.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q58',
@@ -630,7 +630,7 @@ export const quiz: Quiz = {
           text: 'Surah Al Aadiyaat consists of warning for not performing the obligatory rights',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q59',
@@ -653,7 +653,7 @@ export const quiz: Quiz = {
             'Maki Surah.',
             'Madani Surah.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q61',
@@ -664,7 +664,7 @@ export const quiz: Quiz = {
             'the shock of the Day of Judgement',
             'trials of this life.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q62',
@@ -675,7 +675,7 @@ export const quiz: Quiz = {
             'the verses of warning.',
             'the Day of Judgement.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q63',
@@ -693,7 +693,7 @@ export const quiz: Quiz = {
             'an actual Scale.',
             'a metaphor for justice.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q65',
@@ -704,7 +704,7 @@ export const quiz: Quiz = {
             'this life.',
             'Paradise.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q66',
@@ -716,7 +716,7 @@ export const quiz: Quiz = {
             'the thin layer of skin surrounding the brain will burn in the fire.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q67',
@@ -727,7 +727,7 @@ export const quiz: Quiz = {
             'magnifies its reality.',
             'asks about it.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q68',
@@ -743,7 +743,7 @@ export const quiz: Quiz = {
             'Saqar.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q69',
@@ -755,7 +755,7 @@ export const quiz: Quiz = {
             'ninety.',
             'ninety-nine.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
       ],
     },
@@ -771,7 +771,7 @@ export const quiz: Quiz = {
             'Maki Surah.',
             'Madani Surah.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q71',
@@ -782,7 +782,7 @@ export const quiz: Quiz = {
             'news regarding the people\'s situation.',
             'criticism of the people for being preoccupied with other than what they were created for.',
           ],
-          correctIndex: -1,
+          correctIndex: 6,
         },
         {
           id: 'q72',
@@ -790,7 +790,7 @@ export const quiz: Quiz = {
           text: 'This Surah prohibits competition for more gains even if it is done for the sake of Allah',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q73',
@@ -801,7 +801,7 @@ export const quiz: Quiz = {
             'a rejection of the resurrection',
             'permissible',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q74',
@@ -812,7 +812,7 @@ export const quiz: Quiz = {
             'Since the life of the grave is a place which is meant to be a door to the next life',
             'Since they went from their house to the grave and it does not belong to them',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
       ],
     },
@@ -828,7 +828,7 @@ export const quiz: Quiz = {
             'Maki Surah',
             'Madani Surah',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q76',
@@ -836,7 +836,7 @@ export const quiz: Quiz = {
           text: 'Surah Al \'Asr is a proof for seeking knowledge, acting upon it, teaching it, and patience',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q77',
@@ -849,7 +849,7 @@ export const quiz: Quiz = {
             'Created beings may take an oath in other than Allah.',
             'The first and second answer.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q78',
@@ -861,7 +861,7 @@ export const quiz: Quiz = {
             'Three categories.',
             'Four categories',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q79',
@@ -869,7 +869,7 @@ export const quiz: Quiz = {
           text: 'The Surah consists of four orders: The first two help the person to improve himself while the second two help one improve others',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -885,7 +885,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q81',
@@ -896,7 +896,7 @@ export const quiz: Quiz = {
             'a \'valley\' in the Fire.',
             'a warning which includes a valley in the Fire and other than it.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q82',
@@ -904,7 +904,7 @@ export const quiz: Quiz = {
           text: 'Al Hamz is done by speech while Al-Lamz is done by gestures',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q83',
@@ -912,7 +912,7 @@ export const quiz: Quiz = {
           text: 'We benefit from the saying of Allah \'\'Thinking that wealth will make them last forever!\'\' that doing righteous deeds increases one\'s life span',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q84',
@@ -923,7 +923,7 @@ export const quiz: Quiz = {
             'he knew about it',
             'he did not know about it',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q85',
@@ -935,7 +935,7 @@ export const quiz: Quiz = {
             'stones.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q86',
@@ -946,7 +946,7 @@ export const quiz: Quiz = {
             'due to that which it believes.',
             'It penetrates through the body to the heart.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -962,7 +962,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q88',
@@ -970,7 +970,7 @@ export const quiz: Quiz = {
           text: 'From the benefits of this surah is also the fact that the biggest living creature on land fears to transgress against a house from the houses of Allah. So the people should likewise fear',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q89',
@@ -982,7 +982,7 @@ export const quiz: Quiz = {
             'the sadness.',
             'the drought.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q90',
@@ -990,7 +990,7 @@ export const quiz: Quiz = {
           text: 'This Surah is from the events and a miracle that happened prior to the prophethood of our Prophet –may Allah praise and send him peace-',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q91',
@@ -1013,7 +1013,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q93',
@@ -1025,7 +1025,7 @@ export const quiz: Quiz = {
             'Al Feel.',
             'An-Naas.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q94',
@@ -1033,7 +1033,7 @@ export const quiz: Quiz = {
           text: 'Quraysh used to travel to Shaam in the winter and to Yemen in the summer',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q95',
@@ -1044,7 +1044,7 @@ export const quiz: Quiz = {
             'in Makkah.',
             'in Makkah and while traveling.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q96',
@@ -1052,7 +1052,7 @@ export const quiz: Quiz = {
           text: 'Allah has mentioned that He is the Lord of the House to show its virtue and status; even though, He is the Lord of everything',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
       ],
     },
@@ -1068,7 +1068,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q98',
@@ -1079,7 +1079,7 @@ export const quiz: Quiz = {
             'Resurrection and Recompense.',
             'others rights such as paying back the loan.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q99',
@@ -1090,7 +1090,7 @@ export const quiz: Quiz = {
             'abandon.',
             'harshly push away.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q100',
@@ -1101,7 +1101,7 @@ export const quiz: Quiz = {
             'father.',
             'mother.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q101',
@@ -1112,7 +1112,7 @@ export const quiz: Quiz = {
             'as long as one has not reached puberty.',
             'even after puberty.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q102',
@@ -1120,7 +1120,7 @@ export const quiz: Quiz = {
           text: 'The forgetfulness in the prayer is the forgetfulness which is blameworthy; as for the negligence regarding the prayer, then that happens to everyone',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q103',
@@ -1134,7 +1134,7 @@ export const quiz: Quiz = {
             'minor shirk.',
             'major shirk.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q104',
@@ -1142,7 +1142,7 @@ export const quiz: Quiz = {
           text: 'This Surah encourages to help others',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q105',
@@ -1153,7 +1153,7 @@ export const quiz: Quiz = {
             'the dish.',
             'everything which is customary to spend and donate.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -1169,7 +1169,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q107',
@@ -1180,7 +1180,7 @@ export const quiz: Quiz = {
             'a river.',
             'abundance of good and virtue.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q108',
@@ -1188,7 +1188,7 @@ export const quiz: Quiz = {
           text: 'Allah has specifically mentioned these two acts of worship, prayer and sacrificing animals, since they are the best acts of worship one can get closer to Allah with',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q109',
@@ -1201,7 +1201,7 @@ export const quiz: Quiz = {
             'the one who takes away from your rights.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q110',
@@ -1209,7 +1209,7 @@ export const quiz: Quiz = {
           text: 'The saying of Allah "…is truly cut off from any goodness" indirectly proves that the one who loves the Prophet – may Allah praise and send him peace- will always be remembered and praised',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q111',
@@ -1217,7 +1217,7 @@ export const quiz: Quiz = {
           text: 'This Surah shows that the Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645 will have a lot of supporters and followers',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -1233,7 +1233,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q113',
@@ -1247,7 +1247,7 @@ export const quiz: Quiz = {
             'the Witr prayer.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q114',
@@ -1258,7 +1258,7 @@ export const quiz: Quiz = {
             'is not considered worship.',
             'is a deficient worship.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q115',
@@ -1269,7 +1269,7 @@ export const quiz: Quiz = {
             'the Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645.',
             'the Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645 and everyone who could possibly be addressed with the similar words.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q116',
@@ -1280,7 +1280,7 @@ export const quiz: Quiz = {
             'all those whom the religion of our Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645 has reached them and have not believed in it such as the Jews and the Christians.',
             'the Non-Muslims of Makkah.',
           ],
-          correctIndex: -1,
+          correctIndex: 4,
         },
         {
           id: 'q117',
@@ -1288,7 +1288,7 @@ export const quiz: Quiz = {
           text: 'This Surah proves that we must stay far away from worshiping other than Allah and free ourselves from those who worship other than Allah with our heart, tongue, and limbs',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q118',
@@ -1299,7 +1299,7 @@ export const quiz: Quiz = {
             'is for emphasis.',
             'Is to show that the first one proves the non-existence of the action while the second one proves that it has become an attribute of theirs.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
       ],
     },
@@ -1315,7 +1315,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q120',
@@ -1323,7 +1323,7 @@ export const quiz: Quiz = {
           text: 'This Surah contains a glad tiding, a news, a command, and a hint',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q121',
@@ -1331,7 +1331,7 @@ export const quiz: Quiz = {
           text: 'Allah has treated this nation and this religion with mercy and kindness that cannot be imagined and is beyond comprehension',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q122',
@@ -1339,7 +1339,7 @@ export const quiz: Quiz = {
           text: 'There is an indication in this Surah that the Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645 will pass away after a short period of time',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q123',
@@ -1347,7 +1347,7 @@ export const quiz: Quiz = {
           text: 'Acting upon this Surah, the Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645 used to often recite on the bowing position and prostration "You are Perfect O Allah, our Lord, O Allah forgive me"',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -1363,7 +1363,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q125',
@@ -1374,7 +1374,7 @@ export const quiz: Quiz = {
             'is the Prophet\'s \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645 uncle.',
             'is not related to the Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q126',
@@ -1385,7 +1385,7 @@ export const quiz: Quiz = {
             'Aboo Lahab.',
             'everyone who hates the Prophet \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064A\u0647 \u0648\u0633\u0644\u0645.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q127',
@@ -1400,7 +1400,7 @@ export const quiz: Quiz = {
           text: 'This Surah contains an amazing miracle from the miracles of Allah with Aboo Lahab and his wife; they did not accept Islam!',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -1416,7 +1416,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q130',
@@ -1428,7 +1428,7 @@ export const quiz: Quiz = {
             'it purifies those who read it from worshipping other than Allah',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q131',
@@ -1440,7 +1440,7 @@ export const quiz: Quiz = {
             'quarter of the Qur\'an',
             'third of the Qur\'an.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q132',
@@ -1454,7 +1454,7 @@ export const quiz: Quiz = {
             'Witr prayer.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q133',
@@ -1462,7 +1462,7 @@ export const quiz: Quiz = {
           text: 'It is recommended to recite Surah Al Kaafiroon and Al Ikhlass during the day and night in order to affirm the three categories of Tawheed',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q134',
@@ -1473,7 +1473,7 @@ export const quiz: Quiz = {
             'Tawheed of worship.',
             'Tawheed of Lordship and the Names and Attributes.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q135',
@@ -1484,7 +1484,7 @@ export const quiz: Quiz = {
             'make a statement only.',
             'a statement, actions, and belief.',
           ],
-          correctIndex: -1,
+          correctIndex: 4,
         },
         {
           id: 'q136',
@@ -1492,7 +1492,7 @@ export const quiz: Quiz = {
           text: 'The saying of Allah "He is Allah, the One and only" means One in His Lordship, Worship, and Names and Attributes',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q137',
@@ -1505,7 +1505,7 @@ export const quiz: Quiz = {
             'the Master who is complete in His dominion, Lordship, Worship, and His Names and Attributes.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q138',
@@ -1513,7 +1513,7 @@ export const quiz: Quiz = {
           text: 'To attribute a child or parents to Allah is Major Disbelief',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
       ],
     },
@@ -1529,7 +1529,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q140',
@@ -1541,7 +1541,7 @@ export const quiz: Quiz = {
             'just before sleep.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q141',
@@ -1560,7 +1560,7 @@ export const quiz: Quiz = {
             'magic is real.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -1576,7 +1576,7 @@ export const quiz: Quiz = {
             'Maki.',
             'Madani.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q144',
@@ -1588,7 +1588,7 @@ export const quiz: Quiz = {
             'just before sleeping.',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q145',

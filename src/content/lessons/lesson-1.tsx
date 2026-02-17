@@ -1,6 +1,7 @@
 import { SectionTitle } from '@/components/content/SectionTitle'
 import { AyahBox } from '@/components/content/AyahBox'
 import { TooltipTerm } from '@/components/content/TooltipTerm'
+import { TafseerSection } from '@/components/content/TafseerSection'
 
 export default function Lesson01Content() {
   return (
@@ -24,21 +25,21 @@ export default function Lesson01Content() {
                 
                 <p>The student is advised to begin with the explanation of the Qur'an by As-Sa'di "Tayseer Al-Kareem Ar-Rahmaan Fee Tafseeri Kalaam Al-Manaan" may Allah have mercy on him and forgive him. Why?</p>
                 
-                <div className="five-box-grid">
-                    <div className="box-item">
-                        <div className="box-content">The scholars have advised with it and given it great attention</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 my-4">
+                    <div className="rounded-lg border border-gold-500/30 bg-forest-800/50 p-4 text-center">
+                        <div className="text-cream-100 text-sm leading-relaxed">The scholars have advised with it and given it great attention</div>
                     </div>
-                    <div className="box-item">
-                        <div className="box-content">It is concise and thus appropriate for a new student to read.</div>
+                    <div className="rounded-lg border border-gold-500/30 bg-forest-800/50 p-4 text-center">
+                        <div className="text-cream-100 text-sm leading-relaxed">It is concise and thus appropriate for a new student to read.</div>
                     </div>
-                    <div className="box-item">
-                        <div className="box-content">It's expressions are easy and clear; without any ambiguity.</div>
+                    <div className="rounded-lg border border-gold-500/30 bg-forest-800/50 p-4 text-center">
+                        <div className="text-cream-100 text-sm leading-relaxed">It's expressions are easy and clear; without any ambiguity.</div>
                     </div>
-                    <div className="box-item">
-                        <div className="box-content">It helps one to act upon the Qur'an by the help of Allah</div>
+                    <div className="rounded-lg border border-gold-500/30 bg-forest-800/50 p-4 text-center">
+                        <div className="text-cream-100 text-sm leading-relaxed">It helps one to act upon the Qur'an by the help of Allah</div>
                     </div>
-                    <div className="box-item">
-                        <div className="box-content">The author – may Allah have mercy on him– emphasizes the Oneness of Allah</div>
+                    <div className="rounded-lg border border-gold-500/30 bg-forest-800/50 p-4 text-center sm:col-span-2 lg:col-span-1">
+                        <div className="text-cream-100 text-sm leading-relaxed">The author – may Allah have mercy on him– emphasizes the Oneness of Allah</div>
                     </div>
                 </div>
 
@@ -48,30 +49,30 @@ export default function Lesson01Content() {
                 
                 <p>With regard to the Qur'an, there are two extremes and one moderation</p>
                 
-                <div className="quran-types-container">
-                    <div className="three-categories-grid">
-                        <div className="category-box negligence">
-                            <h3 className="category-title">Negligence</h3>
-                            <p className="category-desc">Some abandon the Qur'an and that is done by abandoning:</p>
+                <div className="my-4 space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div className="rounded-lg border border-red-500/40 bg-red-900/20 p-4 text-center">
+                            <h3 className="text-red-400 font-semibold text-lg mb-2">Negligence</h3>
+                            <p className="text-cream-200 text-sm">Some abandon the Qur'an and that is done by abandoning:</p>
                         </div>
                         
-                        <div className="category-box extremism">
-                            <h3 className="category-title">Extremism</h3>
-                            <p className="category-desc">They read and memorize without pondering nor acting upon it.</p>
+                        <div className="rounded-lg border border-orange-500/40 bg-orange-900/20 p-4 text-center">
+                            <h3 className="text-orange-400 font-semibold text-lg mb-2">Extremism</h3>
+                            <p className="text-cream-200 text-sm">They read and memorize without pondering nor acting upon it.</p>
                         </div>
                         
-                        <div className="category-box moderation">
-                            <h3 className="category-title">Moderation</h3>
-                            <p className="category-desc">They read, memorize, ponder, and act upon it. This is the way of the early scholars and those who follow them.</p>
+                        <div className="rounded-lg border border-emerald-500/40 bg-emerald-900/20 p-4 text-center">
+                            <h3 className="text-emerald-400 font-semibold text-lg mb-2">Moderation</h3>
+                            <p className="text-cream-200 text-sm">They read, memorize, ponder, and act upon it. This is the way of the early scholars and those who follow them.</p>
                         </div>
                     </div>
                     
-                    <div className="negligence-items-grid">
-                        <div className="negligence-item">Reading</div>
-                        <div className="negligence-item">Memorization</div>
-                        <div className="negligence-item">Pondering</div>
-                        <div className="negligence-item">Acting upon it</div>
-                        <div className="negligence-item">Treating sickness with it</div>
+                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                        <div className="rounded-md border border-red-500/30 bg-red-900/10 px-3 py-2 text-center text-cream-200 text-sm">Reading</div>
+                        <div className="rounded-md border border-red-500/30 bg-red-900/10 px-3 py-2 text-center text-cream-200 text-sm">Memorization</div>
+                        <div className="rounded-md border border-red-500/30 bg-red-900/10 px-3 py-2 text-center text-cream-200 text-sm">Pondering</div>
+                        <div className="rounded-md border border-red-500/30 bg-red-900/10 px-3 py-2 text-center text-cream-200 text-sm">Acting upon it</div>
+                        <div className="rounded-md border border-red-500/30 bg-red-900/10 px-3 py-2 text-center text-cream-200 text-sm col-span-2 sm:col-span-1">Treating sickness with it</div>
                     </div>
                 </div>
                 
@@ -80,110 +81,121 @@ export default function Lesson01Content() {
                 
       <SectionTitle>Selections from "Tayseer Al-Kareem Ar-Rahmaan Fee Tafseeri Kalaam Al-Manaan" by Abdu-Rrahmaan As-Sa'di -may Allah have mercy on him- and questions about it</SectionTitle>
 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al Faatiha' ''The Opening'' ]</SectionTitle>
+      <TafseerSection 
+        surahName="Al-Faatiha - The Opening" 
+        surahArabic="الفاتحة" 
+        surahNumber="1" 
+        type="makki" 
+        defaultOpen={true}
+      >
+        <AyahBox
+          header={`The Opener (1:1)`}
+          arabic={`بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ١`}
+          translation={`1. In the Name of Allâh, the Most Gracious, the Most Merciful`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/1/1`}
+        />
 
-      <AyahBox
-        header={`The Opener (1:1)`}
-        arabic={`بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ١`}
-        translation={`1. In the Name of Allâh, the Most Gracious, the Most Merciful`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/1/1`}
-      />
+        <AyahBox
+          header={`The Opener (1:2)`}
+          arabic={`ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ٢`}
+          translation={`All the praises and thanks be to Allâh, the Lord of the 'Âlamîn (mankind, jinn and all that exists).`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/1/2`}
+        />
 
-      <AyahBox
-        header={`The Opener (1:2)`}
-        arabic={`ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ٢`}
-        translation={`All the praises and thanks be to Allâh, the Lord of the 'Âlamîn (mankind, jinn and all that exists).`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/1/2`}
-      />
+        <AyahBox
+          header={`The Opener (1:3)`}
+          arabic={`ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ٣`}
+          translation={`3. The Most Gracious, the Most Merciful.`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/1/3`}
+        />
 
-      <AyahBox
-        header={`The Opener (1:3)`}
-        arabic={`ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ٣`}
-        translation={`3. The Most Gracious, the Most Merciful.`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/1/3`}
-      />
+        <AyahBox
+          header={`The Opener (1:4)`}
+          arabic={`مَـٰلِكِ يَوْمِ ٱلدِّينِ ٤`}
+          translation={`4. The Only Owner (and the Only Ruling Judge) of the Day of Recompense (i.e. the Day of Resurrection)`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/1/4`}
+        />
 
-      <AyahBox
-        header={`The Opener (1:4)`}
-        arabic={`مَـٰلِكِ يَوْمِ ٱلدِّينِ ٤`}
-        translation={`4. The Only Owner (and the Only Ruling Judge) of the Day of Recompense (i.e. the Day of Resurrection)`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/1/4`}
-      />
+        <AyahBox
+          header={`The Opener (1:5)`}
+          arabic={`إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ٥`}
+          translation={`5. You (Alone) we worship, and You (Alone) we ask for help (for each and everything).`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/1/5`}
+        />
 
-      <AyahBox
-        header={`The Opener (1:5)`}
-        arabic={`إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ٥`}
-        translation={`5. You (Alone) we worship, and You (Alone) we ask for help (for each and everything).`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/1/5`}
-      />
+        <AyahBox
+          header={`The Opener (1:6)`}
+          arabic={`ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ٦`}
+          translation={`Guide us to the Straight Way.`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/1/6`}
+        />
 
-      <AyahBox
-        header={`The Opener (1:6)`}
-        arabic={`ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ٦`}
-        translation={`Guide us to the Straight Way.`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/1/6`}
-      />
+        <AyahBox
+          header={`The Opener (1:7)`}
+          arabic={`صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ ٧`}
+          translation={`The Way of those on whom You have bestowed Your Grace , not (the way) of those who earned Your Anger  (i.e. those who knew the Truth, but did not follow it) nor of those who went astray (i.e. those who did not follow the Truth out of ignorance and error). ,`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/1/7`}
+        />
 
-      <AyahBox
-        header={`The Opener (1:7)`}
-        arabic={`صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ ٧`}
-        translation={`The Way of those on whom You have bestowed Your Grace , not (the way) of those who earned Your Anger  (i.e. those who knew the Truth, but did not follow it) nor of those who went astray (i.e. those who did not follow the Truth out of ignorance and error). ,`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/1/7`}
-      />
+                  
+                  <p><strong>1.</strong> In the name of Allah, the Entirely Merciful, the Especially Merciful. <strong>2.</strong> All praise and thanks are only for Allah, the Lord of everything that exists. <strong>3.</strong> The Entirely Merciful, the Especially Merciful. <strong>4.</strong> The Owner of the Day of Judgement. <strong>5.</strong> You alone we worship and You alone we ask for help. <strong>6.</strong> Guide us to the straight path. <strong>7.</strong> The path of those whom You have blessed and not the path of those who angered You nor of those who are lost.</p>
+                  
+                  <p><strong>(1)</strong> This means: I begin with every Name of Allah, the Most High. This is since the word "Name" is singular and in the genitive form; therefore, it includes all of Allah's Beautiful and Perfect Names. "Allah", He is the God who is worshipped: the one deserving worship to the exclusion of everything else because of His qualities of divinity, all of which are perfect. "The Entirely Merciful, the Especially Merciful". These are two Names proving that He, Most High, is one who possesses a great and all-encompassing mercy that covers everything and includes every living being. He has decreed it for those who obey Allah, those who follow His Prophets and Messengers: these have unrestricted mercy. Everyone else has a portion of this mercy. Know that one of the principles agreed upon by the early scholars of Islam and their Imams is to have faith in Allah and His Attributes, and in the rules determining how they are to be understood. So, for example, they believe that he is the Entirely Merciful and the Especially Merciful; possessing the quality of mercy which is extended to its recipients.</p>
+                  
+                  <p>Therefore, all blessings are from the results of this mercy. This principle holds true for all of His Names. It is said concerning the Name, All-Knowing: He is All-Knowing, possessing the quality of knowledge by which He knows everything. He is All-Capable, possessing the quality of ability which makes Him capable of doing anything.</p>
+                  
+                  <p><strong>(2)</strong> "All praise and thanks is only for Allah", this verse praises Allah with His perfect Attributes and His actions, all of which are based upon beneficence and justice. To Him belongs perfect and complete praise in every sense. "Lord of the worlds", the Lord is the One who nourishes and sustains the whole of the creation, meaning everything besides Allah, by the very fact of His creating them, His preparing for them the means, and Him blessing them with immense blessings, the absence of which would make their existence impossible. Thus, every blessing they possess, it is from Him, the Most High. His sustaining of the creation is of two types: general and specific. The general refers to His creating the creation, providing for them, and guiding them to all that they need in order to survive in this worldly life. The specific refers to His sustaining His sincere slaves with faith, guiding them to submit to it, perfecting and completing it for them, keeping away everything which may affect it. The reality of this is: Guiding them to every good and protecting them from all evil. Perhaps it was due to this that most of the supplications made by the prophets used the word 'Rabb': all they requested was covered by His specific lordship. His saying "Lord of the worlds"; He alone is the Creator and that all affairs are regulated by Him as is the provision of blessings. It also proves that He is completely Rich Beyond Need and that creation is in total and dire need of Him alone in every sense and in every possible way.</p>
+                  
+                  <p><strong>(4)</strong> "Owner of the Day of Judgement". The master is a person who has the quality of ownership, from the consequences of which is the ability to command and prohibit, reward and punish, and to behave with his subjects and possessions in any way he wishes. The Master of the Day of Judgement, the Day of Rising, the Day on which man will be judged for his actions the good and the bad. This is because on that day the completeness and perfection of His mastery, justice, and wisdom will be made clear to all. Moreover, it will be the end of the worldly masters, so much so that kings, ministers, slaves and the free-born will all be the same: all of them submissive to His greatness, rendered in complete submission before His honor, expectant of His recompense, hoping for His reward and fearing His punishment. The point of mentioning His mastery in this context is to emphasize it; otherwise, He is Master of the Day of Judgement and all other days. <strong>5)</strong> "You Alone we worship and You Alone we ask for help", meaning that we single You out alone for worship and seeking help. This is because mentioning the object at the head of a verb is a method of constraint (hasr), i.e. affirming what is mentioned in the sentence and negating it for anything that falls outside. Therefore, it is as if the person has said, we worship You and we do not worship anything else. We ask You for help and we do not turn to anyone else for help.'</p>
+                  
+                  <p>Mentioning worship before asking for help is by way of mentioning the general before the specific, and to show that attention should be given to His right over the right of His slave. Worship is "a collective noun that subsumes all actions and sayings, outward and inward, that Allah loves and is pleased with. Seeking help, isti`ana, is "to depend upon Allah, Most High, in acquiring that which would benefit and repressing that which would harm, along with having the certainty that He will actually assist the one asking".</p>
+                  
+                  <p>Establishing the worship of Allah and seeking His help are the means to everlasting happiness and security from all evil; there is no path to victory except by meeting the requirements of these two pillars. Worship can only be considered to be true worship when done in the way taught by the Messenger seeking thereby only Allah's Face. These two conditions have to be present for the action to be considered worship. Seeking help has been mentioned after worship even though it is a part of worship because the slave is always in need of Allah's help in all acts of worship: if Allah does not help him, he will not achieve the goals he hopes to attain by enacting the obligations and avoiding the prohibitions. <strong>(6)</strong> "Guide us to and on the Straight Path" means show us, direct us to it, and grant us the divine grace to traverse it. The Straight Path is the clear path that leads to Allah and His Paradise: it is the knowing the truth and acting by it. Therefore, the verse means: guide us to the Path and guide us in the Path. Guidance to the Path means to come to Islam and abandon all other religions. Guidance in the Path means guidance towards all of the details of Islam in terms of knowledge and action. Hence, this supplication is one of the most comprehensive and most beneficial supplications, and this is why it is obligatory to supplicate to Allah with it in every unit of prayer, especially since the servant is in continuous need of it. <strong>(7)</strong> This Straight Path is "the Path of those You have blessed" who are the Prophets, the Sincerely Truthful, the Martyrs and the Righteous "not" the path "of those who have incurred anger" who knew the truth but abandoned it such as the Jews and others, "nor" the path "of those astray" who abandoned the truth out of ignorance and misguidance such as the Christians.</p>
+                  
+                  <p>This chapter, despite being short, has covered what no other chapter of the Qur´an has. It mentions the three types of Tawhid: Tawhid al-Rububiyyah, (Oneness of Allah's Lordship), derived from His saying, "Lord of all the worlds"; Tawhid al-Ilaahiyyah, (Oneness of Worship), which is to single out Allah Alone for worship, derived from the word "Allah" and from His saying "You Alone we worship and You Alone we ask for help"; and Tawhid al-Asma´ wa'l-Sifat, (Oneness of the Names and Attributes), which is to affirm the Attributes of Perfection for Allah, Most High, which He has affirmed for Himself and His Messenger has affirmed for Him, without ta`til (denying the Attributes), or tamthil and tashbih (likening the Attributes to creation) as is proven by His saying, "all praise and thanks" as already mentioned.</p>
+                  
+                  <p>It also affirms Prophethood in His saying "guide us to and on the Straight Path" because this guidance is not possible without a message. It affirms recompense for ones actions in His saying "Master of the Day of Judgement"" and it affirms that this recompense will be established upon justice, this is because the meaning of '"deen"' is recompense founded upon justice. It affirms Qadr (the divine decree) and that the slave is the true performer of his actions opposing the stances of the Qadariyyah, those who deny Qadr, and Jabariyyah, those who negate the will of the person. In fact this surah refutes all the people of innovation and misguidance in His saying "Guide us to and on the Straight Path" because this is knowing the truth and enacting it, and every innovator and misguided person contradicts this. It enjoins making the religion sincerely for Allah in terms of worship and seeking help in His saying "You Alone we worship and You Alone we ask for help".</p>
+                  
+                  <p>All praise and thanks are for Allah, Lord of everything that exists.</p>
+      </TafseerSection>
+                
+                
+      <TafseerSection 
+        surahName="Ayatul Kursee" 
+        surahArabic="آية الكرسي" 
+        type="madani" 
+        defaultOpen={false}
+      >
+        <AyahBox
+          header={`The Cow (2:255)`}
+          arabic={`ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌۭ وَلَا نَوْمٌۭ ۚ لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍۢ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ ٢٥٥`}
+          translation={`Allâh! Lâ ilâha illa Huwa (none has the right to be worshipped but He), Al-Hayyul-Qayyum (the Ever Living, the One Who sustains and protects all that exists). Neither slumber nor sleep overtakes Him. To Him belongs whatever is in the heavens and whatever is on the earth. Who is he that can intercede with Him except with His Permission? He knows what happens to them (His creatures) in this world, and what will happen to them in the Hereafter. And they will never compass anything of His Knowledge except that which He wills. His Kursî  extends over the heavens and the earth, and He feels no fatigue in guarding and preserving them. And He is the Most High, the Most Great. [This Verse 2:255 is called Ayat-ul-Kursî ]`}
+          translator={`Al-Hilali & Khan`}
+          link={`https://quran.com/2/255`}
+        />
 
-                
-                <p><strong>1.</strong> In the name of Allah, the Entirely Merciful, the Especially Merciful. <strong>2.</strong> All praise and thanks are only for Allah, the Lord of everything that exists. <strong>3.</strong> The Entirely Merciful, the Especially Merciful. <strong>4.</strong> The Owner of the Day of Judgement. <strong>5.</strong> You alone we worship and You alone we ask for help. <strong>6.</strong> Guide us to the straight path. <strong>7.</strong> The path of those whom You have blessed and not the path of those who angered You nor of those who are lost.</p>
-                
-                <p><strong>(1)</strong> This means: I begin with every Name of Allah, the Most High. This is since the word "Name" is singular and in the genitive form; therefore, it includes all of Allah's Beautiful and Perfect Names. "Allah", He is the God who is worshipped: the one deserving worship to the exclusion of everything else because of His qualities of divinity, all of which are perfect. "The Entirely Merciful, the Especially Merciful". These are two Names proving that He, Most High, is one who possesses a great and all-encompassing mercy that covers everything and includes every living being. He has decreed it for those who obey Allah, those who follow His Prophets and Messengers: these have unrestricted mercy. Everyone else has a portion of this mercy. Know that one of the principles agreed upon by the early scholars of Islam and their Imams is to have faith in Allah and His Attributes, and in the rules determining how they are to be understood. So, for example, they believe that he is the Entirely Merciful and the Especially Merciful; possessing the quality of mercy which is extended to its recipients.</p>
-                
-                <p>Therefore, all blessings are from the results of this mercy. This principle holds true for all of His Names. It is said concerning the Name, All-Knowing: He is All-Knowing, possessing the quality of knowledge by which He knows everything. He is All-Capable, possessing the quality of ability which makes Him capable of doing anything.</p>
-                
-                <p><strong>(2)</strong> "All praise and thanks is only for Allah", this verse praises Allah with His perfect Attributes and His actions, all of which are based upon beneficence and justice. To Him belongs perfect and complete praise in every sense. "Lord of the worlds", the Lord is the One who nourishes and sustains the whole of the creation, meaning everything besides Allah, by the very fact of His creating them, His preparing for them the means, and Him blessing them with immense blessings, the absence of which would make their existence impossible. Thus, every blessing they possess, it is from Him, the Most High. His sustaining of the creation is of two types: general and specific. The general refers to His creating the creation, providing for them, and guiding them to all that they need in order to survive in this worldly life. The specific refers to His sustaining His sincere slaves with faith, guiding them to submit to it, perfecting and completing it for them, keeping away everything which may affect it. The reality of this is: Guiding them to every good and protecting them from all evil. Perhaps it was due to this that most of the supplications made by the prophets used the word 'Rabb': all they requested was covered by His specific lordship. His saying "Lord of the worlds"; He alone is the Creator and that all affairs are regulated by Him as is the provision of blessings. It also proves that He is completely Rich Beyond Need and that creation is in total and dire need of Him alone in every sense and in every possible way.</p>
-                
-                <p><strong>(4)</strong> "Owner of the Day of Judgement". The master is a person who has the quality of ownership, from the consequences of which is the ability to command and prohibit, reward and punish, and to behave with his subjects and possessions in any way he wishes. The Master of the Day of Judgement, the Day of Rising, the Day on which man will be judged for his actions the good and the bad. This is because on that day the completeness and perfection of His mastery, justice, and wisdom will be made clear to all. Moreover, it will be the end of the worldly masters, so much so that kings, ministers, slaves and the free-born will all be the same: all of them submissive to His greatness, rendered in complete submission before His honor, expectant of His recompense, hoping for His reward and fearing His punishment. The point of mentioning His mastery in this context is to emphasize it; otherwise, He is Master of the Day of Judgement and all other days. <strong>5)</strong> "You Alone we worship and You Alone we ask for help", meaning that we single You out alone for worship and seeking help. This is because mentioning the object at the head of a verb is a method of constraint (hasr), i.e. affirming what is mentioned in the sentence and negating it for anything that falls outside. Therefore, it is as if the person has said, we worship You and we do not worship anything else. We ask You for help and we do not turn to anyone else for help.'</p>
-                
-                <p>Mentioning worship before asking for help is by way of mentioning the general before the specific, and to show that attention should be given to His right over the right of His slave. Worship is "a collective noun that subsumes all actions and sayings, outward and inward, that Allah loves and is pleased with. Seeking help, isti`ana, is "to depend upon Allah, Most High, in acquiring that which would benefit and repressing that which would harm, along with having the certainty that He will actually assist the one asking".</p>
-                
-                <p>Establishing the worship of Allah and seeking His help are the means to everlasting happiness and security from all evil; there is no path to victory except by meeting the requirements of these two pillars. Worship can only be considered to be true worship when done in the way taught by the Messenger seeking thereby only Allah's Face. These two conditions have to be present for the action to be considered worship. Seeking help has been mentioned after worship even though it is a part of worship because the slave is always in need of Allah's help in all acts of worship: if Allah does not help him, he will not achieve the goals he hopes to attain by enacting the obligations and avoiding the prohibitions. <strong>(6)</strong> "Guide us to and on the Straight Path" means show us, direct us to it, and grant us the divine grace to traverse it. The Straight Path is the clear path that leads to Allah and His Paradise: it is the knowing the truth and acting by it. Therefore, the verse means: guide us to the Path and guide us in the Path. Guidance to the Path means to come to Islam and abandon all other religions. Guidance in the Path means guidance towards all of the details of Islam in terms of knowledge and action. Hence, this supplication is one of the most comprehensive and most beneficial supplications, and this is why it is obligatory to supplicate to Allah with it in every unit of prayer, especially since the servant is in continuous need of it. <strong>(7)</strong> This Straight Path is "the Path of those You have blessed" who are the Prophets, the Sincerely Truthful, the Martyrs and the Righteous "not" the path "of those who have incurred anger" who knew the truth but abandoned it such as the Jews and others, "nor" the path "of those astray" who abandoned the truth out of ignorance and misguidance such as the Christians.</p>
-                
-                <p>This chapter, despite being short, has covered what no other chapter of the Qur´an has. It mentions the three types of Tawhid: Tawhid al-Rububiyyah, (Oneness of Allah's Lordship), derived from His saying, "Lord of all the worlds"; Tawhid al-Ilaahiyyah, (Oneness of Worship), which is to single out Allah Alone for worship, derived from the word "Allah" and from His saying "You Alone we worship and You Alone we ask for help"; and Tawhid al-Asma´ wa'l-Sifat, (Oneness of the Names and Attributes), which is to affirm the Attributes of Perfection for Allah, Most High, which He has affirmed for Himself and His Messenger has affirmed for Him, without ta`til (denying the Attributes), or tamthil and tashbih (likening the Attributes to creation) as is proven by His saying, "all praise and thanks" as already mentioned.</p>
-                
-                <p>It also affirms Prophethood in His saying "guide us to and on the Straight Path" because this guidance is not possible without a message. It affirms recompense for ones actions in His saying "Master of the Day of Judgement"" and it affirms that this recompense will be established upon justice, this is because the meaning of '"deen"' is recompense founded upon justice. It affirms Qadr (the divine decree) and that the slave is the true performer of his actions opposing the stances of the Qadariyyah, those who deny Qadr, and Jabariyyah, those who negate the will of the person. In fact this surah refutes all the people of innovation and misguidance in His saying "Guide us to and on the Straight Path" because this is knowing the truth and enacting it, and every innovator and misguided person contradicts this. It enjoins making the religion sincerely for Allah in terms of worship and seeking help in His saying "You Alone we worship and You Alone we ask for help".</p>
-                
-                <p>All praise and thanks are for Allah, Lord of everything that exists.</p>
-                
-                
-      <SectionTitle>[ Explanation of 'Aayatul ' "The verse of the Kursee" ]</SectionTitle>
-
-      <AyahBox
-        header={`The Cow (2:255)`}
-        arabic={`ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌۭ وَلَا نَوْمٌۭ ۚ لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍۢ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ ٢٥٥`}
-        translation={`Allâh! Lâ ilâha illa Huwa (none has the right to be worshipped but He), Al-Hayyul-Qayyum (the Ever Living, the One Who sustains and protects all that exists). Neither slumber nor sleep overtakes Him. To Him belongs whatever is in the heavens and whatever is on the earth. Who is he that can intercede with Him except with His Permission? He knows what happens to them (His creatures) in this world, and what will happen to them in the Hereafter. And they will never compass anything of His Knowledge except that which He wills. His Kursî  extends over the heavens and the earth, and He feels no fatigue in guarding and preserving them. And He is the Most High, the Most Great. [This Verse 2:255 is called Ayat-ul-Kursî ]`}
-        translator={`Al-Hilali & Khan`}
-        link={`https://quran.com/2/255`}
-      />
-
-                
-                <p>"Allah- nothing deserves to be worshiped except Him, the Ever-Living, the Sustainer of all existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission?! He knows what is presently before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursee extends over the heavens and the earth, and their preservation does not tire him. And He is the Most High, the Most Great".</p>
-                
-                <p><strong>(255)</strong> The Messenger of Allah -may Allah praise and send him peace- has stated that this verse is the greatest verse of the Qur'an due that which it comprises of Tawheed, completely singling out Allah, alone, without any partners, in all acts of worship and the many attributes of Allah, The Exalted Inventor of all things.</p>
-                
-                <p>Allah informs us that He is "Allah": Meaning, The One to whom belongs worship, in all its senses: None deserves to be worshiped except Him. Therefore, worshipping other than Allah is futile. He is "Al-Hayy" : The Ever-Living : To whom belongs all of the qualities of perfect life; including perfect hearing, vision, ability, will, and other attributes relating to His essence. He is "Al-Qayyoom" The Sustainer; it entails all of His attributes describing His actions. He is independent and free of any need of His creation. He sustains all of existence.</p>
-                
-                <p>He has originated everything into existence, has provided everything with sustenance, and all the necessities for existence and survival. Due to His perfect qualities of life and sustainment, "Neither drowsiness nor sleep overtakes Him". Drowsiness and sleep only occur in the creation, which experiences weakness, exhaustion, and inability, and does not apply to the One of Magnificence, Greatness, and Splendor! He informs us that He is The Owner of everything that is within the heavens and earth. So everything is a possessed slave of Allah: None can depart from this state. "There is none in the heavens and earth, except that it comes to the Most Merciful as a slave" (19:93). So He is The Owner of everything. And He is The One, to whom belongs the attributes of dominion, authority, reign, majesty, and management of universal affairs. Due to His supreme rule and authority, none can intercede with Him, except by His permission. All of the notable and distinguished interceders are slaves belonging to Him. None can proceed with intercession, until He permits them: "Say: To Allah belongs all intercession. To Him belongs the dominion of the heavens and earth…" (39:44). Allah does not allow anyone to intercede, except the intercession for whom He is pleased with. And Allah is not pleased, except with the one who worships Him alone and follows all of His Messengers. Therefore, whomsoever this does not apply to is not entitled any share of intercession. Then Allah informs us of His unlimited, all-encompassing knowledge. He knows what awaits the creation of infinite future events, as well as "what is behind them", of unlimited past affairs. No concealed thing is hidden from Him: "He knows that which deceives the eyes and what the hearts conceal" (40:19).</p>
-                
-                <p>None of the creation can encompass anything of Allah's knowledge and information, "except for what He wills", i.e., what He has disclosed to them, by different means, including prescribed and legislative affairs. Yet, this in its entirety, still amounts to nothing, with respect to the knowledge and information of The Inventor, Allah. This is affirmed by the most knowledgeable creations of Allah; the messengers and angels. They said: "Exalted are You! We have no knowledge, except what You have taught us" (2:32).</p>
-                
-                <p>Allah then informs us of His greatness and magnificence, and that "His footstool extends over the heavens and earth", and that He maintains the heavens and earth, and all of its inhabitants, by means of causation and universal orders, which He has placed in the creation. All of this, while; "its preservation does not tire or burden Him", due to the perfection of His greatness, ability, and His abundant wisdom in His laws. "And He is The Most High" The Most High in His essence; above all of His creation, having risen over the Throne. The Most High by the exaltedness and greatness of His attributes and status: To Him belongs every perfect attribute of excellence. The Most High by His subjugation of the creation: All of existence submits to Him. Even the stubborn and obstinate are subdued to His subjugation. And He is "The Most Great": He is the possessor of all the qualities of greatness, magnificence, nobility, and splendor: The One whom the hearts love, and the souls glorify. The hearts of His prophets, angels, and allies are in complete glorification of His Majesty.</p>
-                
-                <p>There is none greater than Him! Those of knowledge and acquaintance recognize that the greatness of anything and everything, even if it surpassed eminence and was considered indescribable, is still nothing compared to the greatness of The Most High, Most Great! Clearly, this verse, which is comprised of such extraordinary meanings, entitles it to be the greatest verse of the Qur'an. The heart of one who reads it in contemplation and reflection- while comprehending its meanings- deserves to be filled with certainty, acknowledgement, and Eemaan (Faith). Furthermore, by that, s/he will be safeguarded from the evil of Satan.</p>
+                  
+                  <p>"Allah- nothing deserves to be worshiped except Him, the Ever-Living, the Sustainer of all existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission?! He knows what is presently before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursee extends over the heavens and the earth, and their preservation does not tire him. And He is the Most High, the Most Great".</p>
+                  
+                  <p><strong>(255)</strong> The Messenger of Allah -may Allah praise and send him peace- has stated that this verse is the greatest verse of the Qur'an due that which it comprises of Tawheed, completely singling out Allah, alone, without any partners, in all acts of worship and the many attributes of Allah, The Exalted Inventor of all things.</p>
+                  
+                  <p>Allah informs us that He is "Allah": Meaning, The One to whom belongs worship, in all its senses: None deserves to be worshiped except Him. Therefore, worshipping other than Allah is futile. He is "Al-Hayy" : The Ever-Living : To whom belongs all of the qualities of perfect life; including perfect hearing, vision, ability, will, and other attributes relating to His essence. He is "Al-Qayyoom" The Sustainer; it entails all of His attributes describing His actions. He is independent and free of any need of His creation. He sustains all of existence.</p>
+                  
+                  <p>He has originated everything into existence, has provided everything with sustenance, and all the necessities for existence and survival. Due to His perfect qualities of life and sustainment, "Neither drowsiness nor sleep overtakes Him". Drowsiness and sleep only occur in the creation, which experiences weakness, exhaustion, and inability, and does not apply to the One of Magnificence, Greatness, and Splendor! He informs us that He is The Owner of everything that is within the heavens and earth. So everything is a possessed slave of Allah: None can depart from this state. "There is none in the heavens and earth, except that it comes to the Most Merciful as a slave" (19:93). So He is The Owner of everything. And He is The One, to whom belongs the attributes of dominion, authority, reign, majesty, and management of universal affairs. Due to His supreme rule and authority, none can intercede with Him, except by His permission. All of the notable and distinguished interceders are slaves belonging to Him. None can proceed with intercession, until He permits them: "Say: To Allah belongs all intercession. To Him belongs the dominion of the heavens and earth…" (39:44). Allah does not allow anyone to intercede, except the intercession for whom He is pleased with. And Allah is not pleased, except with the one who worships Him alone and follows all of His Messengers. Therefore, whomsoever this does not apply to is not entitled any share of intercession. Then Allah informs us of His unlimited, all-encompassing knowledge. He knows what awaits the creation of infinite future events, as well as "what is behind them", of unlimited past affairs. No concealed thing is hidden from Him: "He knows that which deceives the eyes and what the hearts conceal" (40:19).</p>
+                  
+                  <p>None of the creation can encompass anything of Allah's knowledge and information, "except for what He wills", i.e., what He has disclosed to them, by different means, including prescribed and legislative affairs. Yet, this in its entirety, still amounts to nothing, with respect to the knowledge and information of The Inventor, Allah. This is affirmed by the most knowledgeable creations of Allah; the messengers and angels. They said: "Exalted are You! We have no knowledge, except what You have taught us" (2:32).</p>
+                  
+                  <p>Allah then informs us of His greatness and magnificence, and that "His footstool extends over the heavens and earth", and that He maintains the heavens and earth, and all of its inhabitants, by means of causation and universal orders, which He has placed in the creation. All of this, while; "its preservation does not tire or burden Him", due to the perfection of His greatness, ability, and His abundant wisdom in His laws. "And He is The Most High" The Most High in His essence; above all of His creation, having risen over the Throne. The Most High by the exaltedness and greatness of His attributes and status: To Him belongs every perfect attribute of excellence. The Most High by His subjugation of the creation: All of existence submits to Him. Even the stubborn and obstinate are subdued to His subjugation. And He is "The Most Great": He is the possessor of all the qualities of greatness, magnificence, nobility, and splendor: The One whom the hearts love, and the souls glorify. The hearts of His prophets, angels, and allies are in complete glorification of His Majesty.</p>
+                  
+                  <p>There is none greater than Him! Those of knowledge and acquaintance recognize that the greatness of anything and everything, even if it surpassed eminence and was considered indescribable, is still nothing compared to the greatness of The Most High, Most Great! Clearly, this verse, which is comprised of such extraordinary meanings, entitles it to be the greatest verse of the Qur'an. The heart of one who reads it in contemplation and reflection- while comprehending its meanings- deserves to be filled with certainty, acknowledgement, and Eemaan (Faith). Furthermore, by that, s/he will be safeguarded from the evil of Satan.</p>
+      </TafseerSection>
                 
                 
       <SectionTitle>Definitions</SectionTitle>
@@ -194,7 +206,7 @@ export default function Lesson01Content() {
                 <p><strong>Madani Surah:</strong> The Chapters of the Quran that were revealed after the Prophet's صلى الله عليه وسلم migration to Madinah.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Madani Surah 'Al-Zalzalah' "The Quake" ]</SectionTitle>
+      <TafseerSection surahName="Al-Zalzalah - The Quake" surahArabic="الزلزلة" surahNumber="99" type="madani" defaultOpen={false}>
 
       <AyahBox
         header={`The Earthquake (99:1)`}
@@ -276,7 +288,9 @@ export default function Lesson01Content() {
                 <p>This verse then contains strong encouragement towards performing good deeds, even if it be little, and discouragement from working evil even if it seems minor.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al-Aadiyaat' "The Courser Horses" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Aadiyaat - The Courser Horses" surahArabic="العاديات" surahNumber="100" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Courser (100:1)`}
@@ -390,7 +404,9 @@ export default function Lesson01Content() {
                 <p><strong>(11)</strong> "Surely their Lord is All-Aware of them on that Day"," their outer and inner deeds, the minor and major, and He will recompense them for them. Even though Allah is perfectly informed about them on every day, this Day has specifically been mentioned to highlight that those deeds will be fully recompensed since Allah is fully aware of them.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al Qaari'ah' "The Striking Hour" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Qaari'ah - The Striking Hour" surahArabic="القارعة" surahNumber="101" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Calamity (101:1)`}
@@ -494,7 +510,9 @@ export default function Lesson01Content() {
                 <p><strong>(8-11)</strong> "But as for those whose scales are light", whose good deeds do not compare to his bad "they will have their home in Hell", his abode and final destination. It will be like a mother to him who always sticks close to him just as Allah says, "surely the punishment in it is lasting and clinging" (25:65). It is also said that the meaning is that his mind will be hurled into Hellfire, meaning that he will be thrown into Hell headfirst. "What will make you realize what it is?!" asked by way of emphasizing its severity, then the answer is given: "a hot blazing Fire", seventy times hotter than the fire of this world! We seek Allah's protection from it!</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'At-Takaathur' "Competition for worldly gains" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="At-Takaathur - Competition for worldly gains" surahArabic="التكاثر" surahNumber="102" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Rivalry in world increase (102:1)`}
@@ -576,7 +594,9 @@ export default function Lesson01Content() {
                 <p><strong>(8)</strong> "Then, on that Day, you will definitely be questioned about your worldly pleasures", in this world. Did you show Him due gratitude? Did you fulfil the rights of Allah in this world and not use his blessings to disobey Him? If so He will confer upon you a blessing far greater and better. Were you deceived by this world and abandoned due gratitude? If so, Allah will punish you: "On the Day when those who disbelieved are exposed to the Fire: You dissipated the good things you had in your worldly life and enjoyed yourself in it. So today you are being repaid with the punishment of humiliation for being arrogant in the earth without any right and for being deviators"(46:20).</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al-Asr' "By the time" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-'Asr - By the time" surahArabic="العصر" surahNumber="103" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Declining Day (103:1)`}
@@ -616,7 +636,9 @@ export default function Lesson01Content() {
                 <p>- "And counsel one another to patience" in obedience to Allah, away from disobedience to Him, and in the face of His decrees that man finds painful. The first two matters perfect the person and the next two aid to perfect others. In the completion of these four matters lies safety from loss and through them does the person attain success.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al-Humazah' "The Backbiters" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Humazah - The Backbiters" surahArabic="الهمزة" surahNumber="104" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Traducer (104:1)`}
@@ -704,7 +726,9 @@ export default function Lesson01Content() {
                 <p><strong>(8-9)</strong> "It will be sealed over them", It closes in on them from every side, "In columns" caging them in towering columns, behind its doors "extended" preventing them from leaving; "Whenever they try to get out, they will be brought back into it, and it will be said to them: 'Taste the chastisement of the Fire which you used to deny' "(32:20). We take refuge with Allah and ask Him for well-being and pardon!</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah "The Elephant" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Feel - The Elephant" surahArabic="الفيل" surahNumber="105" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Elephant (105:1)`}
@@ -752,7 +776,9 @@ export default function Lesson01Content() {
                 <p><strong>(1-5)</strong> "Have you not considered" the might of Allah, His greatness, His mercy to His slaves, the proofs of His Tawhid and the truthfulness of His Messenger –may Allah praise and send him peace- demonstrated in "what your Lord did with the army of the elephant" who set out for the Sanctified House with the goal of demolishing it. They fully equipped their army and enlisted a herd of elephants to help them and, as such, amassed an army from Abyssinia and Yemen that the Arabs had no hope of repelling. When they approached Makkah, they found no defending army to face them, seeing instead that the inhabitants of Makkah had fled in fear. "Did He not make their plot go astray? And He sent against them flocks of birds", one after another, "Striking them with stones of hard clay", striking every single one of them, weakening them, wearing them down and finally killing them, "And made them like an empty field of stalks of which the corn has been eaten up by cattle". Allah sufficed against their evil and utterly confounded their plot. Their story is well known and famous. This event occurred in the year that the Messenger of Allahصلى الله عليه وسلم was born, and became one of the miracles prior to his call and one of the clear proofs of his message. To Allah belongs all praise and thanks.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah ' Quraysh' ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Quraysh" surahArabic="قريش" surahNumber="106" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`Quraysh (106:1)`}
@@ -794,7 +820,9 @@ export default function Lesson01Content() {
                 <p>It is for these reasons that He ordered them to show Him gratitude by saying, "so let them worship the Lord of this House", let them single Him out alone for worship and direct their worship to Him and Him alone. "Who has fed them against hunger and has secured them from fear", being able to eat freely and living in safety are two of the greatest worldly blessings which call for gratitude to Allah, Most High. O Allah! All praise and thanks are Yours for Your blessings, the outer and inner! Allah specifically mentions that He is the Lord of the House because of its nobility and excellence. Whereas in reality, He is the Lord of everything.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al-Maa'oon' "Simplest Aid" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Maa'oon - Simplest Aid" surahArabic="الماعون" surahNumber="107" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Small kindnesses (107:1)`}
@@ -868,7 +896,9 @@ export default function Lesson01Content() {
                 <p>This chapter encourages the feeding of the poor and the orphan, it encourages the encouragement of this, it stresses the importance of being careful in our prayers, the importance of preserving them, the importance of being sincere in them, and in all other deeds. The chapter also encourages doing good and spending small amounts of wealth in charity because Allah reprimands those who do not do this. Allah, the Perfect One, knows best.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah "Al-Kawthar" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Kawthar" surahArabic="الكوثر" surahNumber="108" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Abundance (108:1)`}
@@ -904,7 +934,9 @@ export default function Lesson01Content() {
                 <p><strong>(3)</strong> "Only the one who hates you", criticizes you, and does not give you your rights "is truly cut off from every good", prevented from all good; prevented from good deeds and prevented from being remembered. As for Muhammad – may Allah praise and send him peace- then he is truly complete; as complete as any created being can ever be in terms of being remembered or mentioned as well as having numerous helpers and followers.</p>
                 
                 
-      <SectionTitle>[ Explanation of the Maki Surah "The Disbelievers" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Kaafiroon - The Disbelievers" surahArabic="الكافرون" surahNumber="109" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Disbelievers (109:1)`}
@@ -960,7 +992,9 @@ export default function Lesson01Content() {
                 <p><strong>(1-6)</strong> Meaning, say to those who choose not to believe openly and clearly that "I do not worship what you worship" meaning one frees from that which they used to worship besides Allah openly and secretly. "Nor do you worship the One I worship" since you do not worship Allah alone. So you worshiping Him along with others is not considered worship. He repeated this phrase so the first one shows that the deed does not exist while the second one shows that it has now become their attribute. For this reason He differentiated between the two groups and separated between them by saying "You have your religion, and I have my religion". Similarly, Allah has said: ''Say, 'everyone works according to his way" (17:84); I free myself from your actions and you free yourselves from my deeds.</p>
 
                 
-      <SectionTitle>[ Explanation of the Madani Surah "The Victory" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="An-Nasr - The Victory" surahArabic="النصر" surahNumber="110" type="madani" defaultOpen={false}>
 
       <AyahBox
         header={`The Divine Support (110:1)`}
@@ -990,7 +1024,9 @@ export default function Lesson01Content() {
                 <p><strong>(1-3)</strong> This noble chapter bears glad-tidings for the Messenger of Allah صلى الله عليه وسلم and a command when he sees the results; it also contains an indication of what follows next from these glad-tidings. The glad-tidings are tidings of Allah's aiding His Messenger صلى الله عليه وسلم, the conquest of Makkah and people embracing "Allah's religion in crowds" many of whom will be from his tribe and family after having been his opponents. That which he was given glad-tidings of has occurred. The command after achieving the victory and the conquest is to show gratitude to his Lord, to glorify Him, all the while praising Him, and asking His forgiveness. The indication of what will follow on from this is two-fold: the first is that victory will remain for the religion and it will increase with the Messenger of Allah صلى الله عليه وسلم glorifying and praising Allah and asking His forgiveness. This is an expression of gratitude about which Allah says, "If you are grateful, I will grant you increase" (14:9). This fact was also actualized in the time of the Rightly Guided Khalifs and after them. This aid remained until Islam spread to an extent that no other religion had spread, and nations and people embraced the religion as had not been done for any other religion. Then, this nation began to oppose the command of Allah and they were tested with splitting and discord; then what followed that which was witnessed. Yet, despite this, Allah still shows this nation and religion mercy and kindness to the extent of which does not even cross the minds! The second is that the Messenger of Allah صلى الله عليه وسلم was soon to pass away. This is because his life is a noble life which Allah Himself took an oath by. It is known in Islam that noble matters are completed by asking Allah's forgiveness as we see in the case of prayer and Hajj for example. Allah ordering the Prophet صلى الله عليه وسلم to praise Him and ask forgiveness while in this state indicates that his time has come and that he should now prepare himself for the meeting with his Lord and that he should end his life with one of the best deeds. May Allah shower abundant peace and blessings upon him! He would frequently implement this verse of the Quran in his ruku` and sujud by saying, Glory be to Allah, our Lord, and all praise; O Allah forgive me!</p>
 
                 
-      <SectionTitle>[ Explanation of the Maki Sural 'Al Masad' "The palm-fibre rope" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Masad - The palm-fibre rope" surahArabic="المسد" surahNumber="111" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Palm Fiber (111:1)`}
@@ -1044,7 +1080,9 @@ export default function Lesson01Content() {
                 <p><strong>(3-5)</strong> "He will soon roast in a flaming fire", enveloping him from all directions, "also his wife, the wood-carrier", she was also someone who harmed the Messenger of Allah صلى الله عليه وسلم greatly. She and her husband aided each other in sin and transgression, and they did all they could to harm him صلى الله عليه وسلم. Her sins have collected on her back, weighing her down, in the same way as a wood-carrier piles wood on his back, binding them with a rope "of palm-fibre" around the neck. The meaning could also be that she will actually carry wood to fuel the fire burning her husband with a rope of palm-fibre round her neck. Whatever the case, this Surah contains a clear miracle from Allah. Allah revealed this Surah before Abu Lahab's death and his wife's death. He informed them that they would roast in the Fire, which necessarily means that they would never accept Islam. This is what happened, exactly as the Knower of the unseen and seen informed us!</p>
 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al Ikhlaas' "Sincerity" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Ikhlaas - Sincerity" surahArabic="الإخلاص" surahNumber="112" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Sincerity (112:1)`}
@@ -1090,7 +1128,9 @@ export default function Lesson01Content() {
                 <p><strong>(4)</strong> "And there is none comparable to Him", not in His Names, or His Attributes or His actions. Blessed and Exalted is He! This chapter focuses on Tawhid of the Names and Attributes of Allah.</p>
 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'Al Falaq' "The Daybreak" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="Al-Falaq - The Daybreak" surahArabic="الفلق" surahNumber="113" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`The Daybreak (113:1)`}
@@ -1146,7 +1186,9 @@ export default function Lesson01Content() {
                 <p><strong>(5)</strong> "From the evil of the envious when he envies", the envier is one who wishes to see the removal of the blessings he sees in the envied, and does his utmost to have them removed. Man is therefore in need of seeking refuge from his evil and in order to render his plots vain. Included in the category of the envier is someone who afflicts others with the evil-eye because this only ever emanates from one who is envious and has an evil nature. This chapter covers seeking refuge from all types of evil: general and specific. It also proves that black magic is something real, its harm should be feared, and that one should take refuge with Allah from it and from those who practice it.</p>
 
                 
-      <SectionTitle>[ Explanation of the Maki Surah 'An-Naas' "The People" ]</SectionTitle>
+      </TafseerSection>
+
+      <TafseerSection surahName="An-Naas - The People" surahArabic="الناس" surahNumber="114" type="makki" defaultOpen={false}>
 
       <AyahBox
         header={`Mankind (114:1)`}
@@ -1202,6 +1244,8 @@ export default function Lesson01Content() {
                 <p><strong>(1-6)</strong> This chapter deals with seeking refuge with the Lord and King of the people, the God of the people, from Satan who is the source of all evil. From the evil of the retreating Whisperer, who whispers in people's hearts. Some of the trials of his evil are that he "whispers into the hearts of people", adorns evil, presenting it to them beautiful, and incites them towards performing it. He is always whispering but retreats when the slave remembers Allah, seeking His assistance in repressing him. Therefore, it is incumbent upon a person to turn to Allah for aid, to seek refuge with Him, and to hold firmly to His Lordship. All of the people fall under the realm of His Lordship and sovereignty; He has taken hold of every creature by the forelock. People must also stick firmly to His worship, for it was for His worship that people are created. This worship, however, cannot be perfected until and unless he represses the evil of his enemy who desires to cut him off from his goal, obstructing him from it, and who wants him to follow him, thereby becoming from the people of the scorching blaze. Whispering could occur from jinn or from man and this is why Allah says, coming "from the jinn and man".</p>
                 
                 <p>All praise and thanks are for Allah, Lord of the worlds, from the beginning to the end, inwardly and outwardly. We ask Allah, the Most Perfect, the Most High, to bestow His favors upon us, to forgive our sins which are a barrier between us and many of His blessings. Sins and desires are preventing us from pondering upon His verses. We hope that He will not prevent us from the benefits that are with Him due to the evil that is with us. Since, surely no one loses hope in the mercy of Allah except those who do not believe. None loses hope in His mercy except the misguided. May Allah praise and send peace upon His messenger Muhammad, upon his family and all of his companions; continues praise and peace at all times. All praise and thanks are for Allah the One who the good deeds are completed due to His favors.</p>
+
+      </TafseerSection>
 
     </>
   )

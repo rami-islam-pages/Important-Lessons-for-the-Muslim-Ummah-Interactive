@@ -18,7 +18,7 @@ export const quiz: Quiz = {
             'Four.',
             'Five.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q2',
@@ -30,7 +30,7 @@ export const quiz: Quiz = {
             'Six.',
             'Seven.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q3',
@@ -38,7 +38,7 @@ export const quiz: Quiz = {
           text: 'Islam is a pillar which is higher than Emaan. ( True - False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q4',
@@ -50,7 +50,7 @@ export const quiz: Quiz = {
             'Eight.',
             'Two.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q5',
@@ -62,7 +62,7 @@ export const quiz: Quiz = {
             'Seven.',
             'Five.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q6',
@@ -73,7 +73,7 @@ export const quiz: Quiz = {
             'To understand the reality of something.',
             'There is none that deserves to be worshipped except Allah.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q7',
@@ -84,7 +84,7 @@ export const quiz: Quiz = {
             'S/he is no longer a Muslim.',
             'If their certainty is greater than their doubt, then they do not disbelieve.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q8',
@@ -97,7 +97,7 @@ export const quiz: Quiz = {
             'believing it.',
             'all of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 3,
         },
         {
           id: 'q9',
@@ -105,7 +105,7 @@ export const quiz: Quiz = {
           text: 'Showing off with "La ilaha ila Allah" such as showing off while giving charity is Minor Shirk ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q10',
@@ -118,7 +118,7 @@ export const quiz: Quiz = {
             'disbeliever.',
             'deficient in Emaan.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q11',
@@ -130,7 +130,7 @@ export const quiz: Quiz = {
             'Minor Disbelief.',
             'Major Sin.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q12',
@@ -142,7 +142,7 @@ export const quiz: Quiz = {
             'Three.',
             'Two.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q13',
@@ -150,7 +150,7 @@ export const quiz: Quiz = {
           text: 'The love for the sake of Allah is for good deeds, the person doing them, times, and places ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q14',
@@ -162,7 +162,7 @@ export const quiz: Quiz = {
             'Obligatory.',
             'Major Shirk.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q15',
@@ -174,7 +174,7 @@ export const quiz: Quiz = {
             'Obligatory.',
             'Major Shirk.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q16',
@@ -186,7 +186,7 @@ export const quiz: Quiz = {
             '3',
             '4',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q17',
@@ -194,7 +194,7 @@ export const quiz: Quiz = {
           text: 'Every creation is a slave of Allah in terms of subjugation; even the non-Muslims ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q18',
@@ -205,7 +205,7 @@ export const quiz: Quiz = {
             'It benefits them.',
             'It does not benefit them.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q19',
@@ -213,7 +213,7 @@ export const quiz: Quiz = {
           text: '"His slave and messenger" in the shahadah: A slave who is not worshipped and a messenger who should not be rejected ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q20',
@@ -224,7 +224,7 @@ export const quiz: Quiz = {
             'its meaning',
             'what it implies.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q21',
@@ -232,7 +232,7 @@ export const quiz: Quiz = {
           text: 'Whoever directs any part of lordship to the Prophet \uFDFA, then they have not testified that he is a slave ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q22',
@@ -244,7 +244,7 @@ export const quiz: Quiz = {
             'His slave and messenger.',
             'the seal of the prophets.',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q23',
@@ -256,7 +256,7 @@ export const quiz: Quiz = {
             'Ibn Baaz',
             'Imam Malik',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q24',
@@ -267,7 +267,7 @@ export const quiz: Quiz = {
             'Is\'haaq',
             'Ismaa\'eel',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q25',
@@ -286,7 +286,7 @@ export const quiz: Quiz = {
             'the people',
             'people and jinn.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q27',
@@ -294,7 +294,7 @@ export const quiz: Quiz = {
           text: 'Al Ma\'aarij is his \uFDFA journey from Makkah to Bayt al Maqdis ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q28',
@@ -307,7 +307,7 @@ export const quiz: Quiz = {
             'Madinah',
             'All of the above.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q29',
@@ -321,7 +321,7 @@ export const quiz: Quiz = {
             'four',
             'seven.',
           ],
-          correctIndex: -1,
+          correctIndex: 4,
         },
         {
           id: 'q30',
@@ -333,7 +333,7 @@ export const quiz: Quiz = {
             'four',
             'seven.',
           ],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'q31',
@@ -341,7 +341,7 @@ export const quiz: Quiz = {
           text: 'The Prophet \uFDFA performed his farewell pilgrimage and this shows that he has performed hajj before that ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q32',
@@ -353,7 +353,7 @@ export const quiz: Quiz = {
             'recommended',
             'permissible.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },

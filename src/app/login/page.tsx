@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { bookConfig } from '@/content/book.config'
-import { createClient } from '@/lib/supabase/client'
+import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -14,6 +14,23 @@ export default function LoginPage() {
   const [message, setMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const router = useRouter()
+
+  if (!isSupabaseConfigured) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-forest-900">
+        <div className="mx-4 w-full max-w-md">
+          <div className="rounded-2xl border border-gold-400/20 bg-forest-800/50 p-8 text-center">
+            <h1 className="font-display text-2xl font-bold text-cream-100 mb-4">Sign In</h1>
+            <p className="text-sm text-cream-400 mb-6">Authentication is not configured yet. You can still browse all lessons and quizzes.</p>
+            <Link href="/lessons" className="inline-block rounded-lg bg-gold-400/10 px-6 py-2 text-sm font-medium text-gold-400 transition-colors hover:bg-gold-400/20">
+              Continue to Lessons &rarr;
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   const supabase = createClient()
 
   const handleEmailAuth = async (e: React.FormEvent) => {

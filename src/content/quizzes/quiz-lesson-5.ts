@@ -25,7 +25,7 @@ export const quiz: Quiz = {
             'five',
             'four.',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q35',
@@ -37,7 +37,7 @@ export const quiz: Quiz = {
             'three',
             'two',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q36',
@@ -48,7 +48,7 @@ export const quiz: Quiz = {
             'four',
             'countless',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q37',
@@ -56,7 +56,7 @@ export const quiz: Quiz = {
           text: 'Meekaa\'eel is the angel who is entrusted with rain ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q38',
@@ -64,7 +64,7 @@ export const quiz: Quiz = {
           text: 'People have hearts while the angels do not have hearts ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q39',
@@ -77,7 +77,7 @@ export const quiz: Quiz = {
             'seven',
             'many',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q40',
@@ -85,7 +85,7 @@ export const quiz: Quiz = {
           text: 'Allah has revealed a book to every prophet ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q41',
@@ -93,7 +93,7 @@ export const quiz: Quiz = {
           text: 'The first messenger is Adam \u2013 peace be upon him- ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q42',
@@ -101,7 +101,7 @@ export const quiz: Quiz = {
           text: 'Muhammad \uFDFA is a messenger and not a prophet ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q43',
@@ -113,7 +113,7 @@ export const quiz: Quiz = {
             'four',
             'many',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q44',
@@ -121,7 +121,7 @@ export const quiz: Quiz = {
           text: 'Believing in the Last Day entails believing in everything that happens after death until the people are resurrected from their graves ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q45',
@@ -133,7 +133,7 @@ export const quiz: Quiz = {
             'five',
             'three',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q46',
@@ -141,7 +141,7 @@ export const quiz: Quiz = {
           text: 'Does Allah know something before it happens? ( Yes \u2013 No ).',
           type: 'multiple-choice',
           options: ['Yes', 'No'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q47',
@@ -149,7 +149,7 @@ export const quiz: Quiz = {
           text: 'Does Allah know everything the people do? ( Yes \u2013 No ).',
           type: 'multiple-choice',
           options: ['Yes', 'No'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q48',
@@ -157,7 +157,7 @@ export const quiz: Quiz = {
           text: 'The people have a choice and will to do whatever they want ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q49',
@@ -165,7 +165,7 @@ export const quiz: Quiz = {
           text: 'Are the actions of the people created? ( Yes \u2013 No ).',
           type: 'multiple-choice',
           options: ['Yes', 'No'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'q50',
@@ -177,7 +177,7 @@ export const quiz: Quiz = {
             'three categories',
             'there is no dispute about it',
           ],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q51',
@@ -199,7 +199,7 @@ export const quiz: Quiz = {
           text: 'Hypocrisy of the heart is Minor Shirk which does not take one out of Islam ( True \u2013 False ).',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'q54',
@@ -210,7 +210,7 @@ export const quiz: Quiz = {
             'one pillar',
             'two pillars',
           ],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },

@@ -32,23 +32,23 @@ export default function Lesson11Content() {
       <SectionTitle>The Ruling on Movement in Prayer</SectionTitle>
 
                 
-                <div className="two-column-table">
-                    <div className="table-column">
+                <div className="grid grid-cols-2 gap-4 my-4">
+                    <div className="rounded-lg border border-gold-400/20 bg-forest-800/40 p-4">
                         <h3>Obligatory Movement</h3>
                         <p>Covering one's private parts if they become uncovered. Turning towards the Qiblah if one turns away from it.</p>
                     </div>
-                    <div className="table-column">
+                    <div className="rounded-lg border border-gold-400/20 bg-forest-800/40 p-4">
                         <h3>Recommended Movement</h3>
                         <p>Moving to fill a gap in the row. Moving to get closer to the Imam.</p>
                     </div>
                 </div>
                 
-                <div className="two-column-table">
-                    <div className="table-column">
+                <div className="grid grid-cols-2 gap-4 my-4">
+                    <div className="rounded-lg border border-gold-400/20 bg-forest-800/40 p-4">
                         <h3>Permissible Movement</h3>
                         <p>Light movement that does not break concentration. Scratching or adjusting clothes briefly.</p>
                     </div>
-                    <div className="table-column">
+                    <div className="rounded-lg border border-gold-400/20 bg-forest-800/40 p-4">
                         <h3>Prohibited Movement</h3>
                         <p>Excessive movement that takes away from the prayer. Continuous fidgeting without need.</p>
                     </div>
@@ -58,7 +58,7 @@ export default function Lesson11Content() {
       <SectionTitle>Summary: Conditions, Pillars, and Obligations</SectionTitle>
 
                 
-                <div className="comparison-table">
+                <div className="rounded-lg border border-gold-400/20 bg-forest-800/40 p-4 my-4">
                     <table>
                         <thead>
                             <tr>

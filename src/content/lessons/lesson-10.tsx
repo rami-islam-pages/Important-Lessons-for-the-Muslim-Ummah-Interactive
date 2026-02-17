@@ -13,8 +13,8 @@ export default function Lesson10Content() {
                 <p>What is other than the conditions, pillars, and obligations is recommended. The one who leaves out the recommended acts is not sinful nor does one have to do the prostration of forgetfulness. Some of the recommended acts are:</p>
                 
                 <p><strong>1. The Opening Supplication</strong></p>
-                <div className="tashahhud-box">
-                    <p className="arabic-text" dir="rtl">سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ</p>
+                <div className="rounded-xl border border-gold-400/20 bg-forest-800/40 p-5 my-4">
+                    <p className="font-arabic text-xl sm:text-2xl leading-loose text-gold-400 text-center" dir="rtl">سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ</p>
                     <p className="transliteration"><strong>Transliteration:</strong> Subhaanak-Allaahumma wa bihamdik, wa tabaarakasmuk, wa ta'aalaa jadduk, wa laa ilaaha ghayruk.</p>
                     <p className="translation"><strong>Translation:</strong> Glory be to You, O Allah, and praise be to You. Blessed is Your Name. Exalted is Your Majesty. There is no deity worthy of worship besides You.</p>
                 </div>

@@ -17,7 +17,7 @@ export default function IntroContent() {
 
       <SectionTitle>{"What do 'The Important Lessons' consist of?"}</SectionTitle>
 
-      <ol className="numbered-list">
+      <ol className="list-decimal list-inside space-y-2 my-4 text-cream-200">
         <li>{"The way the early scholars read the Qur'an, memorized it, reflected upon its meanings, and acted upon it."}</li>
         <li>Explanation of Islam, Imaan, Ihsaan, worshiping Allah alone, and the categories of Shirk or worshipping other than Allah.</li>
         <li>Explanation of the Prayer.</li>

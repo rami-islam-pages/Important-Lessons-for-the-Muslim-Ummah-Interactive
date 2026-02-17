@@ -14,7 +14,7 @@ export const quiz: Quiz = {
           text: 'From the Muslim\'s manners is practicing the Islamic etiquettes',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q2',
@@ -22,7 +22,7 @@ export const quiz: Quiz = {
           text: 'My religion orders me to accompany the evil people and stay away from the righteous ones',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q3',
@@ -30,7 +30,7 @@ export const quiz: Quiz = {
           text: 'Islam has taught us to treat the maids and worker well',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q4',
@@ -38,7 +38,7 @@ export const quiz: Quiz = {
           text: 'It is okay to accompany those who harm others verbally and physically',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q5',
@@ -46,7 +46,7 @@ export const quiz: Quiz = {
           text: 'I enjoy cursing someone who curses me',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q6',
@@ -54,7 +54,7 @@ export const quiz: Quiz = {
           text: 'Islam has taught me to help the poor and the weak',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q7',
@@ -62,7 +62,7 @@ export const quiz: Quiz = {
           text: 'From the rights of a Muslim on another Muslim is to visit when sick and supplicate for them',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q8',
@@ -70,7 +70,7 @@ export const quiz: Quiz = {
           text: 'Trying to find out the neighbor\'s secrets is from the Islamic manners',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q9',
@@ -78,7 +78,7 @@ export const quiz: Quiz = {
           text: 'The most beloved people to Allah are the ones who are the most beneficial for the people',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q10',
@@ -86,7 +86,7 @@ export const quiz: Quiz = {
           text: 'The supplication for leaving the house is "In the Name of Allah we enter, in the Name of Allah we exit, and upon our Lord we fully rely"',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q11',
@@ -94,7 +94,7 @@ export const quiz: Quiz = {
           text: 'I say to the one who says "May Allah have mercy on you" upon hearing me praise and thank Allah after I sneeze, "May Allah guide you and rectify your affairs"',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q12',
@@ -102,7 +102,7 @@ export const quiz: Quiz = {
           text: 'Remembering Allah protects a Muslim and draws one closer to Allah',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q13',
@@ -117,7 +117,7 @@ export const quiz: Quiz = {
           text: 'From that which shows that one\'s Emaan is deficient is: Being jealous of your Muslim brother or sister',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q15',
@@ -132,7 +132,7 @@ export const quiz: Quiz = {
           text: 'That which is prohibited from the intoxicants is alcohol',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q17',
@@ -140,7 +140,7 @@ export const quiz: Quiz = {
           text: 'It is disliked to blow on the food and drink',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q18',
@@ -148,7 +148,7 @@ export const quiz: Quiz = {
           text: 'It is recommended to lick the fingers after eating and before washing the hands',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q19',
@@ -156,7 +156,7 @@ export const quiz: Quiz = {
           text: 'Being balanced regarding eating, clothing, and looking good is the best way',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },
@@ -176,7 +176,7 @@ export const quiz: Quiz = {
           text: 'Paying the debt of the dead person is...',
           type: 'multiple-choice',
           options: ['a must', 'recommended', 'permissible'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q22',
@@ -184,7 +184,7 @@ export const quiz: Quiz = {
           text: 'The ruling on burying the deceased is\u2026',
           type: 'multiple-choice',
           options: ['recommended', 'a must', 'communal obligation'],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'l18-q23',
@@ -192,7 +192,7 @@ export const quiz: Quiz = {
           text: 'The ruling on reminding the one dying to say "La Ilaha ilaa Allah" is',
           type: 'multiple-choice',
           options: ['a must', 'recommended', 'prohibited'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q24',
@@ -200,7 +200,7 @@ export const quiz: Quiz = {
           text: 'The ruling on watching the deceased being washed, if one is not one of the people washing him is\u2026',
           type: 'multiple-choice',
           options: ['prohibited', 'permissible', 'disliked'],
-          correctIndex: -1,
+          correctIndex: 2,
         },
         {
           id: 'l18-q25',
@@ -208,7 +208,7 @@ export const quiz: Quiz = {
           text: 'The knots of the shroud are untied once a person is put in the grave',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
         {
           id: 'l18-q26',
@@ -216,7 +216,7 @@ export const quiz: Quiz = {
           text: 'The spouses should not wash one another since the contract of marriage ends with death',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q27',
@@ -238,7 +238,7 @@ export const quiz: Quiz = {
           text: 'Crying for the deceased is permissible without any restrictions',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 1,
         },
         {
           id: 'l18-q30',
@@ -246,7 +246,7 @@ export const quiz: Quiz = {
           text: 'The deceased should be placed in the opening on the side of the grave facing the Qiblah',
           type: 'true-false',
           options: ['True', 'False'],
-          correctIndex: -1,
+          correctIndex: 0,
         },
       ],
     },

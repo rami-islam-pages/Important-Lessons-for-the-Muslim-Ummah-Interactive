@@ -12,9 +12,9 @@ export default function Lesson09Content() {
                 
                 <p>The Tashahhud is recited in every sitting of the prayer. The first Tashahhud is an obligation and the last Tashahhud is a pillar.</p>
                 
-                <div className="tashahhud-box">
+                <div className="rounded-xl border border-gold-400/20 bg-forest-800/40 p-5 my-4">
                     <h3>The Tashahhud</h3>
-                    <p className="arabic-text" dir="rtl">التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ</p>
+                    <p className="font-arabic text-xl sm:text-2xl leading-loose text-gold-400 text-center" dir="rtl">التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ</p>
                     
                     <p className="transliteration"><strong>Transliteration:</strong> At-Tahiyyaatu lillaahi, was-Salawaatu wat-Tayyibaat, As-Salaamu 'alayka ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuh, As-Salaamu 'alaynaa wa 'alaa 'ibaadillaahis-Saaliheen, Ash-hadu an laa ilaaha illallaah, wa ash-hadu anna Muhammadan 'abduhu wa Rasooluh.</p>
                     
@@ -27,9 +27,9 @@ export default function Lesson09Content() {
                 
                 <p>After the Tashahhud in the final sitting, one recites the Salawaat upon the Prophet ‫ﷺ‬:</p>
                 
-                <div className="tashahhud-box">
+                <div className="rounded-xl border border-gold-400/20 bg-forest-800/40 p-5 my-4">
                     <h3>The Ibrahimic Salawaat</h3>
-                    <p className="arabic-text" dir="rtl">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ</p>
+                    <p className="font-arabic text-xl sm:text-2xl leading-loose text-gold-400 text-center" dir="rtl">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ</p>
                     
                     <p className="transliteration"><strong>Transliteration:</strong> Allaahumma salli 'alaa Muhammadin wa 'alaa aali Muhammad, kamaa sallayta 'alaa Ibraaheema wa 'alaa aali Ibraaheem, innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa aali Muhammad, kamaa baarakta 'alaa Ibraaheema wa 'alaa aali Ibraaheem, innaka Hameedun Majeed.</p>
                     
@@ -42,9 +42,9 @@ export default function Lesson09Content() {
                 
                 <p>After the Salawaat, it is recommended to seek refuge from four things:</p>
                 
-                <div className="tashahhud-box">
+                <div className="rounded-xl border border-gold-400/20 bg-forest-800/40 p-5 my-4">
                     <h3>Seeking Refuge</h3>
-                    <p className="arabic-text" dir="rtl">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ</p>
+                    <p className="font-arabic text-xl sm:text-2xl leading-loose text-gold-400 text-center" dir="rtl">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ</p>
                     
                     <p className="transliteration"><strong>Transliteration:</strong> Allaahumma innee a'oodhu bika min 'adhaabi Jahannam, wa min 'adhaabil-qabr, wa min fitnatil-mahyaa wal-mamaat, wa min sharri fitnatil-Maseehid-Dajjaal.</p>
                     
