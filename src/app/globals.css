@@ -94,7 +94,7 @@ html {
 }
 
 body {
-  @apply bg-cream-50 text-forest-900 antialiased;
+  @apply bg-forest-900 text-cream-200 antialiased;
   font-family: var(--font-serif);
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-cream-200);
+  background: var(--color-forest-800);
 }
 
 ::-webkit-scrollbar-thumb {

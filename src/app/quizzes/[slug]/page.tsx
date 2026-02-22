@@ -47,6 +47,9 @@ export default function QuizPage() {
     )
   }
 
+  const isTafseer = quizMeta.category === 'tafseer'
+  const lessonLink = isTafseer ? '/tafseer' : `/lessons/${quizMeta.lessonSlug}`
+
   const unlocked = isCompleted(quizMeta.lessonSlug)
 
   if (!unlocked) {
@@ -115,10 +118,10 @@ export default function QuizPage() {
             &larr; All Quizzes
           </Link>
           <Link
-            href={`/lessons/${quizMeta.lessonSlug}`}
+            href={lessonLink}
             className="text-sm text-cream-400 transition-colors hover:text-gold-400"
           >
-            Go to Lesson
+            {isTafseer ? 'Go to Tafseer' : 'Go to Lesson'}
           </Link>
         </div>
       </nav>

@@ -73,7 +73,7 @@ export default function SurahTafseerPage() {
       )}
 
       {/* Tafseer content */}
-      <div className="lesson-content">
+      <div>
         <SurahContent />
       </div>
 
