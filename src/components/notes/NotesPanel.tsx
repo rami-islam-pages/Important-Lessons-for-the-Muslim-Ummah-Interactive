@@ -67,18 +67,18 @@ export function NotesPanel({
       {/* Panel */}
       <div
         className={cn(
-          'fixed top-0 right-0 z-50 flex h-full w-full max-w-sm flex-col border-l border-forest-700/50 bg-forest-900 shadow-xl transition-transform duration-300',
+          'fixed top-0 right-0 z-50 flex h-full w-full max-w-sm flex-col border-l border-cream-400 bg-cream-50 shadow-xl transition-transform duration-300',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-forest-700/50 px-4 py-3">
+        <div className="flex items-center justify-between border-b border-cream-400 bg-forest-800 px-4 py-3">
           <h2 className="font-display text-lg font-semibold text-cream-100">
             Notes
           </h2>
           <button
             onClick={onClose}
-            className="rounded-md p-1.5 text-cream-400 transition-colors hover:bg-forest-800 hover:text-cream-100"
+            className="rounded-md p-1.5 text-cream-300 transition-colors hover:bg-forest-700 hover:text-cream-100"
             aria-label="Close notes panel"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,18 +88,18 @@ export function NotesPanel({
         </div>
 
         {/* Add note */}
-        <div className="border-b border-forest-700/30 p-4">
+        <div className="border-b border-cream-400 p-4">
           <textarea
             value={newNote}
             onChange={(e) => setNewNote(e.target.value)}
             placeholder="Write a note..."
-            className="w-full resize-none rounded-lg border border-forest-600/50 bg-forest-800/50 px-3 py-2 text-sm text-cream-200 placeholder:text-cream-500 focus:border-gold-400/40 focus:outline-none"
+            className="w-full resize-none rounded-lg border border-cream-400 bg-cream-100 px-3 py-2 text-sm text-ink-700 placeholder:text-ink-400 focus:border-forest-600 focus:outline-none"
             rows={3}
           />
           <button
             onClick={handleAdd}
             disabled={!newNote.trim()}
-            className="mt-2 w-full rounded-lg bg-gold-400/10 px-3 py-2 text-sm font-medium text-gold-400 transition-colors hover:bg-gold-400/20 disabled:cursor-not-allowed disabled:opacity-40"
+            className="mt-2 w-full rounded-lg bg-forest-800 px-3 py-2 text-sm font-medium text-cream-100 transition-colors hover:bg-forest-700 disabled:cursor-not-allowed disabled:opacity-40"
           >
             Add Note
           </button>
@@ -108,7 +108,7 @@ export function NotesPanel({
         {/* Notes list */}
         <div className="flex-1 overflow-y-auto p-4">
           {notes.length === 0 ? (
-            <p className="text-center text-sm text-cream-500">
+            <p className="text-center text-sm text-ink-400">
               No notes yet. Start by writing one above.
             </p>
           ) : (
@@ -116,10 +116,10 @@ export function NotesPanel({
               {notes.map((note) => (
                 <div
                   key={note.id}
-                  className="rounded-lg border border-forest-700/30 bg-forest-800/30 p-3"
+                  className="rounded-lg border border-cream-400 bg-cream-100 p-3"
                 >
                   {note.selectionText && (
-                    <p className="mb-2 border-l-2 border-gold-400/40 pl-2 text-xs text-cream-500 italic">
+                    <p className="mb-2 border-l-2 border-forest-600/40 pl-2 text-xs text-ink-400 italic">
                       &ldquo;{note.selectionText.slice(0, 100)}
                       {note.selectionText.length > 100 ? '...' : ''}&rdquo;
                     </p>
@@ -130,20 +130,20 @@ export function NotesPanel({
                       <textarea
                         value={editText}
                         onChange={(e) => setEditText(e.target.value)}
-                        className="w-full resize-none rounded border border-forest-600/50 bg-forest-800/50 px-2 py-1.5 text-sm text-cream-200 focus:border-gold-400/40 focus:outline-none"
+                        className="w-full resize-none rounded border border-cream-400 bg-cream-100 px-2 py-1.5 text-sm text-ink-700 focus:border-forest-600 focus:outline-none"
                         rows={3}
                         autoFocus
                       />
                       <div className="mt-1.5 flex gap-2">
                         <button
                           onClick={saveEdit}
-                          className="rounded px-2 py-1 text-xs text-gold-400 hover:bg-gold-400/10"
+                          className="rounded px-2 py-1 text-xs text-forest-700 hover:bg-forest-100"
                         >
                           Save
                         </button>
                         <button
                           onClick={() => setEditingId(null)}
-                          className="rounded px-2 py-1 text-xs text-cream-500 hover:bg-forest-800"
+                          className="rounded px-2 py-1 text-xs text-ink-400 hover:bg-cream-200"
                         >
                           Cancel
                         </button>
@@ -151,25 +151,25 @@ export function NotesPanel({
                     </div>
                   ) : (
                     <>
-                      <p className="text-sm leading-relaxed text-cream-300">
+                      <p className="text-sm leading-relaxed text-ink-600">
                         {note.content}
                       </p>
                       <div className="mt-2 flex items-center justify-between">
-                        <span className="text-xs text-cream-500">
+                        <span className="text-xs text-ink-400">
                           {formatDate(note.updatedAt)}
                           {note.updatedAt !== note.createdAt && ' (edited)'}
                         </span>
                         <div className="flex gap-1">
                           <button
                             onClick={() => startEdit(note)}
-                            className="rounded p-1 text-xs text-cream-500 hover:text-gold-400"
+                            className="rounded p-1 text-xs text-ink-400 hover:text-forest-700"
                             aria-label="Edit note"
                           >
                             Edit
                           </button>
                           <button
                             onClick={() => onDelete(note.id)}
-                            className="rounded p-1 text-xs text-cream-500 hover:text-red-400"
+                            className="rounded p-1 text-xs text-ink-400 hover:text-red-600"
                             aria-label="Delete note"
                           >
                             Delete

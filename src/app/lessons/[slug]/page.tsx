@@ -48,8 +48,8 @@ export default async function LessonPage({
       {LessonContent ? (
         <LessonContent />
       ) : (
-        <div className="rounded-xl border border-gold-400/20 bg-forest-800/40 p-8 text-center">
-          <p className="text-cream-400">
+        <div className="rounded-xl border border-cream-400/60 bg-cream-50 p-8 text-center">
+          <p className="text-ink-500">
             This lesson content is being prepared. Please check back soon.
           </p>
         </div>

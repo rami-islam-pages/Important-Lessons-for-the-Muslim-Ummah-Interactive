@@ -21,10 +21,10 @@ function QuizCard({ quiz, unlocked, bestScore }: { quiz: QuizMeta; unlocked: boo
   return (
     <div
       className={cn(
-        'rounded-xl border p-5 transition-all',
+        'rounded-xl border p-5 transition-all shadow-sm',
         unlocked
-          ? 'border-gold-400/15 bg-forest-800/50 hover:border-gold-400/30 hover:bg-forest-800/70 hover:shadow-lg hover:shadow-gold-400/5'
-          : 'border-forest-700/20 bg-forest-800/20 opacity-60'
+          ? 'border-cream-400/60 bg-cream-50 hover:border-forest-600/30 hover:shadow-md'
+          : 'border-cream-400/40 bg-cream-200/50 opacity-60'
       )}
     >
       <div className="mb-3 flex items-center gap-3">
@@ -32,8 +32,8 @@ function QuizCard({ quiz, unlocked, bestScore }: { quiz: QuizMeta; unlocked: boo
           className={cn(
             'flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm font-bold',
             unlocked
-              ? 'bg-gold-400/10 text-gold-400'
-              : 'bg-forest-700/30 text-cream-500'
+              ? 'bg-forest-800/10 text-forest-800'
+              : 'bg-cream-300 text-ink-400'
           )}
         >
           {unlocked ? (
@@ -49,21 +49,21 @@ function QuizCard({ quiz, unlocked, bestScore }: { quiz: QuizMeta; unlocked: boo
         <h2
           className={cn(
             'font-display text-lg font-semibold',
-            unlocked ? 'text-cream-100' : 'text-cream-400'
+            unlocked ? 'text-ink-800' : 'text-ink-400'
           )}
         >
           {quiz.title}
         </h2>
       </div>
 
-      <p className="text-sm text-cream-400">
+      <p className="text-sm text-ink-500">
         {quiz.lessonTitle}
       </p>
 
       {bestScore !== null && (
         <div className="mt-3 flex items-center gap-1.5">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400/60" />
-          <span className="text-xs text-emerald-400/80">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-forest-600" />
+          <span className="text-xs text-forest-600">
             Best score: {bestScore}%
           </span>
         </div>
@@ -73,16 +73,16 @@ function QuizCard({ quiz, unlocked, bestScore }: { quiz: QuizMeta; unlocked: boo
         {unlocked ? (
           <Link
             href={`/quizzes/${quiz.slug}`}
-            className="inline-block rounded-md bg-gold-400/10 px-4 py-2 text-xs font-medium text-gold-400 transition-colors hover:bg-gold-400/20"
+            className="inline-block rounded-md bg-forest-800 px-4 py-2 text-xs font-medium text-cream-100 transition-colors hover:bg-forest-700"
           >
             {bestScore !== null ? 'Retake Quiz' : 'Start Quiz'} &rarr;
           </Link>
         ) : (
-          <p className="text-xs text-cream-500">
+          <p className="text-xs text-ink-400">
             Complete{' '}
             <Link
               href={`/lessons/${quiz.lessonSlug}`}
-              className="text-gold-400/60 hover:text-gold-400"
+              className="text-forest-700 hover:text-forest-800 font-medium"
             >
               {quiz.category === 'tafseer' ? 'Lesson 1' : quiz.lessonTitle}
             </Link>{' '}
@@ -108,18 +108,24 @@ export default function QuizzesPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
-      <div className="mb-10 text-center">
-        <h1 className="font-display text-3xl font-bold text-cream-100 sm:text-4xl">
-          Quizzes
-        </h1>
-        <p className="mt-2 text-sm text-cream-400">
-          Test your knowledge after completing each lesson
-        </p>
-      </div>
+    <div className="book-page">
+      <div className="mx-auto max-w-6xl px-4 py-10">
+        <div className="mb-10 text-center">
+          <h1 className="font-display text-3xl font-bold text-forest-900 sm:text-4xl">
+            Quizzes
+          </h1>
+          <p className="mt-2 text-sm text-ink-500">
+            Test your knowledge after completing each lesson
+          </p>
+          <div className="mx-auto mt-4 flex items-center justify-center gap-3">
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-gold-400/50" />
+            <span className="text-gold-400 text-xs">❦</span>
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-gold-400/50" />
+          </div>
+        </div>
 
       {/* Lesson Quizzes */}
-      <h2 className="mb-4 font-display text-xl font-semibold text-cream-100">
+      <h2 className="mb-4 font-display text-xl font-semibold text-forest-900">
         Lesson Quizzes
       </h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -134,10 +140,10 @@ export default function QuizzesPage() {
       </div>
 
       {/* Tafseer Quizzes */}
-      <h2 className="mb-4 mt-12 font-display text-xl font-semibold text-cream-100">
+      <h2 className="mb-4 mt-12 font-display text-xl font-semibold text-forest-900">
         Tafseer Quizzes
       </h2>
-      <p className="mb-4 text-sm text-cream-400">
+      <p className="mb-4 text-sm text-ink-500">
         Individual quizzes for each surah covered in the Tafseer section
       </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -149,6 +155,7 @@ export default function QuizzesPage() {
             bestScore={getBestScore(quiz.slug)}
           />
         ))}
+      </div>
       </div>
     </div>
   )

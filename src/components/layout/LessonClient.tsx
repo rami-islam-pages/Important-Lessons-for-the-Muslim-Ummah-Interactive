@@ -26,11 +26,11 @@ export function LessonClient({ lesson, prev, next, children }: LessonClientProps
   return (
     <>
       {/* Top navigation */}
-      <nav className="sticky top-14 z-30 border-b border-forest-700/50 bg-forest-900/95 backdrop-blur-sm">
+      <nav className="sticky top-14 z-30 border-b border-cream-400/60 bg-cream-100/95 backdrop-blur-sm">
         <div className="mx-auto flex h-12 max-w-3xl items-center justify-between px-4">
           <Link
             href="/lessons"
-            className="text-sm text-cream-400 transition-colors hover:text-gold-400"
+            className="text-sm text-ink-500 transition-colors hover:text-forest-700"
           >
             &larr; All Lessons
           </Link>
@@ -38,14 +38,14 @@ export function LessonClient({ lesson, prev, next, children }: LessonClientProps
             {quizMeta && (
               <Link
                 href={`/quizzes/${quizMeta.slug}`}
-                className="rounded-md bg-gold-400/10 px-3 py-1.5 text-xs font-medium text-gold-400 transition-colors hover:bg-gold-400/20"
+                className="rounded-md bg-forest-800 px-3 py-1.5 text-xs font-medium text-cream-100 transition-colors hover:bg-forest-700"
               >
                 Take Quiz
               </Link>
             )}
             <button
               onClick={() => setNotesOpen(true)}
-              className="rounded-md bg-forest-800/60 px-3 py-1.5 text-xs text-cream-400 transition-colors hover:bg-forest-700/60 hover:text-cream-100"
+              className="rounded-md border border-cream-400 bg-cream-50 px-3 py-1.5 text-xs text-ink-600 transition-colors hover:bg-cream-200"
               aria-label="Open notes"
             >
               Notes ({notes.length})
@@ -72,8 +72,8 @@ export function LessonClient({ lesson, prev, next, children }: LessonClientProps
               }
               className={
                 completed
-                  ? 'flex items-center gap-2 rounded-lg border border-emerald-400/30 bg-emerald-900/20 px-6 py-3 text-sm font-medium text-emerald-400 transition-colors hover:bg-emerald-900/30'
-                  : 'flex items-center gap-2 rounded-lg border border-gold-400/30 bg-gold-400/10 px-6 py-3 text-sm font-medium text-gold-400 transition-colors hover:bg-gold-400/20'
+                  ? 'flex items-center gap-2 rounded-lg border border-forest-500/30 bg-forest-100 px-6 py-3 text-sm font-medium text-forest-700 transition-colors hover:bg-forest-200'
+                  : 'flex items-center gap-2 rounded-lg border-2 border-forest-800 bg-forest-800 px-6 py-3 text-sm font-medium text-cream-100 transition-colors hover:bg-forest-700'
               }
             >
               {completed ? (
@@ -100,11 +100,11 @@ export function LessonClient({ lesson, prev, next, children }: LessonClientProps
           </div>
         )}
 
-        <div className="flex items-center justify-between border-t border-forest-700/30 pt-6">
+        <div className="flex items-center justify-between border-t border-cream-400/60 pt-6">
           {prev ? (
             <Link
               href={`/lessons/${prev.slug}`}
-              className="group flex items-center gap-2 text-sm text-cream-400 transition-colors hover:text-gold-400"
+              className="group flex items-center gap-2 text-sm text-ink-500 transition-colors hover:text-forest-700"
             >
               <span className="transition-transform group-hover:-translate-x-1">&larr;</span>
               <span>{prev.title}</span>
@@ -115,7 +115,7 @@ export function LessonClient({ lesson, prev, next, children }: LessonClientProps
           {next ? (
             <Link
               href={`/lessons/${next.slug}`}
-              className="group flex items-center gap-2 text-sm text-cream-400 transition-colors hover:text-gold-400"
+              className="group flex items-center gap-2 text-sm text-ink-500 transition-colors hover:text-forest-700"
             >
               <span>{next.title}</span>
               <span className="transition-transform group-hover:translate-x-1">&rarr;</span>

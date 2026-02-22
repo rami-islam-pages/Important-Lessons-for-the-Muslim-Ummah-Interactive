@@ -25,35 +25,35 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
-      <h1 className="mb-2 text-center font-display text-2xl font-bold text-cream-100">
+      <h1 className="mb-2 text-center font-display text-2xl font-bold text-forest-900">
         {quiz.title}
       </h1>
 
       {/* Progress bar */}
       <div className="mb-8 text-center">
-        <div className="mx-auto h-2 w-48 overflow-hidden rounded-full bg-forest-700/50">
+        <div className="mx-auto h-2 w-48 overflow-hidden rounded-full bg-cream-300">
           <div
-            className="h-full rounded-full bg-gold-400/60 transition-all"
+            className="h-full rounded-full bg-forest-600 transition-all"
             style={{ width: `${(answeredCount / totalQuestions) * 100}%` }}
           />
         </div>
-        <p className="mt-2 text-xs text-cream-500">
+        <p className="mt-2 text-xs text-ink-400">
           {answeredCount} of {totalQuestions} answered
         </p>
       </div>
 
       {/* Results banner */}
       {result && (
-        <div className="mb-8 rounded-xl border border-gold-400/20 bg-forest-800/50 p-6 text-center">
-          <p className="font-display text-4xl font-bold text-gold-400">
+        <div className="mb-8 rounded-xl border border-forest-600/20 bg-cream-50 p-6 text-center shadow-sm">
+          <p className="font-display text-4xl font-bold text-forest-800">
             {result.percentage}%
           </p>
-          <p className="mt-1 text-sm text-cream-400">
+          <p className="mt-1 text-sm text-ink-500">
             {result.score} out of {result.total} correct
           </p>
           <button
             onClick={reset}
-            className="mt-4 rounded-lg bg-gold-400/10 px-4 py-2 text-sm font-medium text-gold-400 transition-colors hover:bg-gold-400/20"
+            className="mt-4 rounded-lg bg-forest-800 px-4 py-2 text-sm font-medium text-cream-100 transition-colors hover:bg-forest-700"
           >
             Retake Quiz
           </button>
@@ -63,7 +63,7 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
       {/* Questions grouped by section */}
       {quiz.sections.map((section, sIdx) => (
         <div key={sIdx} className="mb-10">
-          <h2 className="mb-4 border-l-4 border-gold-400/40 pl-3 font-display text-lg font-semibold text-cream-100">
+          <h2 className="mb-4 border-l-4 border-forest-600 pl-3 font-display text-lg font-semibold text-ink-800">
             {section.title}
           </h2>
 
@@ -76,14 +76,14 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
                   className={cn(
                     'rounded-lg border p-4 transition-colors',
                     submitted && correct === true
-                      ? 'border-emerald-400/30 bg-emerald-900/10'
+                      ? 'border-forest-400/30 bg-forest-100/50'
                       : submitted && correct === false
-                        ? 'border-red-400/30 bg-red-900/10'
-                        : 'border-forest-700/30 bg-forest-800/30'
+                        ? 'border-red-300/40 bg-red-50'
+                        : 'border-cream-400/60 bg-cream-50'
                   )}
                 >
-                  <p className="mb-3 text-sm font-medium text-cream-200">
-                    <span className="mr-1 text-gold-400">{question.number}.</span>
+                  <p className="mb-3 text-sm font-medium text-ink-700">
+                    <span className="mr-1 text-forest-700">{question.number}.</span>
                     {question.text}
                   </p>
 
@@ -98,12 +98,12 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
                             className={cn(
                               'flex cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors',
                               answers[question.id] === String(oIdx)
-                                ? 'bg-gold-400/10 text-cream-100'
-                                : 'text-cream-400 hover:bg-forest-800/50',
+                                ? 'bg-forest-100 text-ink-800'
+                                : 'text-ink-600 hover:bg-cream-200',
                               submitted &&
                                 'correctIndex' in question &&
                                 oIdx === question.correctIndex &&
-                                'bg-emerald-400/10 text-emerald-300'
+                                'bg-forest-100 text-forest-700'
                             )}
                           >
                             <input
@@ -113,7 +113,7 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
                               checked={answers[question.id] === String(oIdx)}
                               onChange={() => setAnswer(question.id, String(oIdx))}
                               disabled={submitted}
-                              className="accent-gold-400"
+                              className="accent-forest-700"
                             />
                             {opt}
                           </label>
@@ -135,12 +135,12 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
                               className={cn(
                                 'flex cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors',
                                 selected
-                                  ? 'bg-gold-400/10 text-cream-100'
-                                  : 'text-cream-400 hover:bg-forest-800/50',
+                                  ? 'bg-forest-100 text-ink-800'
+                                  : 'text-ink-600 hover:bg-cream-200',
                                 submitted &&
                                   'correctIndices' in question &&
                                   question.correctIndices.includes(oIdx) &&
-                                  'bg-emerald-400/10 text-emerald-300'
+                                  'bg-forest-100 text-forest-700'
                               )}
                             >
                               <input
@@ -150,7 +150,7 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
                                   toggleMultiSelect(question.id, oIdx)
                                 }
                                 disabled={submitted}
-                                className="accent-gold-400"
+                                className="accent-forest-700"
                               />
                               {opt}
                             </label>
@@ -170,7 +170,7 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
                           }
                           disabled={submitted}
                           rows={3}
-                          className="w-full resize-none rounded-lg border border-forest-600/50 bg-forest-800/50 px-3 py-2 text-sm text-cream-200 placeholder:text-cream-500 focus:border-gold-400/40 focus:outline-none disabled:opacity-60"
+                          className="w-full resize-none rounded-lg border border-cream-400 bg-cream-100 px-3 py-2 text-sm text-ink-700 placeholder:text-ink-400 focus:border-forest-600 focus:outline-none disabled:opacity-60"
                           placeholder="Write your answer..."
                         />
                       ) : (
@@ -181,7 +181,7 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
                             setAnswer(question.id, e.target.value)
                           }
                           disabled={submitted}
-                          className="w-full rounded-lg border border-forest-600/50 bg-forest-800/50 px-3 py-2 text-sm text-cream-200 placeholder:text-cream-500 focus:border-gold-400/40 focus:outline-none disabled:opacity-60"
+                          className="w-full rounded-lg border border-cream-400 bg-cream-100 px-3 py-2 text-sm text-ink-700 placeholder:text-ink-400 focus:border-forest-600 focus:outline-none disabled:opacity-60"
                           placeholder="Your answer..."
                         />
                       )}
@@ -199,7 +199,7 @@ export function QuizContainer({ quiz }: QuizContainerProps) {
         <div className="sticky bottom-4 flex justify-center pt-4">
           <button
             onClick={submit}
-            className="rounded-lg bg-gold-400/20 px-8 py-3 font-display text-base font-medium text-gold-400 shadow-lg transition-all hover:bg-gold-400/30 hover:shadow-xl"
+            className="rounded-lg bg-forest-800 px-8 py-3 font-display text-base font-medium text-cream-100 shadow-lg transition-all hover:bg-forest-700 hover:shadow-xl"
           >
             Submit Quiz
           </button>

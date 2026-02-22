@@ -1,31 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  /* Forest & Gold Islamic palette */
-  --color-forest-950: #071710;
-  --color-forest-900: #0a1f15;
-  --color-forest-800: #0d2a1c;
-  --color-forest-700: #122e20;
-  --color-forest-600: #1a3d2e;
-  --color-forest-500: #2d5742;
-  --color-forest-400: #4a7c5f;
-  --color-forest-300: #6b9f7e;
-  --color-forest-200: #a3c9b2;
-  --color-forest-100: #d5e8dc;
+  /* Book-inspired Islamic palette — parchment & teal */
+  /* Deep teal greens (from book cover) */
+  --color-forest-950: #0b2821;
+  --color-forest-900: #123d33;
+  --color-forest-800: #1a4d3e;
+  --color-forest-700: #215e4c;
+  --color-forest-600: #2d6b5a;
+  --color-forest-500: #3d8b74;
+  --color-forest-400: #5aaa8e;
+  --color-forest-300: #82c4ab;
+  --color-forest-200: #b3dece;
+  --color-forest-100: #ddf0e8;
 
-  --color-gold-600: #9a7b24;
-  --color-gold-500: #b8942c;
-  --color-gold-400: #d4af37;
-  --color-gold-300: #e4c050;
-  --color-gold-200: #f0d98f;
-  --color-gold-100: #faf0d0;
+  /* Rich gold — ornamental accents */
+  --color-gold-600: #7a5c10;
+  --color-gold-500: #8b6914;
+  --color-gold-400: #a67c1a;
+  --color-gold-300: #c49a2a;
+  --color-gold-200: #dbb44e;
+  --color-gold-100: #f0d98f;
 
-  --color-cream-50: #fffef9;
-  --color-cream-100: #fdfbf3;
-  --color-cream-200: #faf7f0;
-  --color-cream-300: #f5f0e3;
-  --color-cream-400: #e8dcc8;
-  --color-cream-500: #ddd0b8;
+  /* Warm parchment paper tones */
+  --color-cream-50: #fdfcf8;
+  --color-cream-100: #faf7f0;
+  --color-cream-200: #f5f0e3;
+  --color-cream-300: #ede6d4;
+  --color-cream-400: #ddd0b8;
+  --color-cream-500: #c4b99e;
+
+  /* Deep ink & brown text tones */
+  --color-ink-900: #1a110a;
+  --color-ink-800: #2a1f14;
+  --color-ink-700: #3d2e1f;
+  --color-ink-600: #52412e;
+  --color-ink-500: #6b5a45;
+  --color-ink-400: #8a7a64;
 
   /* Font families */
   --font-quran: 'KFGQPC Uthmanic Script HAFS', 'Amiri Quran', 'Scheherazade New', serif;
@@ -55,8 +66,8 @@
   }
 
   @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.5); }
+    0%, 100% { box-shadow: 0 0 20px rgba(166, 124, 26, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(166, 124, 26, 0.35); }
   }
 
   @keyframes float {
@@ -94,7 +105,7 @@ html {
 }
 
 body {
-  @apply bg-forest-900 text-cream-200 antialiased;
+  @apply bg-cream-100 text-ink-800 antialiased;
   font-family: var(--font-serif);
 }
 
@@ -114,7 +125,7 @@ body {
 
 /* Selection colors */
 ::selection {
-  background-color: rgba(212, 175, 55, 0.3);
+  background-color: rgba(26, 77, 62, 0.2);
   color: inherit;
 }
 
@@ -124,21 +135,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-forest-800);
+  background: var(--color-cream-200);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-forest-400);
+  background: var(--color-forest-600);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-forest-500);
+  background: var(--color-forest-700);
 }
 
 /* Skip link for accessibility */
 .skip-link {
-  @apply absolute -top-10 left-4 z-50 bg-forest-800 text-gold-400 px-4 py-2 rounded-b-lg transition-all;
+  @apply absolute -top-10 left-4 z-50 bg-forest-800 text-cream-100 px-4 py-2 rounded-b-lg transition-all;
 }
 
 .skip-link:focus {
@@ -159,16 +170,16 @@ body {
 
 /* Lesson content prose styling */
 .lesson-content p {
-  @apply text-base leading-relaxed text-cream-200;
+  @apply text-base leading-relaxed text-ink-700;
   font-family: var(--font-serif);
 }
 
 .lesson-content strong {
-  @apply font-bold text-cream-100;
+  @apply font-bold text-ink-800;
 }
 
 .lesson-content em {
-  @apply italic text-cream-200;
+  @apply italic text-ink-700;
 }
 
 .lesson-content ol {
@@ -180,11 +191,39 @@ body {
 }
 
 .lesson-content li {
-  @apply text-sm leading-relaxed text-cream-300;
+  @apply text-sm leading-relaxed text-ink-600;
 }
 
 .lesson-content a {
-  @apply text-gold-400 underline underline-offset-2 transition-colors hover:text-gold-300;
+  @apply text-forest-700 underline underline-offset-2 transition-colors hover:text-forest-800 font-semibold;
+}
+
+/* Ornamental divider utility */
+.ornament-divider {
+  position: relative;
+  text-align: center;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-gold-400), transparent);
+  margin: 1.5rem auto;
+  max-width: 200px;
+}
+
+.ornament-divider::before {
+  content: '❦';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-cream-100);
+  padding: 0 0.75rem;
+  color: var(--color-gold-400);
+  font-size: 0.875rem;
+}
+
+/* Page wrapper with book-like feel */
+.book-page {
+  background: linear-gradient(135deg, var(--color-cream-50) 0%, var(--color-cream-100) 50%, var(--color-cream-200) 100%);
+  min-height: 100vh;
 }
 
 /* Reduced motion */

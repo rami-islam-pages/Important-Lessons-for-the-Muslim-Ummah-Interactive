@@ -16,15 +16,15 @@ interface ContentGridProps {
 }
 
 const variantColors: Record<string, string> = {
-  negligence: 'border-red-400/30 bg-red-900/20',
-  extremism: 'border-orange-400/30 bg-orange-900/20',
-  moderation: 'border-emerald-400/30 bg-emerald-900/20',
+  negligence: 'border-red-300/40 bg-red-50',
+  extremism: 'border-orange-300/40 bg-orange-50',
+  moderation: 'border-forest-300/40 bg-forest-100/50',
 }
 
 const variantTitleColors: Record<string, string> = {
-  negligence: 'text-red-300',
-  extremism: 'text-orange-300',
-  moderation: 'text-emerald-300',
+  negligence: 'text-red-700',
+  extremism: 'text-orange-700',
+  moderation: 'text-forest-700',
 }
 
 const gridCols: Record<GridVariant, string> = {
@@ -44,12 +44,12 @@ export function ContentGrid({ variant, items }: ContentGridProps) {
             'rounded-lg border p-4 transition-colors',
             item.variant
               ? variantColors[item.variant]
-              : 'border-gold-400/15 bg-forest-800/30',
+              : 'border-cream-400/60 bg-cream-50 shadow-sm',
             variant === 'negligence-items' && 'text-center'
           )}
         >
           {item.number && (
-            <span className="mb-1 block font-display text-sm font-semibold text-gold-400">
+            <span className="mb-1 block font-display text-sm font-semibold text-forest-700">
               {item.number}
             </span>
           )}
@@ -57,16 +57,16 @@ export function ContentGrid({ variant, items }: ContentGridProps) {
             <h3
               className={cn(
                 'mb-2 font-display text-base font-semibold',
-                item.variant ? variantTitleColors[item.variant] : 'text-gold-400'
+                item.variant ? variantTitleColors[item.variant] : 'text-forest-800'
               )}
             >
               {item.title}
             </h3>
           )}
           {item.description ? (
-            <p className="text-sm leading-relaxed text-cream-300">{item.description}</p>
+            <p className="text-sm leading-relaxed text-ink-600">{item.description}</p>
           ) : (
-            <p className="text-sm leading-relaxed text-cream-300">{item.content}</p>
+            <p className="text-sm leading-relaxed text-ink-600">{item.content}</p>
           )}
         </div>
       ))}

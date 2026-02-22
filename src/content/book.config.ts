@@ -19,7 +19,7 @@ export const bookConfig = {
     honorific: 'حفظه الله',
   },
   brand: 'Rami Islamic Pages',
-  themeColor: '#0d2a1c',
+  themeColor: '#1a4d3e',
   totalLessons: 18,
   bookLink: 'https://furqaanbookstore.com/products/explanation-of-the-important-lessons-for-every-muslim',
   youtube: {

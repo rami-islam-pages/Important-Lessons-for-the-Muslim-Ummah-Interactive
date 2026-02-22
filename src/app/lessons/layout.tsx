@@ -4,7 +4,7 @@ export default function LessonsLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-forest-900">
+    <div className="book-page">
       {children}
     </div>
   )

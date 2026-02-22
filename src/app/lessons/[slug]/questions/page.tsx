@@ -46,13 +46,13 @@ export default async function QuestionsPage({
   }
 
   return (
-    <div className="min-h-screen bg-forest-900">
+    <div className="book-page">
       {/* Top navigation */}
-      <nav className="sticky top-14 z-30 border-b border-forest-700/50 bg-forest-900/95 backdrop-blur-sm">
+      <nav className="sticky top-14 z-30 border-b border-cream-400/60 bg-cream-100/95 backdrop-blur-sm">
         <div className="mx-auto flex h-12 max-w-3xl items-center justify-between px-4">
           <Link
             href={`/lessons/${slug}`}
-            className="text-sm text-cream-400 transition-colors hover:text-gold-400"
+            className="text-sm text-ink-500 transition-colors hover:text-forest-700"
           >
             &larr; Back to {lesson.title}
           </Link>
@@ -63,13 +63,13 @@ export default async function QuestionsPage({
         <QuizContainer quiz={quiz} />
       ) : (
         <div className="mx-auto max-w-3xl px-4 py-16 text-center">
-          <div className="rounded-xl border border-gold-400/20 bg-forest-800/40 p-8">
-            <p className="text-cream-400">
+          <div className="rounded-xl border border-cream-400/60 bg-cream-50 p-8 shadow-sm">
+            <p className="text-ink-500">
               Quiz questions for this lesson are being prepared. Please check back soon.
             </p>
             <Link
               href={`/lessons/${slug}`}
-              className="mt-4 inline-block text-sm text-gold-400 transition-colors hover:text-gold-300"
+              className="mt-4 inline-block text-sm text-forest-700 transition-colors hover:text-forest-800"
             >
               Return to lesson &rarr;
             </Link>
