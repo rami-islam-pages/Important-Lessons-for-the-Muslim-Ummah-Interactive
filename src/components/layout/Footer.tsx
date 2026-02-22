@@ -6,10 +6,14 @@ export function Footer() {
     <footer className="border-t border-forest-700/30 bg-forest-900 py-8">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-center gap-4 text-center">
-          <p className="font-display text-sm text-cream-400">
-            {bookConfig.brand}
-          </p>
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-cream-500">
+            <Link
+              href="/about"
+              className="transition-colors hover:text-gold-400"
+            >
+              About
+            </Link>
+            <span className="text-forest-600">|</span>
             <Link
               href={bookConfig.bookLink}
               target="_blank"

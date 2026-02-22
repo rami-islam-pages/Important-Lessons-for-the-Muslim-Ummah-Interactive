@@ -68,6 +68,11 @@ export default function LoginPage() {
     setLoading(false)
   }
 
+  // Google OAuth requires enabling the Google provider in your Supabase dashboard:
+  // 1. Go to Authentication > Providers > Google in the Supabase dashboard
+  // 2. Enable Google provider
+  // 3. Add your Google Cloud OAuth Client ID and Client Secret
+  // 4. Set the authorized redirect URI in Google Cloud Console to your Supabase callback URL
   const handleGoogleAuth = async () => {
     setError('')
     await supabase.auth.signInWithOAuth({
@@ -193,9 +198,6 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <p className="mt-4 text-center text-xs text-forest-500">
-          {bookConfig.brand}
-        </p>
       </div>
     </div>
   )

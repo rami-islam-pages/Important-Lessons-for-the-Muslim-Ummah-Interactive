@@ -38,7 +38,7 @@ export default async function QuestionsPage({
 
   let quiz = null
   try {
-    const quizSlug = slug.replace('lesson-', 'quiz-')
+    const quizSlug = 'quiz-' + slug
     const mod = await import(`@/content/quizzes/${quizSlug}`)
     quiz = mod.default || mod.quiz
   } catch {

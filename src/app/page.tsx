@@ -113,7 +113,9 @@ export default function HomePage() {
 
         {/* Brand footer */}
         <p className="mt-4 text-center text-xs text-forest-500">
-          {bookConfig.brand}
+          <Link href="/about" className="transition-colors hover:text-gold-400/60">
+            {bookConfig.brand}
+          </Link>
         </p>
       </article>
     </div>

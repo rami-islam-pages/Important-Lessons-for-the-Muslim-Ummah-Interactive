@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils/cn'
 
 const navLinks = [
   { href: '/lessons', label: 'Lessons' },
+  { href: '/tafseer', label: 'Tafseer' },
+  { href: '/quizzes', label: 'Quizzes' },
   { href: '/videos', label: 'Videos' },
   { href: '/profile', label: 'Progress' },
 ]
@@ -44,14 +46,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href={bookConfig.bookLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-2 hidden rounded-md border border-gold-400/30 px-3 py-1.5 text-sm font-medium text-gold-400 transition-colors hover:border-gold-400/60 hover:bg-gold-400/10 sm:inline-block"
-          >
-            Get the Book
-          </Link>
           {user ? (
             <Link
               href="/profile"
